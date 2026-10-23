@@ -1,0 +1,3793 @@
+{
+  "schema_version": 1,
+  "description": "Finite built-in compatibility recipes. Identity projections are not real browser fingerprint verification; legacy UA-first routing is separate.",
+  "records": [
+    {
+      "id": "chrome/150/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/151/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/152/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/153/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/154/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/155/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/156/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/157/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/158/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/159/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/160/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/150/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/151/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/152/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/153/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/154/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/155/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/156/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/157/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/158/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/159/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/160/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/120/windows",
+      "record": "Chrome120",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "120",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "chrome/1204/windows/legacy-ja4r",
+      "record": "Chrome120",
+      "projection": "ja4r",
+      "product": "chrome",
+      "version": "1204",
+      "engine_version": "1204",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/142/windows",
+      "record": "Chrome142",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "142",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "chrome/1424/windows/legacy-ja4r",
+      "record": "Chrome142",
+      "projection": "ja4r",
+      "product": "chrome",
+      "version": "1424",
+      "engine_version": "1424",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/150/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "150",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "chrome/1504/windows/legacy-ja4r",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "product": "chrome",
+      "version": "1504",
+      "engine_version": "1504",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/151/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/152/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/153/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/154/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/155/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/156/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/157/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/158/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/159/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/160/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chrome",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chrome/160/windows/legacy-ja4r",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "product": "chrome",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/150/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/151/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/152/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/153/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/154/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/155/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/156/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/157/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/158/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/159/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/160/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/150/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/151/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/152/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/153/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/154/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/155/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/156/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/157/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/158/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/159/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/160/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/150/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/151/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/152/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/153/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/154/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/155/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/156/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/157/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/158/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/159/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/160/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "chromium",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "chromium/160/windows/legacy-ja4r",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "product": "chromium",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/150/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/151/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/152/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/153/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/154/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/155/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/156/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/157/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/158/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/159/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/160/linux",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "linux",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/150/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/151/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/152/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/153/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/154/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/155/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/156/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/157/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/158/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/159/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/160/macos",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "macos",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/150/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "150",
+      "engine_version": "150",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/151/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "151",
+      "engine_version": "151",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/152/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "152",
+      "engine_version": "152",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/153/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "153",
+      "engine_version": "153",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/154/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "154",
+      "engine_version": "154",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/155/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "155",
+      "engine_version": "155",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/156/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "156",
+      "engine_version": "156",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/157/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "157",
+      "engine_version": "157",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/158/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "158",
+      "engine_version": "158",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/159/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "159",
+      "engine_version": "159",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/160/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "edge",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "edge/160/windows/legacy-ja4r",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "product": "edge",
+      "version": "160",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "chromium",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/151/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "151",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/152/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "152",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/153/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "153",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/154/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "154",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/155/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "155",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/156/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "156",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/157/linux",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "157",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/158/linux",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "158",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/159/linux",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "159",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/160/linux",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "160",
+      "engine_version": "",
+      "platform": "linux",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/151/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "151",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/152/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "152",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/153/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "153",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/154/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "154",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/155/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "155",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/156/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "156",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/157/macos",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "157",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/158/macos",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "158",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/159/macos",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "159",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/160/macos",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "160",
+      "engine_version": "",
+      "platform": "macos",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/144/windows",
+      "record": "Firefox144",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "144",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "firefox/144/windows/legacy-ja4r",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "product": "firefox",
+      "version": "144",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/147/windows",
+      "record": "Firefox147",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "147",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "firefox/147/windows/legacy-ja4r",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "product": "firefox",
+      "version": "147",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/148/windows",
+      "record": "Firefox148",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "148",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "firefox/151/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "151",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "firefox/151/windows/legacy-ja4r",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "product": "firefox",
+      "version": "151",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/152/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "152",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/153/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "153",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/154/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "154",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/155/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "155",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/156/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "156",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/157/windows",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "157",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/158/windows",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "158",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "firefox/1584/windows/legacy-ja4r",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "product": "firefox",
+      "version": "1584",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/159/windows",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "159",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/160/windows",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "product": "firefox",
+      "version": "160",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "firefox/4/windows/legacy-ja4r",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "product": "firefox",
+      "version": "4",
+      "engine_version": "",
+      "platform": "windows",
+      "identity": "firefox",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "opera/145/windows",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "product": "opera",
+      "version": "145",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "opera",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "opera/145/windows/legacy-ja4r",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "product": "opera",
+      "version": "145",
+      "engine_version": "160",
+      "platform": "windows",
+      "identity": "opera",
+      "compatible": true,
+      "notes": [
+        "legacy configuration source; no live-client fields verified",
+        "explicit identity projection using the recorded baseline; protocol equivalence is unverified"
+      ]
+    },
+    {
+      "id": "safari/18.7.3/ipados",
+      "record": "Safari",
+      "projection": "ja3",
+      "product": "safari",
+      "version": "18.7.3",
+      "engine_version": "",
+      "platform": "ipados",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    },
+    {
+      "id": "safari/18.7.3/ipados/legacy-ja4r",
+      "record": "Safari",
+      "projection": "ja4r",
+      "product": "safari",
+      "version": "18.7.3",
+      "engine_version": "",
+      "platform": "ipados",
+      "identity": "record",
+      "compatible": false,
+      "notes": [
+        "legacy configuration source; no live-client fields verified"
+      ]
+    }
+  ],
+  "aliases": [
+    {
+      "name": "chrome",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "chrome-ja4r",
+      "target": "chrome/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome-linux",
+      "target": "chrome/160/linux"
+    },
+    {
+      "name": "chrome-mac",
+      "target": "chrome/160/macos"
+    },
+    {
+      "name": "chrome-win",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "chrome/linux/150",
+      "target": "chrome/150/linux"
+    },
+    {
+      "name": "chrome/linux/151",
+      "target": "chrome/151/linux"
+    },
+    {
+      "name": "chrome/linux/152",
+      "target": "chrome/152/linux"
+    },
+    {
+      "name": "chrome/linux/153",
+      "target": "chrome/153/linux"
+    },
+    {
+      "name": "chrome/linux/154",
+      "target": "chrome/154/linux"
+    },
+    {
+      "name": "chrome/linux/155",
+      "target": "chrome/155/linux"
+    },
+    {
+      "name": "chrome/linux/156",
+      "target": "chrome/156/linux"
+    },
+    {
+      "name": "chrome/linux/157",
+      "target": "chrome/157/linux"
+    },
+    {
+      "name": "chrome/linux/158",
+      "target": "chrome/158/linux"
+    },
+    {
+      "name": "chrome/linux/159",
+      "target": "chrome/159/linux"
+    },
+    {
+      "name": "chrome/linux/160",
+      "target": "chrome/160/linux"
+    },
+    {
+      "name": "chrome/macos/150",
+      "target": "chrome/150/macos"
+    },
+    {
+      "name": "chrome/macos/151",
+      "target": "chrome/151/macos"
+    },
+    {
+      "name": "chrome/macos/152",
+      "target": "chrome/152/macos"
+    },
+    {
+      "name": "chrome/macos/153",
+      "target": "chrome/153/macos"
+    },
+    {
+      "name": "chrome/macos/154",
+      "target": "chrome/154/macos"
+    },
+    {
+      "name": "chrome/macos/155",
+      "target": "chrome/155/macos"
+    },
+    {
+      "name": "chrome/macos/156",
+      "target": "chrome/156/macos"
+    },
+    {
+      "name": "chrome/macos/157",
+      "target": "chrome/157/macos"
+    },
+    {
+      "name": "chrome/macos/158",
+      "target": "chrome/158/macos"
+    },
+    {
+      "name": "chrome/macos/159",
+      "target": "chrome/159/macos"
+    },
+    {
+      "name": "chrome/macos/160",
+      "target": "chrome/160/macos"
+    },
+    {
+      "name": "chrome/windows/120",
+      "target": "chrome/120/windows"
+    },
+    {
+      "name": "chrome/windows/1204/legacy-ja4r",
+      "target": "chrome/1204/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome/windows/142",
+      "target": "chrome/142/windows"
+    },
+    {
+      "name": "chrome/windows/1424/legacy-ja4r",
+      "target": "chrome/1424/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome/windows/150",
+      "target": "chrome/150/windows"
+    },
+    {
+      "name": "chrome/windows/1504/legacy-ja4r",
+      "target": "chrome/1504/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome/windows/151",
+      "target": "chrome/151/windows"
+    },
+    {
+      "name": "chrome/windows/152",
+      "target": "chrome/152/windows"
+    },
+    {
+      "name": "chrome/windows/153",
+      "target": "chrome/153/windows"
+    },
+    {
+      "name": "chrome/windows/154",
+      "target": "chrome/154/windows"
+    },
+    {
+      "name": "chrome/windows/155",
+      "target": "chrome/155/windows"
+    },
+    {
+      "name": "chrome/windows/156",
+      "target": "chrome/156/windows"
+    },
+    {
+      "name": "chrome/windows/157",
+      "target": "chrome/157/windows"
+    },
+    {
+      "name": "chrome/windows/158",
+      "target": "chrome/158/windows"
+    },
+    {
+      "name": "chrome/windows/159",
+      "target": "chrome/159/windows"
+    },
+    {
+      "name": "chrome/windows/160",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "chrome/windows/160/legacy-ja4r",
+      "target": "chrome/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome120",
+      "target": "chrome/120/windows"
+    },
+    {
+      "name": "chrome120-ja4r",
+      "target": "chrome/1204/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome120-win",
+      "target": "chrome/120/windows"
+    },
+    {
+      "name": "chrome142",
+      "target": "chrome/142/windows"
+    },
+    {
+      "name": "chrome142-ja4r",
+      "target": "chrome/1424/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome142-win",
+      "target": "chrome/142/windows"
+    },
+    {
+      "name": "chrome150",
+      "target": "chrome/150/windows"
+    },
+    {
+      "name": "chrome150-ja4r",
+      "target": "chrome/1504/windows/legacy-ja4r"
+    },
+    {
+      "name": "chrome150-linux",
+      "target": "chrome/150/linux"
+    },
+    {
+      "name": "chrome150-mac",
+      "target": "chrome/150/macos"
+    },
+    {
+      "name": "chrome150-win",
+      "target": "chrome/150/windows"
+    },
+    {
+      "name": "chrome151",
+      "target": "chrome/151/windows"
+    },
+    {
+      "name": "chrome151-linux",
+      "target": "chrome/151/linux"
+    },
+    {
+      "name": "chrome151-mac",
+      "target": "chrome/151/macos"
+    },
+    {
+      "name": "chrome151-win",
+      "target": "chrome/151/windows"
+    },
+    {
+      "name": "chrome152",
+      "target": "chrome/152/windows"
+    },
+    {
+      "name": "chrome152-linux",
+      "target": "chrome/152/linux"
+    },
+    {
+      "name": "chrome152-mac",
+      "target": "chrome/152/macos"
+    },
+    {
+      "name": "chrome152-win",
+      "target": "chrome/152/windows"
+    },
+    {
+      "name": "chrome153",
+      "target": "chrome/153/windows"
+    },
+    {
+      "name": "chrome153-linux",
+      "target": "chrome/153/linux"
+    },
+    {
+      "name": "chrome153-mac",
+      "target": "chrome/153/macos"
+    },
+    {
+      "name": "chrome153-win",
+      "target": "chrome/153/windows"
+    },
+    {
+      "name": "chrome154",
+      "target": "chrome/154/windows"
+    },
+    {
+      "name": "chrome154-linux",
+      "target": "chrome/154/linux"
+    },
+    {
+      "name": "chrome154-mac",
+      "target": "chrome/154/macos"
+    },
+    {
+      "name": "chrome154-win",
+      "target": "chrome/154/windows"
+    },
+    {
+      "name": "chrome155",
+      "target": "chrome/155/windows"
+    },
+    {
+      "name": "chrome155-linux",
+      "target": "chrome/155/linux"
+    },
+    {
+      "name": "chrome155-mac",
+      "target": "chrome/155/macos"
+    },
+    {
+      "name": "chrome155-win",
+      "target": "chrome/155/windows"
+    },
+    {
+      "name": "chrome156",
+      "target": "chrome/156/windows"
+    },
+    {
+      "name": "chrome156-linux",
+      "target": "chrome/156/linux"
+    },
+    {
+      "name": "chrome156-mac",
+      "target": "chrome/156/macos"
+    },
+    {
+      "name": "chrome156-win",
+      "target": "chrome/156/windows"
+    },
+    {
+      "name": "chrome157",
+      "target": "chrome/157/windows"
+    },
+    {
+      "name": "chrome157-linux",
+      "target": "chrome/157/linux"
+    },
+    {
+      "name": "chrome157-mac",
+      "target": "chrome/157/macos"
+    },
+    {
+      "name": "chrome157-win",
+      "target": "chrome/157/windows"
+    },
+    {
+      "name": "chrome158",
+      "target": "chrome/158/windows"
+    },
+    {
+      "name": "chrome158-linux",
+      "target": "chrome/158/linux"
+    },
+    {
+      "name": "chrome158-mac",
+      "target": "chrome/158/macos"
+    },
+    {
+      "name": "chrome158-win",
+      "target": "chrome/158/windows"
+    },
+    {
+      "name": "chrome159",
+      "target": "chrome/159/windows"
+    },
+    {
+      "name": "chrome159-linux",
+      "target": "chrome/159/linux"
+    },
+    {
+      "name": "chrome159-mac",
+      "target": "chrome/159/macos"
+    },
+    {
+      "name": "chrome159-win",
+      "target": "chrome/159/windows"
+    },
+    {
+      "name": "chrome160",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "chrome160-linux",
+      "target": "chrome/160/linux"
+    },
+    {
+      "name": "chrome160-mac",
+      "target": "chrome/160/macos"
+    },
+    {
+      "name": "chrome160-win",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "chromium",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "chromium-ja4r",
+      "target": "chromium/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "chromium-linux",
+      "target": "chromium/160/linux"
+    },
+    {
+      "name": "chromium-mac",
+      "target": "chromium/160/macos"
+    },
+    {
+      "name": "chromium-win",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "chromium/linux/150",
+      "target": "chromium/150/linux"
+    },
+    {
+      "name": "chromium/linux/151",
+      "target": "chromium/151/linux"
+    },
+    {
+      "name": "chromium/linux/152",
+      "target": "chromium/152/linux"
+    },
+    {
+      "name": "chromium/linux/153",
+      "target": "chromium/153/linux"
+    },
+    {
+      "name": "chromium/linux/154",
+      "target": "chromium/154/linux"
+    },
+    {
+      "name": "chromium/linux/155",
+      "target": "chromium/155/linux"
+    },
+    {
+      "name": "chromium/linux/156",
+      "target": "chromium/156/linux"
+    },
+    {
+      "name": "chromium/linux/157",
+      "target": "chromium/157/linux"
+    },
+    {
+      "name": "chromium/linux/158",
+      "target": "chromium/158/linux"
+    },
+    {
+      "name": "chromium/linux/159",
+      "target": "chromium/159/linux"
+    },
+    {
+      "name": "chromium/linux/160",
+      "target": "chromium/160/linux"
+    },
+    {
+      "name": "chromium/macos/150",
+      "target": "chromium/150/macos"
+    },
+    {
+      "name": "chromium/macos/151",
+      "target": "chromium/151/macos"
+    },
+    {
+      "name": "chromium/macos/152",
+      "target": "chromium/152/macos"
+    },
+    {
+      "name": "chromium/macos/153",
+      "target": "chromium/153/macos"
+    },
+    {
+      "name": "chromium/macos/154",
+      "target": "chromium/154/macos"
+    },
+    {
+      "name": "chromium/macos/155",
+      "target": "chromium/155/macos"
+    },
+    {
+      "name": "chromium/macos/156",
+      "target": "chromium/156/macos"
+    },
+    {
+      "name": "chromium/macos/157",
+      "target": "chromium/157/macos"
+    },
+    {
+      "name": "chromium/macos/158",
+      "target": "chromium/158/macos"
+    },
+    {
+      "name": "chromium/macos/159",
+      "target": "chromium/159/macos"
+    },
+    {
+      "name": "chromium/macos/160",
+      "target": "chromium/160/macos"
+    },
+    {
+      "name": "chromium/windows/150",
+      "target": "chromium/150/windows"
+    },
+    {
+      "name": "chromium/windows/151",
+      "target": "chromium/151/windows"
+    },
+    {
+      "name": "chromium/windows/152",
+      "target": "chromium/152/windows"
+    },
+    {
+      "name": "chromium/windows/153",
+      "target": "chromium/153/windows"
+    },
+    {
+      "name": "chromium/windows/154",
+      "target": "chromium/154/windows"
+    },
+    {
+      "name": "chromium/windows/155",
+      "target": "chromium/155/windows"
+    },
+    {
+      "name": "chromium/windows/156",
+      "target": "chromium/156/windows"
+    },
+    {
+      "name": "chromium/windows/157",
+      "target": "chromium/157/windows"
+    },
+    {
+      "name": "chromium/windows/158",
+      "target": "chromium/158/windows"
+    },
+    {
+      "name": "chromium/windows/159",
+      "target": "chromium/159/windows"
+    },
+    {
+      "name": "chromium/windows/160",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "chromium/windows/160/legacy-ja4r",
+      "target": "chromium/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "chromium150",
+      "target": "chromium/150/windows"
+    },
+    {
+      "name": "chromium150-linux",
+      "target": "chromium/150/linux"
+    },
+    {
+      "name": "chromium150-mac",
+      "target": "chromium/150/macos"
+    },
+    {
+      "name": "chromium150-win",
+      "target": "chromium/150/windows"
+    },
+    {
+      "name": "chromium151",
+      "target": "chromium/151/windows"
+    },
+    {
+      "name": "chromium151-linux",
+      "target": "chromium/151/linux"
+    },
+    {
+      "name": "chromium151-mac",
+      "target": "chromium/151/macos"
+    },
+    {
+      "name": "chromium151-win",
+      "target": "chromium/151/windows"
+    },
+    {
+      "name": "chromium152",
+      "target": "chromium/152/windows"
+    },
+    {
+      "name": "chromium152-linux",
+      "target": "chromium/152/linux"
+    },
+    {
+      "name": "chromium152-mac",
+      "target": "chromium/152/macos"
+    },
+    {
+      "name": "chromium152-win",
+      "target": "chromium/152/windows"
+    },
+    {
+      "name": "chromium153",
+      "target": "chromium/153/windows"
+    },
+    {
+      "name": "chromium153-linux",
+      "target": "chromium/153/linux"
+    },
+    {
+      "name": "chromium153-mac",
+      "target": "chromium/153/macos"
+    },
+    {
+      "name": "chromium153-win",
+      "target": "chromium/153/windows"
+    },
+    {
+      "name": "chromium154",
+      "target": "chromium/154/windows"
+    },
+    {
+      "name": "chromium154-linux",
+      "target": "chromium/154/linux"
+    },
+    {
+      "name": "chromium154-mac",
+      "target": "chromium/154/macos"
+    },
+    {
+      "name": "chromium154-win",
+      "target": "chromium/154/windows"
+    },
+    {
+      "name": "chromium155",
+      "target": "chromium/155/windows"
+    },
+    {
+      "name": "chromium155-linux",
+      "target": "chromium/155/linux"
+    },
+    {
+      "name": "chromium155-mac",
+      "target": "chromium/155/macos"
+    },
+    {
+      "name": "chromium155-win",
+      "target": "chromium/155/windows"
+    },
+    {
+      "name": "chromium156",
+      "target": "chromium/156/windows"
+    },
+    {
+      "name": "chromium156-linux",
+      "target": "chromium/156/linux"
+    },
+    {
+      "name": "chromium156-mac",
+      "target": "chromium/156/macos"
+    },
+    {
+      "name": "chromium156-win",
+      "target": "chromium/156/windows"
+    },
+    {
+      "name": "chromium157",
+      "target": "chromium/157/windows"
+    },
+    {
+      "name": "chromium157-linux",
+      "target": "chromium/157/linux"
+    },
+    {
+      "name": "chromium157-mac",
+      "target": "chromium/157/macos"
+    },
+    {
+      "name": "chromium157-win",
+      "target": "chromium/157/windows"
+    },
+    {
+      "name": "chromium158",
+      "target": "chromium/158/windows"
+    },
+    {
+      "name": "chromium158-linux",
+      "target": "chromium/158/linux"
+    },
+    {
+      "name": "chromium158-mac",
+      "target": "chromium/158/macos"
+    },
+    {
+      "name": "chromium158-win",
+      "target": "chromium/158/windows"
+    },
+    {
+      "name": "chromium159",
+      "target": "chromium/159/windows"
+    },
+    {
+      "name": "chromium159-linux",
+      "target": "chromium/159/linux"
+    },
+    {
+      "name": "chromium159-mac",
+      "target": "chromium/159/macos"
+    },
+    {
+      "name": "chromium159-win",
+      "target": "chromium/159/windows"
+    },
+    {
+      "name": "chromium160",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "chromium160-linux",
+      "target": "chromium/160/linux"
+    },
+    {
+      "name": "chromium160-mac",
+      "target": "chromium/160/macos"
+    },
+    {
+      "name": "chromium160-win",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "edge",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "edge-ja4r",
+      "target": "edge/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "edge-linux",
+      "target": "edge/160/linux"
+    },
+    {
+      "name": "edge-mac",
+      "target": "edge/160/macos"
+    },
+    {
+      "name": "edge-win",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "edge/linux/150",
+      "target": "edge/150/linux"
+    },
+    {
+      "name": "edge/linux/151",
+      "target": "edge/151/linux"
+    },
+    {
+      "name": "edge/linux/152",
+      "target": "edge/152/linux"
+    },
+    {
+      "name": "edge/linux/153",
+      "target": "edge/153/linux"
+    },
+    {
+      "name": "edge/linux/154",
+      "target": "edge/154/linux"
+    },
+    {
+      "name": "edge/linux/155",
+      "target": "edge/155/linux"
+    },
+    {
+      "name": "edge/linux/156",
+      "target": "edge/156/linux"
+    },
+    {
+      "name": "edge/linux/157",
+      "target": "edge/157/linux"
+    },
+    {
+      "name": "edge/linux/158",
+      "target": "edge/158/linux"
+    },
+    {
+      "name": "edge/linux/159",
+      "target": "edge/159/linux"
+    },
+    {
+      "name": "edge/linux/160",
+      "target": "edge/160/linux"
+    },
+    {
+      "name": "edge/macos/150",
+      "target": "edge/150/macos"
+    },
+    {
+      "name": "edge/macos/151",
+      "target": "edge/151/macos"
+    },
+    {
+      "name": "edge/macos/152",
+      "target": "edge/152/macos"
+    },
+    {
+      "name": "edge/macos/153",
+      "target": "edge/153/macos"
+    },
+    {
+      "name": "edge/macos/154",
+      "target": "edge/154/macos"
+    },
+    {
+      "name": "edge/macos/155",
+      "target": "edge/155/macos"
+    },
+    {
+      "name": "edge/macos/156",
+      "target": "edge/156/macos"
+    },
+    {
+      "name": "edge/macos/157",
+      "target": "edge/157/macos"
+    },
+    {
+      "name": "edge/macos/158",
+      "target": "edge/158/macos"
+    },
+    {
+      "name": "edge/macos/159",
+      "target": "edge/159/macos"
+    },
+    {
+      "name": "edge/macos/160",
+      "target": "edge/160/macos"
+    },
+    {
+      "name": "edge/windows/150",
+      "target": "edge/150/windows"
+    },
+    {
+      "name": "edge/windows/151",
+      "target": "edge/151/windows"
+    },
+    {
+      "name": "edge/windows/152",
+      "target": "edge/152/windows"
+    },
+    {
+      "name": "edge/windows/153",
+      "target": "edge/153/windows"
+    },
+    {
+      "name": "edge/windows/154",
+      "target": "edge/154/windows"
+    },
+    {
+      "name": "edge/windows/155",
+      "target": "edge/155/windows"
+    },
+    {
+      "name": "edge/windows/156",
+      "target": "edge/156/windows"
+    },
+    {
+      "name": "edge/windows/157",
+      "target": "edge/157/windows"
+    },
+    {
+      "name": "edge/windows/158",
+      "target": "edge/158/windows"
+    },
+    {
+      "name": "edge/windows/159",
+      "target": "edge/159/windows"
+    },
+    {
+      "name": "edge/windows/160",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "edge/windows/160/legacy-ja4r",
+      "target": "edge/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "edge150",
+      "target": "edge/150/windows"
+    },
+    {
+      "name": "edge150-linux",
+      "target": "edge/150/linux"
+    },
+    {
+      "name": "edge150-mac",
+      "target": "edge/150/macos"
+    },
+    {
+      "name": "edge150-win",
+      "target": "edge/150/windows"
+    },
+    {
+      "name": "edge151",
+      "target": "edge/151/windows"
+    },
+    {
+      "name": "edge151-linux",
+      "target": "edge/151/linux"
+    },
+    {
+      "name": "edge151-mac",
+      "target": "edge/151/macos"
+    },
+    {
+      "name": "edge151-win",
+      "target": "edge/151/windows"
+    },
+    {
+      "name": "edge152",
+      "target": "edge/152/windows"
+    },
+    {
+      "name": "edge152-linux",
+      "target": "edge/152/linux"
+    },
+    {
+      "name": "edge152-mac",
+      "target": "edge/152/macos"
+    },
+    {
+      "name": "edge152-win",
+      "target": "edge/152/windows"
+    },
+    {
+      "name": "edge153",
+      "target": "edge/153/windows"
+    },
+    {
+      "name": "edge153-linux",
+      "target": "edge/153/linux"
+    },
+    {
+      "name": "edge153-mac",
+      "target": "edge/153/macos"
+    },
+    {
+      "name": "edge153-win",
+      "target": "edge/153/windows"
+    },
+    {
+      "name": "edge154",
+      "target": "edge/154/windows"
+    },
+    {
+      "name": "edge154-linux",
+      "target": "edge/154/linux"
+    },
+    {
+      "name": "edge154-mac",
+      "target": "edge/154/macos"
+    },
+    {
+      "name": "edge154-win",
+      "target": "edge/154/windows"
+    },
+    {
+      "name": "edge155",
+      "target": "edge/155/windows"
+    },
+    {
+      "name": "edge155-linux",
+      "target": "edge/155/linux"
+    },
+    {
+      "name": "edge155-mac",
+      "target": "edge/155/macos"
+    },
+    {
+      "name": "edge155-win",
+      "target": "edge/155/windows"
+    },
+    {
+      "name": "edge156",
+      "target": "edge/156/windows"
+    },
+    {
+      "name": "edge156-linux",
+      "target": "edge/156/linux"
+    },
+    {
+      "name": "edge156-mac",
+      "target": "edge/156/macos"
+    },
+    {
+      "name": "edge156-win",
+      "target": "edge/156/windows"
+    },
+    {
+      "name": "edge157",
+      "target": "edge/157/windows"
+    },
+    {
+      "name": "edge157-linux",
+      "target": "edge/157/linux"
+    },
+    {
+      "name": "edge157-mac",
+      "target": "edge/157/macos"
+    },
+    {
+      "name": "edge157-win",
+      "target": "edge/157/windows"
+    },
+    {
+      "name": "edge158",
+      "target": "edge/158/windows"
+    },
+    {
+      "name": "edge158-linux",
+      "target": "edge/158/linux"
+    },
+    {
+      "name": "edge158-mac",
+      "target": "edge/158/macos"
+    },
+    {
+      "name": "edge158-win",
+      "target": "edge/158/windows"
+    },
+    {
+      "name": "edge159",
+      "target": "edge/159/windows"
+    },
+    {
+      "name": "edge159-linux",
+      "target": "edge/159/linux"
+    },
+    {
+      "name": "edge159-mac",
+      "target": "edge/159/macos"
+    },
+    {
+      "name": "edge159-win",
+      "target": "edge/159/windows"
+    },
+    {
+      "name": "edge160",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "edge160-linux",
+      "target": "edge/160/linux"
+    },
+    {
+      "name": "edge160-mac",
+      "target": "edge/160/macos"
+    },
+    {
+      "name": "edge160-win",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "firefox",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "firefox-ja4r",
+      "target": "firefox/4/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox/linux/151",
+      "target": "firefox/151/linux"
+    },
+    {
+      "name": "firefox/linux/152",
+      "target": "firefox/152/linux"
+    },
+    {
+      "name": "firefox/linux/153",
+      "target": "firefox/153/linux"
+    },
+    {
+      "name": "firefox/linux/154",
+      "target": "firefox/154/linux"
+    },
+    {
+      "name": "firefox/linux/155",
+      "target": "firefox/155/linux"
+    },
+    {
+      "name": "firefox/linux/156",
+      "target": "firefox/156/linux"
+    },
+    {
+      "name": "firefox/linux/157",
+      "target": "firefox/157/linux"
+    },
+    {
+      "name": "firefox/linux/158",
+      "target": "firefox/158/linux"
+    },
+    {
+      "name": "firefox/linux/159",
+      "target": "firefox/159/linux"
+    },
+    {
+      "name": "firefox/linux/160",
+      "target": "firefox/160/linux"
+    },
+    {
+      "name": "firefox/macos/151",
+      "target": "firefox/151/macos"
+    },
+    {
+      "name": "firefox/macos/152",
+      "target": "firefox/152/macos"
+    },
+    {
+      "name": "firefox/macos/153",
+      "target": "firefox/153/macos"
+    },
+    {
+      "name": "firefox/macos/154",
+      "target": "firefox/154/macos"
+    },
+    {
+      "name": "firefox/macos/155",
+      "target": "firefox/155/macos"
+    },
+    {
+      "name": "firefox/macos/156",
+      "target": "firefox/156/macos"
+    },
+    {
+      "name": "firefox/macos/157",
+      "target": "firefox/157/macos"
+    },
+    {
+      "name": "firefox/macos/158",
+      "target": "firefox/158/macos"
+    },
+    {
+      "name": "firefox/macos/159",
+      "target": "firefox/159/macos"
+    },
+    {
+      "name": "firefox/macos/160",
+      "target": "firefox/160/macos"
+    },
+    {
+      "name": "firefox/windows/144",
+      "target": "firefox/144/windows"
+    },
+    {
+      "name": "firefox/windows/144/legacy-ja4r",
+      "target": "firefox/144/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox/windows/147",
+      "target": "firefox/147/windows"
+    },
+    {
+      "name": "firefox/windows/147/legacy-ja4r",
+      "target": "firefox/147/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox/windows/148",
+      "target": "firefox/148/windows"
+    },
+    {
+      "name": "firefox/windows/151",
+      "target": "firefox/151/windows"
+    },
+    {
+      "name": "firefox/windows/151/legacy-ja4r",
+      "target": "firefox/151/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox/windows/152",
+      "target": "firefox/152/windows"
+    },
+    {
+      "name": "firefox/windows/153",
+      "target": "firefox/153/windows"
+    },
+    {
+      "name": "firefox/windows/154",
+      "target": "firefox/154/windows"
+    },
+    {
+      "name": "firefox/windows/155",
+      "target": "firefox/155/windows"
+    },
+    {
+      "name": "firefox/windows/156",
+      "target": "firefox/156/windows"
+    },
+    {
+      "name": "firefox/windows/157",
+      "target": "firefox/157/windows"
+    },
+    {
+      "name": "firefox/windows/158",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "firefox/windows/1584/legacy-ja4r",
+      "target": "firefox/1584/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox/windows/159",
+      "target": "firefox/159/windows"
+    },
+    {
+      "name": "firefox/windows/160",
+      "target": "firefox/160/windows"
+    },
+    {
+      "name": "firefox/windows/4/legacy-ja4r",
+      "target": "firefox/4/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox144",
+      "target": "firefox/144/windows"
+    },
+    {
+      "name": "firefox144-ja4r",
+      "target": "firefox/144/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox144-win",
+      "target": "firefox/144/windows"
+    },
+    {
+      "name": "firefox147",
+      "target": "firefox/147/windows"
+    },
+    {
+      "name": "firefox147-ja4r",
+      "target": "firefox/147/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox147-win",
+      "target": "firefox/147/windows"
+    },
+    {
+      "name": "firefox148",
+      "target": "firefox/148/windows"
+    },
+    {
+      "name": "firefox148-win",
+      "target": "firefox/148/windows"
+    },
+    {
+      "name": "firefox151",
+      "target": "firefox/151/windows"
+    },
+    {
+      "name": "firefox151-ja4r",
+      "target": "firefox/151/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox151-linux",
+      "target": "firefox/151/linux"
+    },
+    {
+      "name": "firefox151-mac",
+      "target": "firefox/151/macos"
+    },
+    {
+      "name": "firefox151-win",
+      "target": "firefox/151/windows"
+    },
+    {
+      "name": "firefox152",
+      "target": "firefox/152/windows"
+    },
+    {
+      "name": "firefox152-linux",
+      "target": "firefox/152/linux"
+    },
+    {
+      "name": "firefox152-mac",
+      "target": "firefox/152/macos"
+    },
+    {
+      "name": "firefox152-win",
+      "target": "firefox/152/windows"
+    },
+    {
+      "name": "firefox153",
+      "target": "firefox/153/windows"
+    },
+    {
+      "name": "firefox153-linux",
+      "target": "firefox/153/linux"
+    },
+    {
+      "name": "firefox153-mac",
+      "target": "firefox/153/macos"
+    },
+    {
+      "name": "firefox153-win",
+      "target": "firefox/153/windows"
+    },
+    {
+      "name": "firefox154",
+      "target": "firefox/154/windows"
+    },
+    {
+      "name": "firefox154-linux",
+      "target": "firefox/154/linux"
+    },
+    {
+      "name": "firefox154-mac",
+      "target": "firefox/154/macos"
+    },
+    {
+      "name": "firefox154-win",
+      "target": "firefox/154/windows"
+    },
+    {
+      "name": "firefox155",
+      "target": "firefox/155/windows"
+    },
+    {
+      "name": "firefox155-linux",
+      "target": "firefox/155/linux"
+    },
+    {
+      "name": "firefox155-mac",
+      "target": "firefox/155/macos"
+    },
+    {
+      "name": "firefox155-win",
+      "target": "firefox/155/windows"
+    },
+    {
+      "name": "firefox156",
+      "target": "firefox/156/windows"
+    },
+    {
+      "name": "firefox156-linux",
+      "target": "firefox/156/linux"
+    },
+    {
+      "name": "firefox156-mac",
+      "target": "firefox/156/macos"
+    },
+    {
+      "name": "firefox156-win",
+      "target": "firefox/156/windows"
+    },
+    {
+      "name": "firefox157",
+      "target": "firefox/157/windows"
+    },
+    {
+      "name": "firefox157-linux",
+      "target": "firefox/157/linux"
+    },
+    {
+      "name": "firefox157-mac",
+      "target": "firefox/157/macos"
+    },
+    {
+      "name": "firefox157-win",
+      "target": "firefox/157/windows"
+    },
+    {
+      "name": "firefox158",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "firefox158-ja4r",
+      "target": "firefox/1584/windows/legacy-ja4r"
+    },
+    {
+      "name": "firefox158-linux",
+      "target": "firefox/158/linux"
+    },
+    {
+      "name": "firefox158-mac",
+      "target": "firefox/158/macos"
+    },
+    {
+      "name": "firefox158-win",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "firefox159",
+      "target": "firefox/159/windows"
+    },
+    {
+      "name": "firefox159-linux",
+      "target": "firefox/159/linux"
+    },
+    {
+      "name": "firefox159-mac",
+      "target": "firefox/159/macos"
+    },
+    {
+      "name": "firefox159-win",
+      "target": "firefox/159/windows"
+    },
+    {
+      "name": "firefox160",
+      "target": "firefox/160/windows"
+    },
+    {
+      "name": "firefox160-linux",
+      "target": "firefox/160/linux"
+    },
+    {
+      "name": "firefox160-mac",
+      "target": "firefox/160/macos"
+    },
+    {
+      "name": "firefox160-win",
+      "target": "firefox/160/windows"
+    },
+    {
+      "name": "imitate.chrome",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "imitate.chrome120",
+      "target": "chrome/120/windows"
+    },
+    {
+      "name": "imitate.chrome142",
+      "target": "chrome/142/windows"
+    },
+    {
+      "name": "imitate.chrome150",
+      "target": "chrome/150/windows"
+    },
+    {
+      "name": "imitate.chromeversion",
+      "target": "chrome/160/windows"
+    },
+    {
+      "name": "imitate.chromium",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "imitate.chromiumversion",
+      "target": "chromium/160/windows"
+    },
+    {
+      "name": "imitate.edge",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "imitate.edgeversion",
+      "target": "edge/160/windows"
+    },
+    {
+      "name": "imitate.firefox",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "imitate.firefox144",
+      "target": "firefox/144/windows"
+    },
+    {
+      "name": "imitate.firefox147",
+      "target": "firefox/147/windows"
+    },
+    {
+      "name": "imitate.firefox148",
+      "target": "firefox/148/windows"
+    },
+    {
+      "name": "imitate.firefox151",
+      "target": "firefox/151/windows"
+    },
+    {
+      "name": "imitate.firefox158",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "imitate.firefoxversion",
+      "target": "firefox/158/windows"
+    },
+    {
+      "name": "imitate.opera",
+      "target": "opera/145/windows"
+    },
+    {
+      "name": "imitate.safari",
+      "target": "safari/18.7.3/ipados"
+    },
+    {
+      "name": "ja4r.chrome120ja4",
+      "target": "chrome/1204/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.chrome142ja4",
+      "target": "chrome/1424/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.chrome150ja4",
+      "target": "chrome/1504/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.chromeja4",
+      "target": "chrome/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.chromiumja4",
+      "target": "chromium/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.edgeja4",
+      "target": "edge/160/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.firefox144ja4",
+      "target": "firefox/144/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.firefox147ja4",
+      "target": "firefox/147/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.firefox151ja4",
+      "target": "firefox/151/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.firefox158ja4",
+      "target": "firefox/1584/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.firefoxja4",
+      "target": "firefox/4/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.operaja4",
+      "target": "opera/145/windows/legacy-ja4r"
+    },
+    {
+      "name": "ja4r.safarija4",
+      "target": "safari/18.7.3/ipados/legacy-ja4r"
+    },
+    {
+      "name": "opera",
+      "target": "opera/145/windows"
+    },
+    {
+      "name": "opera-ja4r",
+      "target": "opera/145/windows/legacy-ja4r"
+    },
+    {
+      "name": "opera/windows/145",
+      "target": "opera/145/windows"
+    },
+    {
+      "name": "opera/windows/145/legacy-ja4r",
+      "target": "opera/145/windows/legacy-ja4r"
+    },
+    {
+      "name": "safari",
+      "target": "safari/18.7.3/ipados"
+    },
+    {
+      "name": "safari-ja4r",
+      "target": "safari/18.7.3/ipados/legacy-ja4r"
+    },
+    {
+      "name": "safari/ipados/18.7.3",
+      "target": "safari/18.7.3/ipados"
+    },
+    {
+      "name": "safari/ipados/18.7.3/legacy-ja4r",
+      "target": "safari/18.7.3/ipados/legacy-ja4r"
+    }
+  ]
+}

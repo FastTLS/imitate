@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "chromium_routes": [
+    {
+      "max_version": 105,
+      "record": "legacy/chrome-105"
+    },
+    {
+      "max_version": 115,
+      "record": "legacy/chrome-115"
+    },
+    {
+      "max_version": 116,
+      "record": "legacy/chrome-116"
+    },
+    {
+      "max_version": 118,
+      "record": "legacy/chrome-118"
+    },
+    {
+      "max_version": 121,
+      "record": "legacy/chrome-121"
+    },
+    {
+      "max_version": 123,
+      "record": "legacy/chrome-123"
+    },
+    {
+      "max_version": 130,
+      "record": "legacy/chrome-130"
+    },
+    {
+      "max_version": 131,
+      "record": "legacy/chrome-131"
+    },
+    {
+      "max_version": 135,
+      "record": "legacy/chrome-135"
+    },
+    {
+      "max_version": 149,
+      "record": "legacy/chromium-142-random-priority"
+    },
+    {
+      "max_version": 0,
+      "record": "legacy/chrome-150"
+    }
+  ],
+  "firefox_routes": [
+    {
+      "max_version": 131,
+      "record": "legacy/firefox-131-priority-tree"
+    },
+    {
+      "max_version": 146,
+      "record": "legacy/firefox-144"
+    },
+    {
+      "max_version": 150,
+      "record": "legacy/firefox-147"
+    },
+    {
+      "max_version": 0,
+      "record": "legacy/firefox-151"
+    }
+  ]
+}

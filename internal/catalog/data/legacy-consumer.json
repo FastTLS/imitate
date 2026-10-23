@@ -1,0 +1,2409 @@
+{
+  "schema_version": 1,
+  "description": "transitional legacy fixtures; not executable complete Spec",
+  "records": [
+    {
+      "name": "legacy/chrome",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "legacy",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "6237673d853529f05cd726e625fd9be35072fbeeb05bd9f3090fd5f2d923a1ee"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65281"
+        ],
+        "optional": [
+          "21"
+        ]
+      }
+    },
+    {
+      "name": "legacy/chrome-0",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "0",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "",
+      "preserve_user_agent": true,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome0.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "32b9727fdab16d80049c44aa27e6629db7c85fec6cafe42c5396636892a1245c"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65281"
+        ],
+        "optional": [
+          "21"
+        ]
+      }
+    },
+    {
+      "name": "legacy/chrome-105",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "105",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65037-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.246 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome105.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "5c0a08b73121e4a0107a896ae5a8f7e6237633ac065ebe65f45a38540fe1ff4a"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-115",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "115",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65037-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome115.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "8d903094653abf6d4244ca7eaa14c8e5eec748dd2369d06fff8e839187738e0c"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": [
+          "21"
+        ]
+      }
+    },
+    {
+      "name": "legacy/chrome-116",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "116",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65037-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome116.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "cece0744d4bb88f9d427934bff9f2a1130f3c73133f82516d07a5ea84f09d2e8"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": [
+          "21"
+        ]
+      }
+    },
+    {
+      "name": "legacy/chrome-118",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "118",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65037-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome118.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "3a2da72cf2e80cd5988f0845bcabb925364674cbfa5fdb91d55a74235483a5c7"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-121",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "121",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17513-65037-65281,25497-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome121.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "d1b8044be9d46e394e134004a54445f1eb4ed69cacdb32acda1391628efff4cd"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-123",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "123",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17513-65037-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome123.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "099b053096b2298d2765825be2179a3ed030e8bc55a0b13f902f63d43472c6b4"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-130",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "130",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17513-65037-65281,25497-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome130.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "9df3d3776afb9a203431134c52a4c213fa968da11b3436a876695a59a6616791"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-131",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "131",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17513-65037-65281,4588-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome131.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "13ae3e308d103a3ab88c7e672a3a42a0d4da0e5b19e494773da5210ea62eaaf0"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-135",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "135",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17613-65037-65281,4588-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome135.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "183f662441d6217506d6da74afc2823827c880313216d5b383ad03c4eca59a5f"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17613",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chromium-142-random-priority",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "142",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17613-65037-65281,4588-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome142.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "07b899c0d976e07874e83514f611e8f2a738c749d73c07b46fa0a1eaa4292212"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17613",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/chrome-150",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "150",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-11-0-17613-5-45-23-65037-16-27-13-10-18-35-51-43-41,4588-29-23-24,0",
+      "http2_settings": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
+      "http2": null,
+      "pseudo_header_order": null,
+      "set_pseudo_header_order": false,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/chrome150.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "3b9988d8bda6570d2fad998e2847e1ba27a39683ed6d4fab90a4652535992e6b"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    },
+    {
+      "name": "legacy/chromium",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chromium",
+        "product_version": "legacy",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-21-23-27-35-43-45-51-17513-65037-65281,29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "preserve_user_agent": false,
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "if_empty": true
+        },
+        {
+          "name": "Sec-Ch-Ua",
+          "value": "\"Chromium\";v=\"115\", \"Not/A)Brand\";v=\"99\"",
+          "if_empty": false
+        }
+      ],
+      "delete_headers": [],
+      "header_order": null,
+      "set_header_order": false,
+      "source": {
+        "path": "src/imitate/chromium.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "0d184eb4ed979a6a1611421c59703c5ef34ea54df116ccb65e66f4aa70eb0247"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "21",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17513",
+          "65037",
+          "65281"
+        ],
+        "optional": [
+          "21"
+        ]
+      }
+    },
+    {
+      "name": "legacy/edge",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "edge",
+        "product_version": "legacy",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17613-65037-65281,4588-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/edge.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "a63c1528d313782a1c9c7838ef9dac3ef8939ce3cfb01cf1aaf0f53459460975"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17613",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/firefox-131-priority-tree",
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "legacy",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-5-10-11-13-16-23-28-34-35-43-45-51-65037-65281,29-23-24-25-256-257,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "connection_flow": 12517377,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 13,
+          "weight": 42,
+          "exclusive": false
+        },
+        "priority_frames": [
+          {
+            "stream_id": 3,
+            "dependency": 0,
+            "weight": 201,
+            "exclusive": false
+          },
+          {
+            "stream_id": 5,
+            "dependency": 0,
+            "weight": 101,
+            "exclusive": false
+          },
+          {
+            "stream_id": 7,
+            "dependency": 0,
+            "weight": 1,
+            "exclusive": false
+          },
+          {
+            "stream_id": 9,
+            "dependency": 7,
+            "weight": 1,
+            "exclusive": false
+          },
+          {
+            "stream_id": 11,
+            "dependency": 3,
+            "weight": 1,
+            "exclusive": false
+          },
+          {
+            "stream_id": 13,
+            "dependency": 0,
+            "weight": 241,
+            "exclusive": false
+          }
+        ]
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":path",
+        ":authority",
+        ":scheme"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [
+        "Sec-CH-UA",
+        "Sec-CH-UA-Arch",
+        "Sec-CH-UA-Full-Version",
+        "Sec-CH-UA-Mobile",
+        "Sec-CH-UA-Model",
+        "Sec-CH-UA-Platform",
+        "Sec-CH-UA-Platform-Version",
+        "Sec-Ch-Ua",
+        "Sec-Ch-Ua-Arch",
+        "Sec-Ch-Ua-Full-Version",
+        "Sec-Ch-Ua-Mobile",
+        "Sec-Ch-Ua-Model",
+        "Sec-Ch-Ua-Platform",
+        "Sec-Ch-Ua-Platform-Version",
+        "sec-ch-ua",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-model",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version"
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/firefox.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "5832ce0a8350e234680ba0fb87e4a936defdd556981499651e694046efe63de7"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    },
+    {
+      "name": "legacy/firefox-144",
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "144",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "connection_flow": 12517377,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 42,
+          "exclusive": false
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":path",
+        ":authority",
+        ":scheme"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [
+        "Sec-CH-UA",
+        "Sec-CH-UA-Arch",
+        "Sec-CH-UA-Full-Version",
+        "Sec-CH-UA-Mobile",
+        "Sec-CH-UA-Model",
+        "Sec-CH-UA-Platform",
+        "Sec-CH-UA-Platform-Version",
+        "Sec-Ch-Ua",
+        "Sec-Ch-Ua-Arch",
+        "Sec-Ch-Ua-Full-Version",
+        "Sec-Ch-Ua-Mobile",
+        "Sec-Ch-Ua-Model",
+        "Sec-Ch-Ua-Platform",
+        "Sec-Ch-Ua-Platform-Version",
+        "sec-ch-ua",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-model",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version"
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/firefox144.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "b5bf9ac89bedf677ebb2afb117b97d810b2d75efefecd836ceba793d29ab6888"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    },
+    {
+      "name": "legacy/firefox-147",
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "147",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "connection_flow": 12517377,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 42,
+          "exclusive": false
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":path",
+        ":authority",
+        ":scheme"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [
+        "Sec-CH-UA",
+        "Sec-CH-UA-Arch",
+        "Sec-CH-UA-Full-Version",
+        "Sec-CH-UA-Mobile",
+        "Sec-CH-UA-Model",
+        "Sec-CH-UA-Platform",
+        "Sec-CH-UA-Platform-Version",
+        "Sec-Ch-Ua",
+        "Sec-Ch-Ua-Arch",
+        "Sec-Ch-Ua-Full-Version",
+        "Sec-Ch-Ua-Mobile",
+        "Sec-Ch-Ua-Model",
+        "Sec-Ch-Ua-Platform",
+        "Sec-Ch-Ua-Platform-Version",
+        "sec-ch-ua",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-model",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version"
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/firefox147.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "50a90f80665065d6ec790012bcf8f2979b5225b5c0ec18565a34968858fe95e7"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    },
+    {
+      "name": "legacy/firefox-151",
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "151",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "connection_flow": 12517377,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 42,
+          "exclusive": false
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":path",
+        ":authority",
+        ":scheme"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [
+        "Sec-CH-UA",
+        "Sec-CH-UA-Arch",
+        "Sec-CH-UA-Full-Version",
+        "Sec-CH-UA-Mobile",
+        "Sec-CH-UA-Model",
+        "Sec-CH-UA-Platform",
+        "Sec-CH-UA-Platform-Version",
+        "Sec-Ch-Ua",
+        "Sec-Ch-Ua-Arch",
+        "Sec-Ch-Ua-Full-Version",
+        "Sec-Ch-Ua-Mobile",
+        "Sec-Ch-Ua-Model",
+        "Sec-Ch-Ua-Platform",
+        "Sec-Ch-Ua-Platform-Version",
+        "sec-ch-ua",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-model",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version"
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/firefox151.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "7e6c9bd87a813de3d581e7894f655db9f8004a1cfe40a3c2f4ef130dde79ac01"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    },
+    {
+      "name": "legacy/opera",
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "opera",
+        "product_version": "legacy",
+        "platform": "windows",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-16-18-23-27-35-43-45-51-17613-65037-65281,4588-29-23-24,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "connection_flow": 15663105,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 256,
+          "exclusive": true
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":authority",
+        ":scheme",
+        ":path"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "src/imitate/opera.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "c198a117ff37df5b132872f1d3f5b7988cd9cdeffcc5e78a8d7668a5e242ef0f"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": {
+        "strategy": "legacy-swap-permutation",
+        "extensions": [
+          "0",
+          "5",
+          "10",
+          "11",
+          "13",
+          "16",
+          "18",
+          "23",
+          "27",
+          "35",
+          "43",
+          "45",
+          "51",
+          "17613",
+          "65037",
+          "65281"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "name": "legacy/webkit-desktop-15.3",
+      "metadata": {
+        "kind": "browser",
+        "family": "webkit",
+        "product": "safari",
+        "product_version": "legacy",
+        "platform": "macos",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 4194304
+          },
+          {
+            "id": 3,
+            "value": 100
+          }
+        ],
+        "connection_flow": 10485760,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 255,
+          "exclusive": false
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":scheme",
+        ":path",
+        ":authority"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [
+        "Sec-CH-UA",
+        "Sec-CH-UA-Arch",
+        "Sec-CH-UA-Full-Version",
+        "Sec-CH-UA-Mobile",
+        "Sec-CH-UA-Model",
+        "Sec-CH-UA-Platform",
+        "Sec-CH-UA-Platform-Version",
+        "Sec-Ch-Ua",
+        "Sec-Ch-Ua-Arch",
+        "Sec-Ch-Ua-Full-Version",
+        "Sec-Ch-Ua-Mobile",
+        "Sec-Ch-Ua-Model",
+        "Sec-Ch-Ua-Platform",
+        "Sec-Ch-Ua-Platform-Version",
+        "sec-ch-ua",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-model",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version"
+      ],
+      "header_order": null,
+      "set_header_order": false,
+      "source": {
+        "path": "src/imitate/safari.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "307a2bba412404d4fb9258ce42c96ca18b55deb108d638cc5485352f6bc5a941"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    },
+    {
+      "name": "legacy/webkit-ios-15.3",
+      "metadata": {
+        "kind": "browser",
+        "family": "webkit",
+        "product": "safari",
+        "product_version": "legacy",
+        "platform": "ios",
+        "variant": "legacy-import"
+      },
+      "fingerprint_type": "ja3",
+      "fingerprint": "772,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0",
+      "http2_settings": "",
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 3,
+            "value": 100
+          }
+        ],
+        "connection_flow": 10485760,
+        "header_priority": {
+          "stream_id": 0,
+          "dependency": 0,
+          "weight": 255,
+          "exclusive": false
+        },
+        "priority_frames": []
+      },
+      "pseudo_header_order": [
+        ":method",
+        ":scheme",
+        ":path",
+        ":authority"
+      ],
+      "set_pseudo_header_order": true,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15",
+      "preserve_user_agent": false,
+      "headers": [],
+      "delete_headers": [
+        "Sec-CH-UA",
+        "Sec-CH-UA-Arch",
+        "Sec-CH-UA-Full-Version",
+        "Sec-CH-UA-Mobile",
+        "Sec-CH-UA-Model",
+        "Sec-CH-UA-Platform",
+        "Sec-CH-UA-Platform-Version",
+        "Sec-Ch-Ua",
+        "Sec-Ch-Ua-Arch",
+        "Sec-Ch-Ua-Full-Version",
+        "Sec-Ch-Ua-Mobile",
+        "Sec-Ch-Ua-Model",
+        "Sec-Ch-Ua-Platform",
+        "Sec-Ch-Ua-Platform-Version",
+        "sec-ch-ua",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-model",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version"
+      ],
+      "header_order": null,
+      "set_header_order": false,
+      "source": {
+        "path": "src/imitate/safari-ios.go",
+        "head": "3213acb80c950ce53f58923807ded6acae0ba611",
+        "sha256_before_data_migration": "ffd27904ceee979ae49c21051a8ccd89a8351b065260aca4b7a02f936f70af27"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "random_extensions": null
+    }
+  ],
+  "ja4r": {}
+}

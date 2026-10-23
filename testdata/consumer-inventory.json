@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "source_head": "3213acb80c950ce53f58923807ded6acae0ba611",
+  "source_repository": "local legacy consumer; not live browser evidence",
+  "files": [
+    {
+      "path": "go.mod",
+      "sha256": "c4a334642f61c310becb9441a35dc7ecd238b639aebe7a44b25bd6115cce3636"
+    },
+    {
+      "path": "go.sum",
+      "sha256": "0dfde3576180a17be7ce076aa41723d62fe492ae40c4a06a2a26611fe345be2d"
+    },
+    {
+      "path": "src/common/utils/fp.go",
+      "sha256": "ea2edefab96d46bbac628255ac4d3aa57df5a457a9b647c2f43cdbb3d9958ce9"
+    },
+    {
+      "path": "src/common/utils/ua.go",
+      "sha256": "2f3276fa0b17936a4b6b7c1610fc0bf1d02a90670d3d56b34344cf4ba52de4bf"
+    },
+    {
+      "path": "src/imitate/chrome.go",
+      "sha256": "6237673d853529f05cd726e625fd9be35072fbeeb05bd9f3090fd5f2d923a1ee"
+    },
+    {
+      "path": "src/imitate/chrome0.go",
+      "sha256": "32b9727fdab16d80049c44aa27e6629db7c85fec6cafe42c5396636892a1245c"
+    },
+    {
+      "path": "src/imitate/chrome105.go",
+      "sha256": "5c0a08b73121e4a0107a896ae5a8f7e6237633ac065ebe65f45a38540fe1ff4a"
+    },
+    {
+      "path": "src/imitate/chrome115.go",
+      "sha256": "8d903094653abf6d4244ca7eaa14c8e5eec748dd2369d06fff8e839187738e0c"
+    },
+    {
+      "path": "src/imitate/chrome116.go",
+      "sha256": "cece0744d4bb88f9d427934bff9f2a1130f3c73133f82516d07a5ea84f09d2e8"
+    },
+    {
+      "path": "src/imitate/chrome118.go",
+      "sha256": "3a2da72cf2e80cd5988f0845bcabb925364674cbfa5fdb91d55a74235483a5c7"
+    },
+    {
+      "path": "src/imitate/chrome121.go",
+      "sha256": "d1b8044be9d46e394e134004a54445f1eb4ed69cacdb32acda1391628efff4cd"
+    },
+    {
+      "path": "src/imitate/chrome123.go",
+      "sha256": "099b053096b2298d2765825be2179a3ed030e8bc55a0b13f902f63d43472c6b4"
+    },
+    {
+      "path": "src/imitate/chrome130.go",
+      "sha256": "9df3d3776afb9a203431134c52a4c213fa968da11b3436a876695a59a6616791"
+    },
+    {
+      "path": "src/imitate/chrome131.go",
+      "sha256": "13ae3e308d103a3ab88c7e672a3a42a0d4da0e5b19e494773da5210ea62eaaf0"
+    },
+    {
+      "path": "src/imitate/chrome135.go",
+      "sha256": "183f662441d6217506d6da74afc2823827c880313216d5b383ad03c4eca59a5f"
+    },
+    {
+      "path": "src/imitate/chrome142.go",
+      "sha256": "07b899c0d976e07874e83514f611e8f2a738c749d73c07b46fa0a1eaa4292212"
+    },
+    {
+      "path": "src/imitate/chrome150.go",
+      "sha256": "3b9988d8bda6570d2fad998e2847e1ba27a39683ed6d4fab90a4652535992e6b"
+    },
+    {
+      "path": "src/imitate/chrome150_test.go",
+      "sha256": "fd523cb8e54dae5ee7130e8c3899296131046e6eada8b6e08841a9d0cd29fd25"
+    },
+    {
+      "path": "src/imitate/chromium.go",
+      "sha256": "0d184eb4ed979a6a1611421c59703c5ef34ea54df116ccb65e66f4aa70eb0247"
+    },
+    {
+      "path": "src/imitate/edge.go",
+      "sha256": "a63c1528d313782a1c9c7838ef9dac3ef8939ce3cfb01cf1aaf0f53459460975"
+    },
+    {
+      "path": "src/imitate/firefox.go",
+      "sha256": "5832ce0a8350e234680ba0fb87e4a936defdd556981499651e694046efe63de7"
+    },
+    {
+      "path": "src/imitate/firefox144.go",
+      "sha256": "b5bf9ac89bedf677ebb2afb117b97d810b2d75efefecd836ceba793d29ab6888"
+    },
+    {
+      "path": "src/imitate/firefox147.go",
+      "sha256": "50a90f80665065d6ec790012bcf8f2979b5225b5c0ec18565a34968858fe95e7"
+    },
+    {
+      "path": "src/imitate/firefox151.go",
+      "sha256": "7e6c9bd87a813de3d581e7894f655db9f8004a1cfe40a3c2f4ef130dde79ac01"
+    },
+    {
+      "path": "src/imitate/index.go",
+      "sha256": "ae823fbeaee4ec2465bec6d11ffb32c832166d6ce66ec111940bb9f769e24780"
+    },
+    {
+      "path": "src/imitate/opera.go",
+      "sha256": "c198a117ff37df5b132872f1d3f5b7988cd9cdeffcc5e78a8d7668a5e242ef0f"
+    },
+    {
+      "path": "src/imitate/safari-ios.go",
+      "sha256": "ffd27904ceee979ae49c21051a8ccd89a8351b065260aca4b7a02f936f70af27"
+    },
+    {
+      "path": "src/imitate/safari.go",
+      "sha256": "307a2bba412404d4fb9258ce42c96ca18b55deb108d638cc5485352f6bc5a941"
+    }
+  ],
+  "entrypoints": {
+    "Chrome": "legacy/chrome",
+    "Chrome0": "legacy/chrome-0",
+    "Chrome105": "legacy/chrome-105",
+    "Chrome115": "legacy/chrome-115",
+    "Chrome116": "legacy/chrome-116",
+    "Chrome118": "legacy/chrome-118",
+    "Chrome121": "legacy/chrome-121",
+    "Chrome123": "legacy/chrome-123",
+    "Chrome130": "legacy/chrome-130",
+    "Chrome131": "legacy/chrome-131",
+    "Chrome135": "legacy/chrome-135",
+    "Chrome142": "legacy/chromium-142-random-priority",
+    "Chrome150": "legacy/chrome-150",
+    "Chromium": "legacy/chromium",
+    "Edge": "legacy/edge",
+    "Firefox": "legacy/firefox-131-priority-tree",
+    "Firefox144": "legacy/firefox-144",
+    "Firefox147": "legacy/firefox-147",
+    "Firefox151": "legacy/firefox-151",
+    "Opera": "legacy/opera",
+    "SafariIOS": "legacy/webkit-ios-15.3",
+    "Safari": "legacy/webkit-desktop-15.3"
+  },
+  "initial_headers": {
+    "Accept": "provided",
+    "Accept-Encoding": "provided",
+    "Accept-Language": "provided",
+    "Priority": "provided",
+    "Sec-CH-UA": "provided",
+    "Sec-CH-UA-Arch": "provided",
+    "Sec-CH-UA-Full-Version": "provided",
+    "Sec-CH-UA-Mobile": "provided",
+    "Sec-CH-UA-Model": "provided",
+    "Sec-CH-UA-Platform": "provided",
+    "Sec-CH-UA-Platform-Version": "provided",
+    "Sec-Ch-Ua": "provided",
+    "Sec-Ch-Ua-Arch": "provided",
+    "Sec-Ch-Ua-Full-Version": "provided",
+    "Sec-Ch-Ua-Mobile": "provided",
+    "Sec-Ch-Ua-Model": "provided",
+    "Sec-Ch-Ua-Platform": "provided",
+    "Sec-Ch-Ua-Platform-Version": "provided",
+    "Sec-Fetch-Dest": "provided",
+    "Sec-Fetch-Mode": "provided",
+    "Sec-Fetch-Site": "provided",
+    "Sec-Fetch-User": "provided",
+    "sec-ch-ua": "provided",
+    "sec-ch-ua-arch": "provided",
+    "sec-ch-ua-full-version": "provided",
+    "sec-ch-ua-mobile": "provided",
+    "sec-ch-ua-model": "provided",
+    "sec-ch-ua-platform": "provided",
+    "sec-ch-ua-platform-version": "provided",
+    "te": "provided",
+    "upgrade-insecure-requests": "provided",
+    "X-Preserved": "keep"
+  },
+  "chromium_routes": [
+    {
+      "max_version": 105,
+      "record": "legacy/chrome-105"
+    },
+    {
+      "max_version": 115,
+      "record": "legacy/chrome-115"
+    },
+    {
+      "max_version": 116,
+      "record": "legacy/chrome-116"
+    },
+    {
+      "max_version": 118,
+      "record": "legacy/chrome-118"
+    },
+    {
+      "max_version": 121,
+      "record": "legacy/chrome-121"
+    },
+    {
+      "max_version": 123,
+      "record": "legacy/chrome-123"
+    },
+    {
+      "max_version": 130,
+      "record": "legacy/chrome-130"
+    },
+    {
+      "max_version": 131,
+      "record": "legacy/chrome-131"
+    },
+    {
+      "max_version": 135,
+      "record": "legacy/chrome-135"
+    },
+    {
+      "max_version": 149,
+      "record": "legacy/chromium-142-random-priority"
+    },
+    {
+      "max_version": 160,
+      "record": "legacy/chrome-150"
+    }
+  ],
+  "firefox_routes": [
+    {
+      "max_version": 131,
+      "record": "legacy/firefox-131-priority-tree"
+    },
+    {
+      "max_version": 146,
+      "record": "legacy/firefox-144"
+    },
+    {
+      "max_version": 150,
+      "record": "legacy/firefox-147"
+    },
+    {
+      "max_version": 10000,
+      "record": "legacy/firefox-151"
+    }
+  ],
+  "limitations": [
+    "UA generation quirks preserved only for migration",
+    "SafariIOS preset contains a desktop UA",
+    "no fields verified against live browsers",
+    "MakeTlsOptions iOS Safari currently selects desktop Safari, not SafariIOS",
+    "random bytes and global PRNG sequence are not a compatibility contract"
+  ]
+}

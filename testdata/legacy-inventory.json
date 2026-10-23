@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "source_head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+  "baseline": "before profile runtime migration; nil-header panic fixed separately",
+  "preset_invocations": 74,
+  "initial_states": [
+    "empty",
+    "populated"
+  ],
+  "wrapper_count": 31,
+  "random_rules": {
+    "imitate.Chrome120": {
+      "required_extensions": "0-5-10-11-13-16-18-23-27-35-43-45-51-17513-65037-65281-41",
+      "optional": [
+        "21"
+      ],
+      "last": "41",
+      "order": "random-permutation"
+    }
+  },
+  "service_sources": [
+    {
+      "path": "fastls-fetch/fingerprint.go",
+      "sha256": "fea4bc6d8d69ca89cb153588ad7277f4f5e81f783c2bf37ae7f562926d983e95",
+      "literal_case_aliases": [
+        "120",
+        "142",
+        "\"chrome\"",
+        "\"chrome120\"",
+        "\"chrome142\"",
+        "\"chromium\"",
+        "\"edge\"",
+        "\"firefox\"",
+        "\"firefox144\"",
+        "\"firefox147\"",
+        "\"firefox148\"",
+        "\"safari\"",
+        "\"opera\""
+      ],
+      "import_uses_core": true
+    },
+    {
+      "path": "fastls-mitm/fingerprint.go",
+      "sha256": "ef70a10ab64f84b3abf38f9a864cce8c9c29f49e26354b335fcbc4eeda0b2164",
+      "literal_case_aliases": [
+        "\"chrome\"",
+        "\"chrome120\"",
+        "\"chrome142\"",
+        "\"chromium\"",
+        "\"edge\"",
+        "\"firefox\"",
+        "\"firefox144\"",
+        "\"firefox147\"",
+        "\"firefox151\"",
+        "\"safari\"",
+        "\"opera\"",
+        "\"chrome\"",
+        "\"chrome120\"",
+        "\"chrome142\"",
+        "\"chromium\"",
+        "\"edge\"",
+        "\"firefox\"",
+        "\"firefox144\"",
+        "\"firefox147\"",
+        "\"firefox151\"",
+        "\"safari\"",
+        "\"opera\""
+      ],
+      "import_uses_core": true
+    },
+    {
+      "path": "fastls-rpc/grpc/fingerprint.go",
+      "sha256": "d99652d1befc085970ce9a45518ebb24439bcaf793e5bf04f8eb64fdd54ac373",
+      "literal_case_aliases": [
+        "120",
+        "142",
+        "\"chrome\"",
+        "\"chrome120\"",
+        "\"chrome142\"",
+        "\"chromium\"",
+        "\"edge\"",
+        "\"firefox\"",
+        "\"firefox144\"",
+        "\"firefox147\"",
+        "\"firefox148\"",
+        "\"safari\"",
+        "\"opera\""
+      ],
+      "import_uses_core": true
+    },
+    {
+      "path": "fastls-rpc/jsonrpc/fingerprint.go",
+      "sha256": "d99652d1befc085970ce9a45518ebb24439bcaf793e5bf04f8eb64fdd54ac373",
+      "literal_case_aliases": [
+        "120",
+        "142",
+        "\"chrome\"",
+        "\"chrome120\"",
+        "\"chrome142\"",
+        "\"chromium\"",
+        "\"edge\"",
+        "\"firefox\"",
+        "\"firefox144\"",
+        "\"firefox147\"",
+        "\"firefox148\"",
+        "\"safari\"",
+        "\"opera\""
+      ],
+      "import_uses_core": true
+    }
+  ],
+  "identity_generators": {
+    "chromium": {
+      "min": 150,
+      "max": 160,
+      "default": 160,
+      "policy": "clamp in legacy only"
+    },
+    "firefox": {
+      "threshold": 158,
+      "below_baseline": 151,
+      "at_or_above_baseline": 158,
+      "policy": "UA-only for other requested majors"
+    }
+  }
+}

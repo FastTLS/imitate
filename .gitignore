@@ -1,0 +1,13 @@
+go.work
+go.work.sum
+reports/
+dist/
+build/
+__pycache__/
+*.pyc
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.log

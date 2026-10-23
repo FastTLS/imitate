@@ -1,0 +1,876 @@
+{
+  "schema_version": 1,
+  "description": "compatibility migration input, not a complete real-client Spec; JA4R shares header records through existing family wrappers",
+  "records": [
+    {
+      "name": "Chrome120",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49120-52393-52392-49171-49172-156-157-47-53,<random-permutation;optional-padding21;psk41-last>,29-23-24,0",
+      "http2_settings": "1:65536;2:0;4:6291456;6:262144|15663105|0:256:true|m,a,s,p",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "if_empty": true
+        },
+        {
+          "name": "Sec-Ch-Ua",
+          "value": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Ch-Ua-Mobile",
+          "value": "?0",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Ch-Ua-Platform",
+          "value": "\"Windows\"",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "Upgrade-Insecure-Requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "referer"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/chrome120.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "3cfcf86264323f9dbc267a8e4b1a2d7d143a9edd559ef5f5dc46a726692b5e42"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chrome",
+        "product_version": "120",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Chrome142",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-27-51-13-0-11-10-5-18-35-43-45-17613-23-65037-16-41,4588-29-23-24,0",
+      "http2_settings": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "if_empty": true
+        },
+        {
+          "name": "Sec-Ch-Ua",
+          "value": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Ch-Ua-Mobile",
+          "value": "?0",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Ch-Ua-Platform",
+          "value": "\"Windows\"",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "Upgrade-Insecure-Requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/chrome142.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "7f9ac243a3fa232f1c870b5488c61434ffe8cc3dfefad8ed8d446ad17590db2a"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chrome",
+        "product_version": "142",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Chrome150",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-11-0-17613-5-45-23-65037-16-27-13-10-18-35-51-43-41,4588-29-23-24,0",
+      "http2_settings": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "if_empty": true
+        },
+        {
+          "name": "Sec-Ch-Ua",
+          "value": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Ch-Ua-Mobile",
+          "value": "?0",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Ch-Ua-Platform",
+          "value": "\"Windows\"",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "Upgrade-Insecure-Requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "pragma",
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "upgrade-insecure-requests",
+        "user-agent",
+        "accept",
+        "sec-fetch-site",
+        "sec-fetch-mode",
+        "sec-fetch-user",
+        "sec-fetch-dest",
+        "referer",
+        "accept-encoding",
+        "accept-language",
+        "cookie",
+        "priority"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/chrome150.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "bd0d137e157d508df1b04ccbbecfbcb2822f96c856fdbc34bb331eff13dc9e59"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "chromium",
+        "product": "chrome",
+        "product_version": "150",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Firefox144",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "1:65536;2:0;4:131072;5:16384|12517377|0|m,p,a,s",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "if_empty": true
+        },
+        {
+          "name": "Accept-Encoding",
+          "value": "gzip, deflate, br, zstd",
+          "if_empty": false
+        },
+        {
+          "name": "Accept-Language",
+          "value": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+          "if_empty": true
+        },
+        {
+          "name": "Priority",
+          "value": "u=0, i",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "te",
+          "value": "trailers",
+          "if_empty": false
+        },
+        {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/firefox144.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "07a830f28696b170fcc3eacde0804a565ab67dc7245dc60994975be4c326578a"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "144",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Firefox147",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "1:65536;2:0;4:131072;5:16384|12517377|0:42:false|m,p,a,s",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "if_empty": true
+        },
+        {
+          "name": "Accept-Encoding",
+          "value": "gzip, deflate, br, zstd",
+          "if_empty": false
+        },
+        {
+          "name": "Accept-Language",
+          "value": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+          "if_empty": true
+        },
+        {
+          "name": "Priority",
+          "value": "u=0, i",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "te",
+          "value": "trailers",
+          "if_empty": false
+        },
+        {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/firefox147.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "5ae7db25edc7becd75a40fd6966659329818c3d61c28bfae2bf072fed73f4ce4"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "147",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Firefox148",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "1:65536;2:0;4:131072;5:16384|12517377|0:42:false|m,p,a,s",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "if_empty": true
+        },
+        {
+          "name": "Accept-Encoding",
+          "value": "gzip, deflate, br, zstd",
+          "if_empty": false
+        },
+        {
+          "name": "Accept-Language",
+          "value": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+          "if_empty": true
+        },
+        {
+          "name": "Priority",
+          "value": "u=0, i",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "te",
+          "value": "trailers",
+          "if_empty": false
+        },
+        {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/firefox148.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b01dfb35ba55dc07bb2f2cd439e38b324d67473bc518b969c5c7b2d3ec78084b"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "148",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Firefox151",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0",
+      "http2_settings": "1:65536;2:0;4:131072;5:16384|12517377|0:42:false|m,p,a,s",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "if_empty": true
+        },
+        {
+          "name": "Accept-Encoding",
+          "value": "gzip, deflate, br, zstd",
+          "if_empty": false
+        },
+        {
+          "name": "Accept-Language",
+          "value": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+          "if_empty": true
+        },
+        {
+          "name": "Priority",
+          "value": "u=0, i",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "te",
+          "value": "trailers",
+          "if_empty": false
+        },
+        {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/firefox151.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "29e2b73a9e207cb19a7157feeacc9f22fb113c5aa985f70e0261ce0f541f5ee4"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "151",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Firefox158",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-65037,4588-29-23-24-25,0",
+      "http2_settings": "1:65536;2:0;4:131072;5:16384|12517377|0:42:false|m,p,a,s",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "if_empty": true
+        },
+        {
+          "name": "Accept-Encoding",
+          "value": "gzip, deflate, br, zstd",
+          "if_empty": false
+        },
+        {
+          "name": "Accept-Language",
+          "value": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+          "if_empty": true
+        },
+        {
+          "name": "Priority",
+          "value": "u=0, i",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Dest",
+          "value": "document",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Mode",
+          "value": "navigate",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-Site",
+          "value": "none",
+          "if_empty": false
+        },
+        {
+          "name": "Sec-Fetch-User",
+          "value": "?1",
+          "if_empty": false
+        },
+        {
+          "name": "te",
+          "value": "trailers",
+          "if_empty": false
+        },
+        {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+          "if_empty": false
+        }
+      ],
+      "header_order": [
+        "host",
+        "connection",
+        "cache-control",
+        "device-memory",
+        "viewport-width",
+        "rtt",
+        "downlink",
+        "ect",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-full-version",
+        "sec-ch-ua-arch",
+        "sec-ch-ua-platform",
+        "sec-ch-ua-platform-version",
+        "sec-ch-ua-model",
+        "user-agent",
+        "accept",
+        "accept-language",
+        "accept-encoding",
+        "upgrade-insecure-requests",
+        "sec-fetch-dest",
+        "sec-fetch-mode",
+        "sec-fetch-site",
+        "sec-fetch-user",
+        "cookie",
+        "referer",
+        "priority",
+        "te"
+      ],
+      "set_header_order": true,
+      "source": {
+        "path": "imitate/firefox158.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "c09185378b116b54770394d45fd3ee19116ee55c3ec9cdde807ed14849555d24"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "gecko",
+        "product": "firefox",
+        "product_version": "158",
+        "platform": "windows",
+        "device": "desktop",
+        "variant": "legacy-core"
+      }
+    },
+    {
+      "name": "Safari",
+      "fingerprint_type": "ja3",
+      "fingerprint": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0",
+      "http2_settings": "2:0;3:100;4:2097152;9:1|10420225|0:256:false|m,s,a,p",
+      "user_agent": "Mozilla/5.0 (iPad; CPU OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7.3 Mobile/15E148 Safari/604.1",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "if_empty": true
+        }
+      ],
+      "header_order": null,
+      "set_header_order": false,
+      "source": {
+        "path": "imitate/safari.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "f4095cfee96f8f22fc7830f1cf0fa71332ed5cf0c84384da21e38c6c0fdd3d26"
+      },
+      "legacy": true,
+      "verified_fields": [],
+      "metadata": {
+        "kind": "browser",
+        "family": "webkit",
+        "product": "safari",
+        "product_version": "18.7.3",
+        "platform": "ipados",
+        "device": "ipad",
+        "variant": "legacy-core"
+      }
+    }
+  ],
+  "ja4r": {
+    "Chrome120": "t13d1517h2_002f,0035,009c,009d,1301,1302,1303,bfe0,c013,c014,c02b,c02c,c02f,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,0029,002b,002d,0033,4469,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
+    "Chrome142": "t13d1517h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,0029,002b,002d,0033,44cd,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
+    "Chrome150": "t13d1517h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,0029,002b,002d,0033,44cd,fe0d,ff01_0904,0905,0906,0403,0804,0401,0503,0805,0501,0806,0601",
+    "Firefox158": "t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001c,0022,0023,002b,002d,0033,fe0d,ff01_0403,0503,0603,0804,0805,0806,0401,0501,0601,0203,0201",
+    "Safari": "t13d2014h2_000a,002f,0035,009c,009d,1301,1302,1303,c008,c009,c00a,c012,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,002b,002d,0033,ff01_0403,0804,0401,0503,0805,0805,0501,0806,0601,0201"
+  }
+}

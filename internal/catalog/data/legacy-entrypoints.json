@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "description": "Legacy wrapper bindings and identity projections; exact selection does not imply browser verification",
+  "entrypoints": [
+    {
+      "entrypoint": "imitate.Chrome",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "ChromeVersion",
+      "version": 160,
+      "source": {
+        "path": "imitate/chrome.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "baae49d2e6c9d321637186f6d185c82d8f01e2c9b505c715326f92524c11bd03"
+      }
+    },
+    {
+      "entrypoint": "imitate.Chrome120",
+      "record": "Chrome120",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/chrome120.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "ce5a99848af73503d91d3319219af1eff7b123f41bd999fc1298af968e9c7531"
+      }
+    },
+    {
+      "entrypoint": "imitate.Chrome142",
+      "record": "Chrome142",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/chrome142.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "74db79f62af8196567a6c7c8c57d7739c69c22b2067b2fc62da0936f5933f210"
+      }
+    },
+    {
+      "entrypoint": "imitate.Chrome150",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/chrome150.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "bceb822060767ff2f57b96b9371b091379d0590d0c5c63d4c15bed42caf42e80"
+      }
+    },
+    {
+      "entrypoint": "imitate.Chromium",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "ChromiumVersion",
+      "version": 160,
+      "source": {
+        "path": "imitate/chromium.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "43a8b808a407b0bf155648b0907d13f1d42467fdf2f9cecfae81b10c8249f166"
+      }
+    },
+    {
+      "entrypoint": "imitate.ChromeVersion",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "ChromeVersion",
+      "version": 0,
+      "source": {
+        "path": "imitate/chromium_headers.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "bb95a960ed1950d41119e99e3bd820bf6dd3051ed90e3c7dcfe7c8693aa8ee40"
+      }
+    },
+    {
+      "entrypoint": "imitate.EdgeVersion",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "EdgeVersion",
+      "version": 0,
+      "source": {
+        "path": "imitate/chromium_headers.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "bb95a960ed1950d41119e99e3bd820bf6dd3051ed90e3c7dcfe7c8693aa8ee40"
+      }
+    },
+    {
+      "entrypoint": "imitate.ChromiumVersion",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "ChromiumVersion",
+      "version": 0,
+      "source": {
+        "path": "imitate/chromium_headers.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "bb95a960ed1950d41119e99e3bd820bf6dd3051ed90e3c7dcfe7c8693aa8ee40"
+      }
+    },
+    {
+      "entrypoint": "imitate.Edge",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "EdgeVersion",
+      "version": 160,
+      "source": {
+        "path": "imitate/edge.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "d4a8d27617d7a5de8d70f8ac494b245d9acf36ff806bf4b3c32ab5b7e8b1a077"
+      }
+    },
+    {
+      "entrypoint": "imitate.Firefox144",
+      "record": "Firefox144",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox144.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "25a825cc0d44f5ca02eb1599610a530bf739b0332cfcd38ac2156775ce7f415b"
+      }
+    },
+    {
+      "entrypoint": "imitate.Firefox147",
+      "record": "Firefox147",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox147.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "db9a9bd4484689be5797142379271f13ebe49ed9c82e809bec2461e9247e78bd"
+      }
+    },
+    {
+      "entrypoint": "imitate.Firefox148",
+      "record": "Firefox148",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox148.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b8576414403f7e70b5c5b0db8e5936c4cfeeca75833641d7ac28fb8947ae5944"
+      }
+    },
+    {
+      "entrypoint": "imitate.Firefox151",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox151.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "ea05c66babfec4af85e0faebe8ee4fbc2018fefa98017807d5f5feeadb8cc499"
+      }
+    },
+    {
+      "entrypoint": "imitate.Firefox158",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox158.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "ee8921daaa0b215e5c1bb1da3dd1562e7888b91309e2946ab2f283045e41856d"
+      }
+    },
+    {
+      "entrypoint": "imitate.Firefox",
+      "record": "Firefox158",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox158.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "ee8921daaa0b215e5c1bb1da3dd1562e7888b91309e2946ab2f283045e41856d"
+      }
+    },
+    {
+      "entrypoint": "imitate.FirefoxVersion",
+      "record": "Firefox151",
+      "projection": "ja3",
+      "identity_rule": "FirefoxVersion",
+      "version": 0,
+      "source": {
+        "path": "imitate/firefox_version.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "543173a35173e17a7bd1ce7c69a4cbf61a6cf512b0ec18bdbcdcf43c081dafd3"
+      }
+    },
+    {
+      "entrypoint": "imitate.Opera",
+      "record": "Chrome150",
+      "projection": "ja3",
+      "identity_rule": "OperaIdentity",
+      "version": 160,
+      "source": {
+        "path": "imitate/opera.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "871a7dd5261859976ca676ffc12f89fdbd9185469af11cfab059a9696d80449b"
+      }
+    },
+    {
+      "entrypoint": "imitate.Safari",
+      "record": "Safari",
+      "projection": "ja3",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/safari.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "ded4217289a4bebb2c8930f3214b4a057f8deb24354d0cc81a9b80340c5d1c94"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Chrome120JA4",
+      "record": "Chrome120",
+      "projection": "ja4r",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/ja4r/chrome120_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b75376c063386d7a5801497d6ae2b30df665e21fe19a7ec43737fb295b8d9b7c"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Chrome142JA4",
+      "record": "Chrome142",
+      "projection": "ja4r",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/ja4r/chrome142_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "f089af95f282c55ad2ac4c34ac530d0c6f084608684933fe25190f8b52976f88"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Chrome150JA4",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/ja4r/chrome150_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "7bc23a7f25c9890038767dbf756896173d034f4aad344e86b1f570bc84c35a8e"
+      }
+    },
+    {
+      "entrypoint": "ja4r.ChromeJA4",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "identity_rule": "ChromeVersion",
+      "version": 160,
+      "source": {
+        "path": "imitate/ja4r/chrome_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "2823134326f14e3bb8330262173c9c2939a23126513994ce41c220ae1b4ae4a9"
+      }
+    },
+    {
+      "entrypoint": "ja4r.ChromiumJA4",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "identity_rule": "ChromiumVersion",
+      "version": 160,
+      "source": {
+        "path": "imitate/ja4r/chromium_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "cef735862f98af9aed0f8336159d53bc8c09bfaab2c8060e38942af43cb0ef2d"
+      }
+    },
+    {
+      "entrypoint": "ja4r.EdgeJA4",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "identity_rule": "EdgeVersion",
+      "version": 160,
+      "source": {
+        "path": "imitate/ja4r/edge_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "45d05c33cafb8df0eb97eec9ec2ed14157cc3d056b387f05ebdd3ac758cc9c23"
+      }
+    },
+    {
+      "entrypoint": "ja4r.FirefoxJA4",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/ja4r/firefox_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b12e863d9d39c35b6c6d57c7fd9d59622d63286ea6cf03d5ded56597b3a409c3"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Firefox158JA4",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/ja4r/firefox_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b12e863d9d39c35b6c6d57c7fd9d59622d63286ea6cf03d5ded56597b3a409c3"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Firefox144JA4",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "identity_rule": "FirefoxIdentity",
+      "version": 144,
+      "source": {
+        "path": "imitate/ja4r/firefox_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b12e863d9d39c35b6c6d57c7fd9d59622d63286ea6cf03d5ded56597b3a409c3"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Firefox147JA4",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "identity_rule": "FirefoxIdentity",
+      "version": 147,
+      "source": {
+        "path": "imitate/ja4r/firefox_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b12e863d9d39c35b6c6d57c7fd9d59622d63286ea6cf03d5ded56597b3a409c3"
+      }
+    },
+    {
+      "entrypoint": "ja4r.Firefox151JA4",
+      "record": "Firefox158",
+      "projection": "ja4r",
+      "identity_rule": "FirefoxIdentity",
+      "version": 151,
+      "source": {
+        "path": "imitate/ja4r/firefox_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "b12e863d9d39c35b6c6d57c7fd9d59622d63286ea6cf03d5ded56597b3a409c3"
+      }
+    },
+    {
+      "entrypoint": "ja4r.OperaJA4",
+      "record": "Chrome150",
+      "projection": "ja4r",
+      "identity_rule": "OperaIdentity",
+      "version": 160,
+      "source": {
+        "path": "imitate/ja4r/opera_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "98841ac61317d49b5f0981749dbc311f9b416804400a87b3ff9adb0fc79897da"
+      }
+    },
+    {
+      "entrypoint": "ja4r.SafariJA4",
+      "record": "Safari",
+      "projection": "ja4r",
+      "identity_rule": "",
+      "version": 0,
+      "source": {
+        "path": "imitate/ja4r/safari_ja4.go",
+        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
+        "sha256_before_data_migration": "8f4a71ab93ac789a1198b1f9532fbd6ffed2b18dd2e39be9395702e98f3bdb5f"
+      }
+    }
+  ],
+  "version_rules": [
+    {
+      "name": "ChromeVersion",
+      "minimum": 150,
+      "maximum": 160,
+      "default": 160,
+      "out_of_range": "clamp",
+      "ranges": [
+        {
+          "max_version": 160,
+          "record": "Chrome150"
+        }
+      ]
+    },
+    {
+      "name": "EdgeVersion",
+      "minimum": 150,
+      "maximum": 160,
+      "default": 160,
+      "out_of_range": "clamp",
+      "ranges": [
+        {
+          "max_version": 160,
+          "record": "Chrome150"
+        }
+      ]
+    },
+    {
+      "name": "ChromiumVersion",
+      "minimum": 150,
+      "maximum": 160,
+      "default": 160,
+      "out_of_range": "clamp",
+      "ranges": [
+        {
+          "max_version": 160,
+          "record": "Chrome150"
+        }
+      ]
+    },
+    {
+      "name": "FirefoxVersion",
+      "out_of_range": "unbounded-legacy-identity",
+      "ranges": [
+        {
+          "max_version": 157,
+          "record": "Firefox151"
+        },
+        {
+          "max_version": 0,
+          "record": "Firefox158"
+        }
+      ]
+    }
+  ]
+}
