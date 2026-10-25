@@ -1,15 +1,2 @@
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.2 h1:RfIjQSwvR6iXxyTTLq0TEqU1iJVLJI1VQcX2fycTvN0=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.2/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.3 h1:a2MeezLqxiIqELrQne22om1PKe1OvcRB3o1psYWJ9mI=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.3/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.4 h1:UNncGFFMfy/1BPxrVKUCZDcNqiIHLPTJmJz1Qon5SDU=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.4/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.5 h1:X/PMDu0kRqCL3wDD4tZDY6cSpLvbD5gFcLyAR6JrsQ8=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.5/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.6 h1:4QzFnurAmgO+PRaGNZCfb2z2ryyTakrcwzdDGIrlDlU=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.6/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.7 h1:eLPajMJjGXxcU7uTynyR4P396gHA4kBn5DQh788wu+w=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.7/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.8 h1:4+RfjkwTaehDu1jmczP2elLGhNvDWw5d5qvmD1LPS7Y=
-github.com/FastTLS/fastls/profile v0.1.0-dev.20261023.8/go.mod h1:RtFAj8dLHQAA8tVT32FGNo73jPEb1ueyA5CJRuzk378=
+github.com/FastTLS/fastls/profile v0.0.0-20261024135115-f2b213de88e4 h1:zTh8DuAFx+esIce8Vrr2OwplrUU9AaJ9VKimEQVdLJM=
+github.com/FastTLS/fastls/profile v0.0.0-20261024135115-f2b213de88e4/go.mod h1:dXt6QcpzDhLvBAqbNIpQ2g/vqgUXQRRuaxotdZB6EbU=
