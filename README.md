@@ -29,6 +29,12 @@ match, err := imitate.Use(&options, "chrome/155/windows")
 
 UA 生成工具的范围不等于指纹目录的覆盖范围，以 List 返回的有限名称为准。已有配置使用记录的协议基线，不据此声称真实浏览器的全部指纹已经验证。
 
+2026-10-25：正式目录的149个浏览器配置和3个原生配置全部返回完整 `Spec`，在线解析和离线导出不再通过 JA3/JA4R 重建协议。浏览器数据的维护入口是 `browser-specs.json`；`internal/recipes` 仅保留历史配方及身份工具，不再作为正式 TLS 目录的执行入口。迁移保留原有规范 ID；带 `legacy-ja4r` 的历史 ID 也承载完整 Spec。历史数据迁移不等于新增实机验证。缺少后端实现的历史声明通过 `capabilities.advertised_only` 明确保留，不宣称能够协商。
+
+Edge 151–156 的 Windows 配置已按官方稳定版实测对齐 en-US 顶层导航请求头、HTTP/1 头名大小写及协议专属头，TLS 显式携带签名列表、GREASE 和扩展排序策略。离线包保留相同的每连接随机策略。独立浏览器证据在 `testdata/edge-windows-20261025.json`；其他平台、其他补丁版本、其他请求场景和 ECH 的完整随机分布尚未验证。ML-DSA 仅为线上声明，当前 uTLS 后端不能验证 ML-DSA 的 CertificateVerify；RSA/ECDSA 服务端握手另有回归覆盖。`RecordedOnly` 不因此把整个配置提升为完整实机一致。
+
+该修订必须配套包含新协议头字段和能力检查的 profile/核心版本使用。本地跨仓构建使用工作区绑定；各模块正式发布前需要先发布匹配的 profile 和核心依赖，不能只升级数据包后假设旧后端支持新字段。
+
 原生配置：
 
 - `library/fastls/2/any/portable-h1`

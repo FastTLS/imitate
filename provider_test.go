@@ -42,7 +42,7 @@ func TestCanonicalCatalogAndBrandGeneration(t *testing.T) {
 	}
 	ua := "Firefox/151.0"
 	r, err := p.Resolve(context.Background(), profile.ResolveRequest{Selector: "chrome/156/windows", UserAgent: &ua})
-	if err != nil || r.Match.Product != "chrome" || !strings.Contains(r.Legacy.UserAgent, "Chrome/156.") {
+	if err != nil || r.Match.Product != "chrome" || r.Spec == nil || !strings.Contains(r.Spec.Identity.UserAgent, "Chrome/156.") {
 		t.Fatal(r.Match, err)
 	}
 }
@@ -66,7 +66,7 @@ func TestFiniteRangeCancellationAndIndependentOwnership(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	r.Headers.Rules[0].Values[0] = "changed"
+	r.Spec.Headers.Defaults[0].Values[0] = "changed"
 	var wg sync.WaitGroup
 	for i := 0; i < 32; i++ {
 		wg.Add(1)
@@ -77,7 +77,7 @@ func TestFiniteRangeCancellationAndIndependentOwnership(t *testing.T) {
 				t.Error(err)
 				return
 			}
-			for _, h := range r.Headers.Rules {
+			for _, h := range r.Spec.Headers.Defaults {
 				if strings.Contains(strings.Join(h.Values, ""), "changed") {
 					t.Error("shared mutable output")
 				}
@@ -85,4 +85,42 @@ func TestFiniteRangeCancellationAndIndependentOwnership(t *testing.T) {
 		}()
 	}
 	wg.Wait()
+}
+
+func TestEveryCanonicalRecordIsACompleteSpec(t *testing.T) {
+	p := imitate.New()
+	ids, err := p.List()
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, id := range ids {
+		r, err := p.Resolve(context.Background(), profile.ResolveRequest{Selector: id})
+		if err != nil {
+			t.Fatal(id, err)
+		}
+		if r.Legacy != nil || r.Spec == nil {
+			t.Fatal("canonical catalog depends on legacy fingerprint", id)
+		}
+		if err := profile.ValidateResolution(r); err != nil {
+			t.Fatal(id, err)
+		}
+		fallback, err := p.Resolve(context.Background(), profile.ResolveRequest{Defaults: profile.Defaults{Selector: id}})
+		if err != nil || fallback.Spec == nil || fallback.Spec.ID != id {
+			t.Fatal("explicit default selector failed", id, err)
+		}
+	}
+	r, err := p.Resolve(context.Background(), profile.ResolveRequest{Selector: "edge/156/windows"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	r.Spec.Headers.HTTP1Defaults[0].Values[0] = "changed"
+	r.Spec.Headers.HTTP2Defaults[0].Values[0] = "changed"
+	r.Spec.TLS.Extensions[0].ID = 0xffff
+	again, err := p.Resolve(context.Background(), profile.ResolveRequest{Selector: "edge/156/windows"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if again.Spec.Headers.HTTP1Defaults[0].Values[0] == "changed" || again.Spec.Headers.HTTP2Defaults[0].Values[0] == "changed" || again.Spec.TLS.Extensions[0].ID == 0xffff {
+		t.Fatal("complete specs share mutable state")
+	}
 }

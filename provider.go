@@ -8,14 +8,13 @@ import (
 	"strings"
 
 	"github.com/FastTLS/fastls/profile"
-	"github.com/FastTLS/imitate/internal/catalog"
 	"github.com/FastTLS/imitate/internal/recipes"
 )
 
 const ChromiumVersionMin = 100
 const ChromiumVersionMax = 160
-const Version = "0.1.0-dev.20261023.8"
-const DataRevision = "recipes-20261023.3"
+const Version = "0.1.0"
+const DataRevision = "recipes-20261025.1"
 
 type Provider struct{}
 
@@ -28,37 +27,33 @@ func (p *Provider) Resolve(ctx context.Context, r profile.ResolveRequest) (profi
 	if p == nil {
 		return profile.Resolution{}, fmt.Errorf("%w: nil imitate provider", profile.ErrInvalidOptions)
 	}
+	if r.Selector == "" {
+		r.Selector = r.Defaults.Selector
+	}
 	if strings.HasPrefix(r.Selector, "library/") || strings.HasPrefix(r.Selector, "client/") {
 		return resolveNative(ctx, r)
 	}
-	opts := []recipes.UseOption{recipes.WithDefaults(r.Defaults)}
-	if r.Policy != "" {
-		opts = append(opts, recipes.WithPolicy(r.Policy))
+	selector := r.Selector
+	if r.Policy != "" && r.Policy != profile.AllowCompatible && r.Policy != profile.RecordedOnly {
+		return profile.Resolution{}, profile.ErrInvalidOptions
 	}
-	o := recipes.Options{}
-	m, err := recipes.Use(&o, r.Selector, opts...)
-	if err != nil {
+	result, ok := browserSpecs[selector]
+	if !ok || r.Policy == profile.RecordedOnly && result.Match.Method == "compatible" {
+		return profile.Resolution{}, fmt.Errorf("%w: %s", profile.ErrUnknownProfile, selector)
+	}
+	result = profile.CloneResolution(result)
+	result.Match.Selector = selector
+	result.Match.ProviderID = "FastTLS/imitate"
+	result.Match.ProviderVersion = Version
+	result.Match.DataRevision = DataRevision
+	result.Match.ContractVersion = profile.ContractVersion
+	if err := profile.ValidateResolution(result); err != nil {
 		return profile.Resolution{}, err
 	}
-	h := profile.HeaderPolicy{}
-	keys := make([]string, 0, len(o.Headers))
-	for k := range o.Headers {
-		if !strings.EqualFold(k, "User-Agent") {
-			keys = append(keys, k)
-		}
-	}
-	slices.Sort(keys)
-	for _, k := range keys {
-		h.Rules = append(h.Rules, profile.HeaderRule{Header: profile.Header{Name: k, Values: []string{o.Headers[k]}}, Mode: "default"})
-	}
-	m.ProviderID = "FastTLS/imitate"
-	m.ProviderVersion = Version
-	m.DataRevision = DataRevision
-	m.ContractVersion = profile.ContractVersion
-	if err = ctx.Err(); err != nil {
+	if err := ctx.Err(); err != nil {
 		return profile.Resolution{}, err
 	}
-	return profile.Resolution{Legacy: &profile.LegacyDefinition{Format: profile.LegacyFormat(o.Fingerprint.Type()), Hello: o.Fingerprint.Value(), UserAgent: o.UserAgent, HTTP2: o.HTTP2Settings, HTTP2Settings: o.HTTP2SettingsString, HeaderOrder: o.HeaderOrderKeys, PseudoOrder: o.PHeaderOrderKeys}, Headers: h, Match: m}, nil
+	return result, nil
 }
 
 // List returns finite supported IDs. It never invents future browser versions.
@@ -66,13 +61,9 @@ func (p *Provider) List() ([]string, error) {
 	if p == nil {
 		return nil, fmt.Errorf("%w: nil provider", profile.ErrInvalidOptions)
 	}
-	a, err := catalog.ListBuiltinSelections()
-	if err != nil {
-		return nil, err
-	}
 	ids := []string{}
-	for _, s := range a {
-		ids = append(ids, s.ID)
+	for id := range browserSpecs {
+		ids = append(ids, id)
 	}
 	ids = append(ids, nativeIDs...)
 	slices.Sort(ids)

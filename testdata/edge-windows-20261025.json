@@ -1,0 +1,3953 @@
+{
+  "source": "Windows x64 official Microsoft Edge Stable; headed minimized; en-US fresh profiles; localhost navigation; server session tickets disabled; ephemeral key material omitted by independent fastls-lab",
+  "cases": [
+    {
+      "case_id": "151.0.4129.107-tls12-h1",
+      "version": "151.0.4129.107",
+      "scenario": "tls12-h1",
+      "captured_at": "2026-10-25T02:32:13.826Z",
+      "binary_sha256": "1c43c32ab3d8442171fafa7614015dd5b6977e60f8fa22e63f0c30f0b1e6ccf8",
+      "events": [
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 3,
+          "connection_id": "conn-2",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:32:14.5930946Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              31354,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 47802,
+                "payload_hex": ""
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "001609040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001ce00204178275e1001dcacc842b2e68da9dd87290b34b2da93450317eaf09919735b6c00d0e432a344cf53821e40439d4468a6bf0c9a6bb51b98f79591cdfec1abd7c113a2fd31b4aaf9c8cf9141d5934e293598e6c58a4fc9e53921dd3bcf621c36ea5f5ca415e137b2f10776a28247cf75d0d0aa73276c27e9e02a8b4d4f0d83fa2fbd28d3031b313a5bc3ba58983fd0506105aa34def2a94f890cf52066992e0590455e07a705a87eff1e29f2db06607b24b5f5e98d71d1c9b561603c5f054cb81e5e69cfa1ee1ddd11f5d723ed72ef700f126223dd6e64d3c04b00e29b5f0234853edf5914ba6edbbe3caf730e8c20030a97d7"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  27242,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "06baba03040303"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a6a6a11ec001d00170018"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 6682,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 4,
+          "connection_id": "conn-2",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:32:14.5938179Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 49195,
+            "resumed": false,
+            "version": 771
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 5,
+          "connection_id": "conn-2",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:32:14.5938179Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-151.0.4129.107-tls12-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52315"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Not=A?Brand\";v=\"99\", \"Microsoft Edge\";v=\"151\", \"Chromium\";v=\"151\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "151.0.4129.107-tls13-h1",
+      "version": "151.0.4129.107",
+      "scenario": "tls13-h1",
+      "captured_at": "2026-10-25T02:32:25.031Z",
+      "binary_sha256": "1c43c32ab3d8442171fafa7614015dd5b6977e60f8fa22e63f0c30f0b1e6ccf8",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 3,
+          "connection_id": "conn-2",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:32:25.803588Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              64250,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 19018,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  60138,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06aaaa03040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001609040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001a0002091f32ce61807fe7e2d446bc30995024a26cb29d037eeedc8c60f08712c0ac81f0090d61e88dc79c202be3e0932574d2a254cd6d80f6251892edfbe6c7ed61c0abc32c158fb5e8e92e1f60271f638b15a3589e475035d169b318044e5c1a52d9945ca7f3ba966baeba020a4d372a3a9ca44fb42fbd15144a550f1a0f256ae38c09c4e76db78588a0c164505dbca9876781d3081c89b32294f0a26dd9eea3dfadc8e677f1c34da87a3c34b6f6b2e1a03900308"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000aeaea11ec001d00170018"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 31354,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 4,
+          "connection_id": "conn-2",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:32:25.8046012Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 5,
+          "connection_id": "conn-2",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:32:25.8046012Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-151.0.4129.107-tls13-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52310"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Not=A?Brand\";v=\"99\", \"Microsoft Edge\";v=\"151\", \"Chromium\";v=\"151\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "151.0.4129.107-tls13-h2",
+      "version": "151.0.4129.107",
+      "scenario": "tls13-h2",
+      "captured_at": "2026-10-25T02:32:36.241Z",
+      "binary_sha256": "1c43c32ab3d8442171fafa7614015dd5b6977e60f8fa22e63f0c30f0b1e6ccf8",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 56,
+          "connection_id": "conn-23",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:32:37.0300898Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              23130,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 60138,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "001609040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 43,
+                "payload_hex": "064a4a03040303"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000adada11ec001d00170018"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001360020bd9b502e9acd290fd77eb0630aa9072a88608ffe4ff6596a4d51401691fb1f7f0090f524befc450703d82894b8a5f9749e46ce0bd1d16ed0692705d4f13cb0e65234c96ecc826e74e2cdea7cff84b55b21369ca7c7e8de161975cb6983ae74ef2670ce6328e5846ae1e0a57ef0587be3d9415b4030ac09e6f9eb20d7d1c0ba4a1dd920b06d6dc8f2802535ec08c638ae057d0d0c9b7d614a4e808018f179b394524a866b1666e6c29cfcf332b097c28351a0"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  56026,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 10794,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 57,
+          "connection_id": "conn-23",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:32:37.0312227Z",
+          "data": {
+            "alpn": "h2",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 58,
+          "connection_id": "conn-23",
+          "type": "http2.settings",
+          "time": "2026-10-25T02:32:37.0312227Z",
+          "data": [
+            {
+              "id": 1,
+              "value": 65536
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 4,
+              "value": 6291456
+            },
+            {
+              "id": 6,
+              "value": 262144
+            }
+          ]
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 59,
+          "connection_id": "conn-23",
+          "type": "http2.window_update",
+          "time": "2026-10-25T02:32:37.0312227Z",
+          "data": {
+            "increment": 15663105,
+            "stream_id": 0
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 60,
+          "connection_id": "conn-23",
+          "type": "http2.header_priority",
+          "time": "2026-10-25T02:32:37.0312227Z",
+          "data": {
+            "dependency": 0,
+            "exclusive": true,
+            "stream_id": 1,
+            "weight": 256
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 61,
+          "connection_id": "conn-23",
+          "type": "http2.headers",
+          "time": "2026-10-25T02:32:37.0312227Z",
+          "data": {
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "localhost:52312"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "/inspect?sample=edge-151.0.4129.107-tls13-h2-0"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Not=A?Brand\";v=\"99\", \"Microsoft Edge\";v=\"151\", \"Chromium\";v=\"151\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "scope": "first-request-per-connection",
+            "stream_id": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "152.0.4191.137-tls12-h1",
+      "version": "152.0.4191.137",
+      "scenario": "tls12-h1",
+      "captured_at": "2026-10-25T02:32:48.115Z",
+      "binary_sha256": "e4810067e2d997375e82562cbd9afeafd15e8874d615688dc26001a96819c4d9",
+      "events": [
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 56,
+          "connection_id": "conn-23",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:32:48.9361946Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              19018,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 43690,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  19018,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a4a4a11ec001d00170018"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06aaaa03040303"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100019a002053cde68c9f1e4dabcd8765db1cfbf01af50c1481e2ee1a441b95d074ed00943600907cb5317aa21bb26aced48a66996b87712b17591148654d7dc4f4aa2f70c01ca83d45a942af1ad2078a69ca97ffd2d244bbdafe6c68914942bf61f84ee245955cec0b1848b573dfd27e8275c70abb643858a469b5a7fa1230d4d96b05f5d98eae66c5bc28bfa4324fe4a75b57735443e2d9b326b73bc24d897c71d4fc598e9110165f81ed118229ab7e36abb5c8eadadf"
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018caca09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 47802,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 57,
+          "connection_id": "conn-23",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:32:48.9361946Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 49195,
+            "resumed": false,
+            "version": 771
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 58,
+          "connection_id": "conn-23",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:32:48.9361946Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-152.0.4191.137-tls12-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52315"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Microsoft Edge\";v=\"152\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36 Edg/152.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "152.0.4191.137-tls13-h1",
+      "version": "152.0.4191.137",
+      "scenario": "tls13-h1",
+      "captured_at": "2026-10-25T02:32:59.967Z",
+      "binary_sha256": "e4810067e2d997375e82562cbd9afeafd15e8874d615688dc26001a96819c4d9",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 203,
+          "connection_id": "conn-51",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:33:00.756866Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              60138,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 6682,
+                "payload_hex": ""
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a5a5a11ec001d00170018"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018caca09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 43,
+                "payload_hex": "062a2a03040303"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  23130,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100011e0020673620f44085af9deceb0e8c6f5bc722a5e47d5776ab45b62e8041ec61767a6b00f03bea13470629ddb40a26e15dc6e1640df9bbb7fb34e4890f9c2a393a7be0aae31758284cb86efa6e01a87f4372a8eb16ac6e20f32c4d328cdca3fc62a98db7d84ce265db1ea07b9a3c674d8c59906f4aab5a20b860000d45f8238b73df762001ba86991fe127124078eef78c7da63656a06245b85bd4fd5b70a0dcba5133bb839dd124f16be88b05b0177623458fda9ae2122292b814ba9ecef2bd9d44ceb9d51d06c17171e8bd895da8cb5965e894c4881456bd331dd6dd3ea76d6354f27c5cf7d7835190b4a1fa79b00519d294f81cbd45fc5bfc106ab8f24ca029b4b7a388dea38c4e26e0f360b1b8f9aa8243c7ff"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 60138,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 204,
+          "connection_id": "conn-51",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:33:00.7573705Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 205,
+          "connection_id": "conn-51",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:33:00.7573705Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-152.0.4191.137-tls13-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52310"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Microsoft Edge\";v=\"152\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36 Edg/152.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "152.0.4191.137-tls13-h2",
+      "version": "152.0.4191.137",
+      "scenario": "tls13-h2",
+      "captured_at": "2026-10-25T02:33:10.909Z",
+      "binary_sha256": "e4810067e2d997375e82562cbd9afeafd15e8874d615688dc26001a96819c4d9",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 256,
+          "connection_id": "conn-72",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:33:11.7536294Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              6682,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 27242,
+                "payload_hex": ""
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a7a7a11ec001d00170018"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  31354,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 43,
+                "payload_hex": "06fafa03040303"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001e300206f46ebb9156a866cb592088f20763b3d34c2acd801c74ac79cd85889e316312900b065a52bb9d77209f2f5543d2ac9dba7840eadf9fe13cac365e683d22c6448d786cb9908884941dcca8b5425fe22634597febd98c44372948a0bc3d0d2e88b9c7a17b1557de5541abbff5bb2de0402ed2e96355e3cae86d060a5bad7e358bec957c945e66d2de3e648b3a9d7d10d400feb235c4eb9325779c4034b711fb8f56ed0783c9e317f644ed794221833f1db5b170337eadceeed850ef6456926ed29ce04be131c12e4276d49e6b36ae2d42177d8"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 13,
+                "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 56026,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 257,
+          "connection_id": "conn-72",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:33:11.7543307Z",
+          "data": {
+            "alpn": "h2",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 258,
+          "connection_id": "conn-72",
+          "type": "http2.settings",
+          "time": "2026-10-25T02:33:11.7543307Z",
+          "data": [
+            {
+              "id": 1,
+              "value": 65536
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 4,
+              "value": 6291456
+            },
+            {
+              "id": 6,
+              "value": 262144
+            }
+          ]
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 259,
+          "connection_id": "conn-72",
+          "type": "http2.window_update",
+          "time": "2026-10-25T02:33:11.7543307Z",
+          "data": {
+            "increment": 15663105,
+            "stream_id": 0
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 260,
+          "connection_id": "conn-72",
+          "type": "http2.header_priority",
+          "time": "2026-10-25T02:33:11.7543307Z",
+          "data": {
+            "dependency": 0,
+            "exclusive": true,
+            "stream_id": 1,
+            "weight": 256
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 261,
+          "connection_id": "conn-72",
+          "type": "http2.headers",
+          "time": "2026-10-25T02:33:11.7543307Z",
+          "data": {
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "localhost:52312"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "/inspect?sample=edge-152.0.4191.137-tls13-h2-0"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Microsoft Edge\";v=\"152\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36 Edg/152.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "scope": "first-request-per-connection",
+            "stream_id": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "153.0.4234.48-tls12-h1",
+      "version": "153.0.4234.48",
+      "scenario": "tls12-h1",
+      "captured_at": "2026-10-25T02:33:22.466Z",
+      "binary_sha256": "9a84277c86316b975e5927a12f2355001b2e46f274c7a61b2fa0278aaf435996",
+      "events": [
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 113,
+          "connection_id": "conn-46",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:33:22.9844794Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              19018,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 60138,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018baba09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001080020f0874ca04c32cc8a9e16a1496c507e9819e01f06cbb31e703ae817d3c5d1693300d003581b9ca83c60fd94ffc1d3036b383c5d59d45ec12f4e7584c400aa55d3e418608084fd735b94100d6928b57a6f0fb2d0a110370934726e94a5e6d5f02c394a6d27a6dbf52ca513f23dabf48f641965e6cc636973dcf3346e6855ee23fad571c7463895f47a0d2260182c2f80a9af64d48fe575bcd221e32b1683c1c31b34e1be9cb8e03a8254f48ec322f49069e3f7ed6f0e9393f8021d852795af921f52ee000c424c8b768eac2201107c3b7944c7019deb7199b7ed3e1711d3b719b897bcb1e63649766e41a89ed5ff0a6e6ac734"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  64250,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06dada03040303"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000afafa11ec001d00170018"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 6682,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 114,
+          "connection_id": "conn-46",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:33:22.9855979Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 49195,
+            "resumed": false,
+            "version": 771
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 115,
+          "connection_id": "conn-46",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:33:22.9855979Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-153.0.4234.48-tls12-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52315"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Microsoft Edge\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "153.0.4234.48-tls13-h1",
+      "version": "153.0.4234.48",
+      "scenario": "tls13-h1",
+      "captured_at": "2026-10-25T02:33:31.251Z",
+      "binary_sha256": "9a84277c86316b975e5927a12f2355001b2e46f274c7a61b2fa0278aaf435996",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 413,
+          "connection_id": "conn-104",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:33:31.7666437Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              60138,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 31354,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a3a3a11ec001d00170018"
+              },
+              {
+                "id": 43,
+                "payload_hex": "066a6a03040303"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 13,
+                "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001800020ab3d9aff2a6b086f4f2b3433853c04bcb0d0bc9e316c406b14df18ea7d2b544e00f00d3a426d012fd9a259a2a035f95e590077d2ef30d8c4318a6b1884bb14deccd1c2726923789a94116b54215b2728f0f963bafdd93d242bd171f91e5f2754788cf2ea404ca5d40851b512449f73d2068ba06bb88393c8482f39daaea6f5bc4918d861696a7bcb3dd1df4f348fb714de2b969160efc50080ea38471ce098ef9fc5eba6ea0763df0c6e837f4a6409f8c9e2ee5a0c55f3ef986e67f8dd4e355a50f88a7180a0f86da7228abd8a7c646b4ef9ef00c8afa69c2a55153dd08c3a0c22cba581e81dcb63a21a633546e443e89a7e7012d31a0f371b0971879b1becd23eccdd61299278a6ab94c0a4e0c3167fb6d5"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  14906,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 56026,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 414,
+          "connection_id": "conn-104",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:33:31.7671483Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 415,
+          "connection_id": "conn-104",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:33:31.7671483Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-153.0.4234.48-tls13-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52310"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Microsoft Edge\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "153.0.4234.48-tls13-h2",
+      "version": "153.0.4234.48",
+      "scenario": "tls13-h2",
+      "captured_at": "2026-10-25T02:33:40.236Z",
+      "binary_sha256": "9a84277c86316b975e5927a12f2355001b2e46f274c7a61b2fa0278aaf435996",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 485,
+          "connection_id": "conn-134",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:33:41.0124555Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              60138,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 27242,
+                "payload_hex": ""
+              },
+              {
+                "id": 43,
+                "payload_hex": "06caca03040303"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a9a9a11ec001d00170018"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 13,
+                "payload_hex": "00188a8a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001b400206ed32a494e5e3a69fe64cf241daf70c21a4d00dc4b4394b4f153550a71f8b13900f0a484c03d8fca3976442030b522763581acd2c5083158b79750b7678c1742be07e571de629ba099ef23fbedf487796ea6bc1e648bbefa2968eca17bc21ff5f203d39bfa2633efb93debc552c043a62d6e5d3fe7fc9cd1ff3238183b855134e4e88e485dfbbd2a609e5336b0ec31f022e7276ebd5890c8669de44b34cc2012f0ee24a1815dc8a98af3344dde3d74a70abeccdaae35fd92660aaac84df9c7fa47f4301323f8d9c06356ea39c594ef2f9aef3e5e6afdabd37a91880797fa73d54d9e1fa45bce67e836d6d28c625660785e65b6f4c6e6549ba64caf1e7c1e4988dd023d7f1bdc28ab2e1177eb80ed6484b655"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  39578,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 14906,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 486,
+          "connection_id": "conn-134",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:33:41.0129591Z",
+          "data": {
+            "alpn": "h2",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 487,
+          "connection_id": "conn-134",
+          "type": "http2.settings",
+          "time": "2026-10-25T02:33:41.0182202Z",
+          "data": [
+            {
+              "id": 1,
+              "value": 65536
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 4,
+              "value": 6291456
+            },
+            {
+              "id": 6,
+              "value": 262144
+            }
+          ]
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 488,
+          "connection_id": "conn-134",
+          "type": "http2.window_update",
+          "time": "2026-10-25T02:33:41.0182202Z",
+          "data": {
+            "increment": 15663105,
+            "stream_id": 0
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 489,
+          "connection_id": "conn-134",
+          "type": "http2.header_priority",
+          "time": "2026-10-25T02:33:41.0182202Z",
+          "data": {
+            "dependency": 0,
+            "exclusive": true,
+            "stream_id": 1,
+            "weight": 256
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 490,
+          "connection_id": "conn-134",
+          "type": "http2.headers",
+          "time": "2026-10-25T02:33:41.0182202Z",
+          "data": {
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "localhost:52312"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "/inspect?sample=edge-153.0.4234.48-tls13-h2-0"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Microsoft Edge\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "scope": "first-request-per-connection",
+            "stream_id": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "154.0.4258.62-tls12-h1",
+      "version": "154.0.4258.62",
+      "scenario": "tls12-h1",
+      "captured_at": "2026-10-25T02:33:49.832Z",
+      "binary_sha256": "d366716ba3cd2cc67d92d9b712b129fea4c8df769961d1e04b037ce034780ad0",
+      "events": [
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 186,
+          "connection_id": "conn-77",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:33:50.3322636Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              23130,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 43690,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001ba0020edbb80200f96c643de11df73bd14fad260d25acea91638def77445ef04ac990c00b06a0b7d8415f5d7132c2bd442476af6a09cb26bbeda799be6dd94afe87f7708e433550c076f984dda92d33ee60d04173a2ff663973621220adfb8882d2688476da79a38855999c7d8557ff4b4cdad14585dc5d1dd420c0813978c6cc59563f749b417940bcf6c92a62099fbe01c6f1e6ab0b6e7adc393e6e6dc4a4042b5ae32b24bfba140114c4b81caa6d1ded5d15c2422a6778add5cabaad67d2f5964c266776f944bdd21088598fa58e742a3bb7ae2"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 13,
+                "payload_hex": "00189a9a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06caca03040303"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000afafa11ec001d00170018"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  64250,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 56026,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 187,
+          "connection_id": "conn-77",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:33:50.3327684Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 49195,
+            "resumed": false,
+            "version": 771
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 188,
+          "connection_id": "conn-77",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:33:50.3327684Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-154.0.4258.62-tls12-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52315"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "154.0.4258.62-tls13-h1",
+      "version": "154.0.4258.62",
+      "scenario": "tls13-h1",
+      "captured_at": "2026-10-25T02:33:59.623Z",
+      "binary_sha256": "d366716ba3cd2cc67d92d9b712b129fea4c8df769961d1e04b037ce034780ad0",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 666,
+          "connection_id": "conn-174",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:00.1471218Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              6682,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 56026,
+                "payload_hex": ""
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018eaea09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100017a0020ed111556381f087044ec452918abb214506f68941d2be7b4c9f7c1622f62e331009041f56e145831d2229713fa62e12a90c3935fce78f7219aeb7283ecde8dd975f2a5507cd39d464449645ffd9dfe583bc2f8369315ef033adbe4a85ecfcbe3c9c101ec1c5e94e8a2b43938de9d57359af65fe8eeb6ec51baaeb1d8343368cd9c259967d5ef15c5cddf00d14745bf0aba9ec8ab75455ada5d69951bdb38fffbd07acf6088687c542a8782ac7da16ee0d06e"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  31354,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 43,
+                "payload_hex": "065a5a03040303"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a7a7a11ec001d00170018"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 35466,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 667,
+          "connection_id": "conn-174",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:00.1476258Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 668,
+          "connection_id": "conn-174",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:34:00.1476258Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-154.0.4258.62-tls13-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52310"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "154.0.4258.62-tls13-h2",
+      "version": "154.0.4258.62",
+      "scenario": "tls13-h2",
+      "captured_at": "2026-10-25T02:34:09.224Z",
+      "binary_sha256": "d366716ba3cd2cc67d92d9b712b129fea4c8df769961d1e04b037ce034780ad0",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 741,
+          "connection_id": "conn-205",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:09.7469955Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              10794,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 35466,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001a80020ef41635443af8a3a7daf2cb4b1b25ea434207efba059fcfe8f147cbf721b587100b0a9aeebe570251ed3401762ceb5315b24f63e56a50208df78745121bc71366120badabefbc07ec0b412b8d41fe69f28f4e183523fdf32c5e7e673504ef66d7af9f9fbc4400056f47240cc390bdca8928e5e629f23d653a5707b7d71d427c3be98639ff1df4c6c67cfc0ac6e1b14f7a59d1580091b52d079de3574973b7c47570537500df71fadaa9d29840f9f913167e0c8a497d8273c3a9bf2aa83924d07058e96c1fefd38ad6403049c2f141136815a"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  31354,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018caca09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 43,
+                "payload_hex": "066a6a03040303"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a7a7a11ec001d00170018"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 23130,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 742,
+          "connection_id": "conn-205",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:09.7477876Z",
+          "data": {
+            "alpn": "h2",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 743,
+          "connection_id": "conn-205",
+          "type": "http2.settings",
+          "time": "2026-10-25T02:34:09.7477876Z",
+          "data": [
+            {
+              "id": 1,
+              "value": 65536
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 4,
+              "value": 6291456
+            },
+            {
+              "id": 6,
+              "value": 262144
+            }
+          ]
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 744,
+          "connection_id": "conn-205",
+          "type": "http2.window_update",
+          "time": "2026-10-25T02:34:09.7477876Z",
+          "data": {
+            "increment": 15663105,
+            "stream_id": 0
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 745,
+          "connection_id": "conn-205",
+          "type": "http2.header_priority",
+          "time": "2026-10-25T02:34:09.7477876Z",
+          "data": {
+            "dependency": 0,
+            "exclusive": true,
+            "stream_id": 1,
+            "weight": 256
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 746,
+          "connection_id": "conn-205",
+          "type": "http2.headers",
+          "time": "2026-10-25T02:34:09.7477876Z",
+          "data": {
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "localhost:52312"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "/inspect?sample=edge-154.0.4258.62-tls13-h2-0"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "scope": "first-request-per-connection",
+            "stream_id": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "155.0.4283.62-tls12-h1",
+      "version": "155.0.4283.62",
+      "scenario": "tls12-h1",
+      "captured_at": "2026-10-25T02:34:18.964Z",
+      "binary_sha256": "c2451a012ff88e82449834de5b526ebb42b5a3fc25958d795910d2b172c975b6",
+      "events": [
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 253,
+          "connection_id": "conn-105",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:19.4927662Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              39578,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 14906,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  27242,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001c500209c23ad5b73933f3b3d8efaf28c61dadf48b695065db1b733d9906ac3a96c401e00f09d4c9efd92733088a61133c914e1d862687b974303ab6ccafd527f35dc986b14003be949fdfe73ca893fb104942d2f10e2a3d28cb0c77f0b1c00183dfc28b6bbc1c76693ac7387f3252c402e525efda3d98d0091488710a260c06907c559826e6285c1e965b509e8ac4e88121a9b711f19453de47c46950bceb9a5583d2acd90912fc55a9dfbab77ea9a6fbeffd84905a294eb8306efd38d0a076fed97116514383b13d32ba079d63710d3b07c7b9605cddc3b7762307300c6c85e116cdbe9a4b40aaa83c8d71fd651e577fd665a05844b0921b0d7a7e505f0a17303196eb201178bae8a5f56fabbdf1fab931090121c"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018fafa09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a6a6a11ec001d00170018"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 43,
+                "payload_hex": "061a1a03040303"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 47802,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 254,
+          "connection_id": "conn-105",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:19.493291Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 49195,
+            "resumed": false,
+            "version": 771
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 255,
+          "connection_id": "conn-105",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:34:19.493291Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-155.0.4283.62-tls12-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52315"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Microsoft Edge\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "155.0.4283.62-tls13-h1",
+      "version": "155.0.4283.62",
+      "scenario": "tls13-h1",
+      "captured_at": "2026-10-25T02:34:27.840Z",
+      "binary_sha256": "c2451a012ff88e82449834de5b526ebb42b5a3fc25958d795910d2b172c975b6",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 922,
+          "connection_id": "conn-245",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:28.3690409Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              19018,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 43690,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  31354,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001fa0020d6179e31d09dbecc9b8936cf69a68e87ff7400903d3075eac4aff2c07b7ef03600b08817bb7c5f95e76e692d5b111dff483e77f55e159a09d177ae3148fd4d2a13d850972e198c1983a36a2f9a230082229176c3df7e221fa0a709df9b2eb11e46253cbb65385b1fe628f4e4dccbe5beb793fc9b3eb9333bd4f625cbb01843ac81a4e3fc0ff41fad05cf59fa4ea2081956a4948dbe51358fb5593699ef3875a9a2933b7531bbbab244e43a2421afd21c25ae02ae910331314754fe3daf17aaf176ea5d53d3d4171a1b22ad74689f5e157863"
+              },
+              {
+                "id": 43,
+                "payload_hex": "069a9a03040303"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018caca09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a7a7a11ec001d00170018"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 64250,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 923,
+          "connection_id": "conn-245",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:28.3695451Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 924,
+          "connection_id": "conn-245",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:34:28.3695451Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-155.0.4283.62-tls13-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52310"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Microsoft Edge\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "155.0.4283.62-tls13-h2",
+      "version": "155.0.4283.62",
+      "scenario": "tls13-h2",
+      "captured_at": "2026-10-25T02:34:36.901Z",
+      "binary_sha256": "c2451a012ff88e82449834de5b526ebb42b5a3fc25958d795910d2b172c975b6",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 995,
+          "connection_id": "conn-275",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:37.4345474Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              43690,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 56026,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  60138,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "064a4a03040303"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000aeaea11ec001d00170018"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100015600207a0ec9cf866ec432b88a400801ed366bb45a2add2e03a47ee6c2d4129df16c0d00b01a78bb7b4d526b53b84770649beb4fa45621bd783ee69dcd050105f524fb35d7e9c00c49e0dabe57dafe7b16b5021897253ff9b0646b631db5802e0f8a51c81c3e10f0e4fd43ad7335a2c6ac198d431cefb556e51c719020f5fbd89dee3f0621989d6ec69c3c46c4f4f2a544361fc59ebd746393063ba1e62b7102369d48d59fe73c95aac156beef747968714da4c309720f31082252f2ea78a276818f83d2203506bb924dda107ba2a9b5999eaff7ea"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018eaea09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 35466,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 996,
+          "connection_id": "conn-275",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:37.4352847Z",
+          "data": {
+            "alpn": "h2",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 997,
+          "connection_id": "conn-275",
+          "type": "http2.settings",
+          "time": "2026-10-25T02:34:37.4352847Z",
+          "data": [
+            {
+              "id": 1,
+              "value": 65536
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 4,
+              "value": 6291456
+            },
+            {
+              "id": 6,
+              "value": 262144
+            }
+          ]
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 998,
+          "connection_id": "conn-275",
+          "type": "http2.window_update",
+          "time": "2026-10-25T02:34:37.4352847Z",
+          "data": {
+            "increment": 15663105,
+            "stream_id": 0
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 999,
+          "connection_id": "conn-275",
+          "type": "http2.header_priority",
+          "time": "2026-10-25T02:34:37.4352847Z",
+          "data": {
+            "dependency": 0,
+            "exclusive": true,
+            "stream_id": 1,
+            "weight": 256
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1000,
+          "connection_id": "conn-275",
+          "type": "http2.headers",
+          "time": "2026-10-25T02:34:37.4352847Z",
+          "data": {
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "localhost:52312"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "/inspect?sample=edge-155.0.4283.62-tls13-h2-0"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Microsoft Edge\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "scope": "first-request-per-connection",
+            "stream_id": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "156.0.4314.42-tls12-h1",
+      "version": "156.0.4314.42",
+      "scenario": "tls12-h1",
+      "captured_at": "2026-10-25T02:34:46.279Z",
+      "binary_sha256": "bb74db4c753133706f4ab0a483a87aa28a90ddd6eeb305fe001376ba73a40fc3",
+      "events": [
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 326,
+          "connection_id": "conn-136",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:46.8540879Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              23130,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 60138,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  43690,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001c70020c64b122831ce557de4ac33347edd2fe4239cc316672ed5328cf58946d7bbce3e00b0ae3fefce1a801684652e7a299bee596e8fe3d58ba0b37ebfc08b771d0032d1e25a30a1e761f65dd80286cec9963c13d64636c854f6c434c77bce4dc3c996a2ab5adc73e94186ea1c3a589899fd969a6940b33b48f11279ddbbb746836e0438fe96baad94185056ecebb0216471f53e266dc9af2cf27230ed321ccde33ff47c69a61e408599bd7988598b88b1272b8fbaae68aada9e43c19b34d9ddc1e2d7e2d2af179b06fa4fe064da21835097fc12fe"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000aaaaa11ec001d00170018"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 43,
+                "payload_hex": "062a2a03040303"
+              },
+              {
+                "id": 51914,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 327,
+          "connection_id": "conn-136",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:46.8545917Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 49195,
+            "resumed": false,
+            "version": 771
+          }
+        },
+        {
+          "run_id": "capture12-1792895533598",
+          "sequence": 328,
+          "connection_id": "conn-136",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:34:46.8545917Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-156.0.4314.42-tls12-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52315"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"Microsoft Edge\";v=\"156\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "156.0.4314.42-tls13-h1",
+      "version": "156.0.4314.42",
+      "scenario": "tls13-h1",
+      "captured_at": "2026-10-25T02:34:55.585Z",
+      "binary_sha256": "bb74db4c753133706f4ab0a483a87aa28a90ddd6eeb305fe001376ba73a40fc3",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1179,
+          "connection_id": "conn-316",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:34:56.0863747Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              23130,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 47802,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "00185a5a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001fc0020b1aa22c0c6c32c8e0e7dc1b19f870b65166b92fc22aa5fdb8842683fb03a583300f09bab46c2c106f094529c7cd4c5fdf771efe4465454398f99eadc310dd84aa2c849cb70ae8e21f9bc7e56a0fdc3ad3999bad53757e49c81b332e3da134e913b495176195c8d41cd83b8572c486247c43ba70691c7276b9e647c3613a35d0ded18e168dcc146145c695b156e8b7f697e55bdac062a3747a47ce95ef2b7b23d45fc01a03905fe932f11d789cc6c2ad113b89018e8d0db20e0b20c8f53a568ca133923b7918452080f1851d692ce96a994a13d58448ea2e5e3a193b9bf00eadc7368bbd940f3d422a514cd70e81497b3c0e950393094a84270eb2e276d185039b8e10923819e58fc6293d1d506b0a7b6366c"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 43,
+                "payload_hex": "063a3a03040303"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  6682,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a1a1a11ec001d00170018"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 43690,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1180,
+          "connection_id": "conn-316",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:34:56.0873947Z",
+          "data": {
+            "alpn": "http/1.1",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1181,
+          "connection_id": "conn-316",
+          "type": "http1.headers",
+          "time": "2026-10-25T02:34:56.0873947Z",
+          "data": {
+            "request_line": "GET /inspect?sample=edge-156.0.4314.42-tls13-h1-0 HTTP/1.1",
+            "headers": [
+              {
+                "name": "Host",
+                "value": "localhost:52310"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"Microsoft Edge\";v=\"156\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "scope": "first-request-per-connection"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "156.0.4314.42-tls13-h2",
+      "version": "156.0.4314.42",
+      "scenario": "tls13-h2",
+      "captured_at": "2026-10-25T02:35:04.831Z",
+      "binary_sha256": "bb74db4c753133706f4ab0a483a87aa28a90ddd6eeb305fe001376ba73a40fc3",
+      "events": [
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1254,
+          "connection_id": "conn-347",
+          "type": "tls.client_hello",
+          "time": "2026-10-25T02:35:05.3354385Z",
+          "data": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              39578,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 64250,
+                "payload_hex": ""
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100013b00201bf36397bcf55fda3a60bb7e80774c62b235dd0c381574c453d288eb328e605700f0619ecce3dc9f396d2743a55ce324d1d0b192a28fa0e15c3280bd91978386c40ee9d178830b65d1cbb307884ba3581bf7d8a9802aa5479f2f4271b53514cb96e213f247c9602997236e8c104885bc3228d44d807f5afd54106cc472e793aab4b373e67480dc6150aceaa5f69e360546ee3a29ee5c4740f671ac8824022702a58e470da8148f4a22c9bf7c72884157e28663a4ce16850e97797780f5d82fc8b67568f79096cbc839f6a5c5cf7ab7a08709b6aa36ce86141a7a951c63da157f42a0d6a5dd50cc6a4a4e309113f3b07c5313eb25b1f3b6308f25af0a9dfbc00af58c64516fef3ecff2faff7fbcd0bbc07fc6"
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018eaea09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  39578,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a9a9a11ec001d00170018"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 43,
+                "payload_hex": "069a9a03040303"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 10794,
+                "payload_hex": "00"
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1255,
+          "connection_id": "conn-347",
+          "type": "tls.negotiated",
+          "time": "2026-10-25T02:35:05.3360188Z",
+          "data": {
+            "alpn": "h2",
+            "cipher_suite": 4865,
+            "resumed": false,
+            "version": 772
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1256,
+          "connection_id": "conn-347",
+          "type": "http2.settings",
+          "time": "2026-10-25T02:35:05.3360188Z",
+          "data": [
+            {
+              "id": 1,
+              "value": 65536
+            },
+            {
+              "id": 2,
+              "value": 0
+            },
+            {
+              "id": 4,
+              "value": 6291456
+            },
+            {
+              "id": 6,
+              "value": 262144
+            }
+          ]
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1257,
+          "connection_id": "conn-347",
+          "type": "http2.window_update",
+          "time": "2026-10-25T02:35:05.3360188Z",
+          "data": {
+            "increment": 15663105,
+            "stream_id": 0
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1258,
+          "connection_id": "conn-347",
+          "type": "http2.header_priority",
+          "time": "2026-10-25T02:35:05.3360188Z",
+          "data": {
+            "dependency": 0,
+            "exclusive": true,
+            "stream_id": 1,
+            "weight": 256
+          }
+        },
+        {
+          "run_id": "capture13-1792895533598",
+          "sequence": 1259,
+          "connection_id": "conn-347",
+          "type": "http2.headers",
+          "time": "2026-10-25T02:35:05.3367823Z",
+          "data": {
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "localhost:52312"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "/inspect?sample=edge-156.0.4314.42-tls13-h2-0"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"Microsoft Edge\";v=\"156\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "scope": "first-request-per-connection",
+            "stream_id": 1
+          }
+        }
+      ]
+    }
+  ]
+}
