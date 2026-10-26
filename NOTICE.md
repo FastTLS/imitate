@@ -9,5 +9,6 @@ provenance in `testdata/consumer-inventory.json` and the recipe source records.
 The expanded compatibility-selector fixture is a frozen migration oracle, not
 the editable recipe source.
 
-This file does not grant a new license. Source authorization and the project's
-license selection must be confirmed before public release.
+Original project code is licensed under the Apache License, Version 2.0; see
+LICENSE. This does not replace licenses or notices applicable to third-party
+material. The source and capture provenance records above remain applicable.
