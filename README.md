@@ -2,6 +2,16 @@
 
 FastTLS 官方独立指纹生成库。模块为 `github.com/FastTLS/imitate`，只依赖 Go 标准库和 `github.com/FastTLS/fastls/profile` 小规范模块；不发送请求，不导入 Fastls 根包、fhttp、uTLS 或 quic-go。
 
+## 安装
+
+```sh
+go get github.com/FastTLS/imitate@v0.1.0
+```
+
+需要 Go 1.26+。本库不联网获取或运行浏览器，不发送 HTTP 请求，不替代 TLS 传输。以下片段须配合 context、profile 与 imitate 的对应导入。
+
+## 解析与使用
+
 ```go
 provider := imitate.New()
 result, err := provider.Resolve(context.Background(), profile.ResolveRequest{
@@ -25,7 +35,7 @@ match, err := imitate.Use(&options, "chrome/155/windows")
 
 `WithProvider` 优先于 Options 中的提供者。显式提供者缺少记录时返回错误。Fastls 已移除冻结内置目录，Use 必须显式提供生成器或离线 Provider；用户仍可直接传入自定义 JA3、JA4R 或完整 Spec。生成器可并发复用，Resolve 返回独立数据，接收 context 取消，不联网选择最新版本。
 
-当前目录包含149个浏览器规范配置和3个原生配置，共152条。只按规范 ID 解析；旧短名、旧平台/版本顺序、compat-v1 配置和 LegacyUAFirst 业务策略已移除。下游负责把旧名称或 UA 转成规范名称。请求 UA 不参与 Resolve 选择；用户可在 Fastls Options 中覆盖任意请求头的值，不改变协议参数与顺序。
+当前可用配置以安装版本 Provider 的 `List` 为准，不把默认分支目录数量用于描述历史标签。只按规范 ID 解析；旧短名、旧平台/版本顺序、compat-v1 配置和 LegacyUAFirst 业务策略已移除。下游负责把旧名称或 UA 转成规范名称。请求 UA 不参与 Resolve 选择；用户可在 Fastls Options 中覆盖任意请求头的值，不改变协议参数与顺序。
 
 UA 生成工具的范围不等于指纹目录的覆盖范围，以 List 返回的有限名称为准。已有配置使用记录的协议基线，不据此声称真实浏览器的全部指纹已经验证。
 
@@ -43,7 +53,7 @@ Edge 151–156 的 Windows 配置已按官方稳定版实测对齐 en-US 顶层�
 
 这些是本项目的可执行参数基线，支持 TLS1.2/1.3；不会冒充已采集的 curl、Python 或其它第三方客户端。library 基线不生成 UA/Client Hints；client 基线使用 `fastls-probe/1`。`browser` 包提供身份工具，`library` 和 `client` 包可直接生成完整 Spec。
 
-`List` 返回152个规范 ID；新导出不包含旧别名和 compat-v1 配置。`Export` 导出带规范/提供者/数据修订的闭合 Bundle。导出中历史随机扩展固定为一种允许的排列，不携带连接密钥；在线 Resolve 保留原随机约束。
+`List` 返回该版本的全部规范 ID；新导出不包含旧别名和 compat-v1 配置。`Export` 导出带规范/提供者/数据修订的闭合 Bundle。导出行为以对应数据修订的 Spec 和测试为准；不要把单次导出结果当成真实浏览器完整随机分布的认证。
 
 ```sh
 go run ./cmd/imitate-export -output fingerprints.json
@@ -52,6 +62,20 @@ go test ./...
 
 导出文件通过 Fastls 的 `imitate.Register(data)` 得到隔离的离线 Provider，无全局注册、不加载脚本。数据仓库只维护证据和固定导出物，可执行配方的维护入口在本仓库。
 
-当前为尚未发布Go模块版本的开发候选。跨仓验收可使用显式文件模块代理或由CI固定源码提交，公共 go.mod 没有本机 replace；规范子模块须先发布，随后发布 fhttp/核心/生成器。开发分支用于联调，尚未打发布标签。来源见 `NOTICE.md`，正式发布前须确认授权与许可证。
+稳定模块版本为 `v0.1.0`；默认分支的数据修订不等于已经发布的新模块版本。来源与第三方声明见 [NOTICE.md](NOTICE.md)。
 
-用户请求头优先于默认值，包括显式空值。WithUserAgent 只覆盖 HTTP UA，不再重新生成其余身份头；未找到指纹返回错误。详细分工见工作区 FASTLS_V2_REQUEST_HEADERS.md。
+用户请求头优先于默认值，包括显式空值。WithUserAgent 只覆盖 HTTP UA，不再重新生成其余身份头；未找到指纹返回错误。详见 [指纹与请求头](https://fasttls.github.io/concepts/fingerprints)。
+
+## 详细文档与问题反馈
+
+- [使用文档](https://fasttls.github.io/concepts/)：安装、功能、参数与排错。
+- [版本与发布说明](https://github.com/FastTLS/imitate/releases)：正式版本、开发版本和产物边界。
+- [问题反馈](https://github.com/FastTLS/imitate/issues)：请提供版本、系统架构、脱敏后的最小示例与错误；不要提交凭据、Cookie、私钥或个人数据。
+
+## 开源协议与第三方声明
+
+自有代码采用 [Apache-2.0](LICENSE)，来源与授权边界见 [NOTICE.md](NOTICE.md)。浏览器品牌属于各自权利人，配置身份不表示厂商认可。
+
+## 使用边界与免责声明
+
+仅在拥有权限的系统、数据和网络上使用，并遵守适用法律、服务条款及隐私要求。软件按许可证约定以“现状”提供，不承诺可用性、特定用途适用性、第三方服务放行、匿名性或与真实浏览器完全一致。浏览器名称和版本用于描述配置，不表示获得相应厂商认证或背书。部署方负责访问控制、密钥和个人信息保护、请求限额及数据备份；担保排除与责任限制以随附许可证及适用法律为准。本说明不改变许可证授予的权利或新增许可限制。
