@@ -44,6 +44,26 @@ class ChromiumContracts(unittest.TestCase):
                     releases.extract_archive(manifest, archive, root)
                 execute.assert_not_called()
 
+    def test_interrupted_transfer_resumes_only_missing_bytes(self):
+        requests = []
+        class Response(io.BytesIO):
+            status = 206
+            url = releases.CHROME_MSI
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            def response(request, timeout):
+                start, end = map(int, request.get_header('Range').split('=')[1].split('-'))
+                requests.append((start, end))
+                value = Response(b'x' if start % 2 == 0 else b'x' * (end - start + 1))
+                value.headers = {'Content-Range': f'bytes {start}-{end}/16', 'ETag': 'pin'}
+                return value
+            with patch.object(releases.urllib.request, 'build_opener') as opener:
+                opener.return_value.open.side_effect = response
+                releases.ranged_download(dict(size=16, etag='pin', url=releases.CHROME_MSI), root / 'browser.msi')
+            self.assertEqual((root / 'browser.msi').read_bytes(), b'x' * 16)
+            self.assertEqual(len(requests), 16)
+            self.assertEqual({p for p in requests if p[0] % 2 == 1}, {(i, i) for i in range(1, 16, 2)})
+
     def make_run(self, root):
         version = '156.0.1.2'
         audit.dump(root / 'downloads/builds.json', [dict(browser='chrome', version=version, executable_sha256='a' * 64, source='official')])

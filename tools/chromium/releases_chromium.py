@@ -178,23 +178,49 @@ def ranged_download(manifest, archive):
     size, etag = manifest['size'], manifest['etag']
     if not 0 < size <= MAX_ARCHIVE or not isinstance(etag, str) or not etag:
         raise ValueError('Invalid range download identity')
-    directory = archive.parent / 'ranges'; directory.mkdir(exist_ok=False)
+    directory = archive.parent / 'ranges'
+    identity = dict(url=checked_url(manifest['url']), size=size, etag=etag)
+    if directory.exists():
+        if json.loads((directory / 'identity.json').read_text(encoding='utf-8')) != identity:
+            raise ValueError('Partial download identity changed')
+    else:
+        directory.mkdir()
+        (directory / 'identity.json').write_text(json.dumps(identity), encoding='utf-8')
     def fetch_part(index):
         start, end = size * index // 8, size * (index + 1) // 8 - 1
-        request = urllib.request.Request(checked_url(manifest['url']), headers={'Range': f'bytes={start}-{end}', 'If-Match': etag})
         target = directory / f'{index}.part'
-        with urllib.request.build_opener(Redirects()).open(request, timeout=90) as response, target.open('xb') as stream:
-            checked_url(response.url)
-            if response.status != 206 or response.headers.get('Content-Range') != f'bytes {start}-{end}/{size}' or response.headers.get('ETag') != etag:
-                raise ValueError('Chrome range identity mismatch')
-            count = 0
-            while chunk := response.read(1024 * 1024):
-                count += len(chunk)
-                if count > end - start + 1:
-                    raise ValueError('Chrome range exceeds declared size')
-                stream.write(chunk)
+        ledger = directory / f'{index}.json'
+        if target.exists():
+            record = json.loads(ledger.read_text(encoding='utf-8'))
+            if record != dict(start=start, end=end, bytes=target.stat().st_size, sha256=digest(target)):
+                raise ValueError('Partial browser bytes changed')
+        elif ledger.exists():
+            raise ValueError('Missing partial browser bytes')
+        if target.exists() and target.stat().st_size > end - start + 1:
+            raise ValueError('Oversized partial browser range')
+        for attempt in range(3):
+            offset = target.stat().st_size if target.exists() else 0
+            if offset == end - start + 1:
+                return
+            position = start + offset
+            request = urllib.request.Request(identity['url'], headers={'Range': f'bytes={position}-{end}', 'If-Match': etag})
+            with urllib.request.build_opener(Redirects()).open(request, timeout=90) as response:
+                checked_url(response.url)
+                if response.status != 206 or response.headers.get('Content-Range') != f'bytes {position}-{end}/{size}' or response.headers.get('ETag') != etag:
+                    raise ValueError('Chrome range identity mismatch')
+                with target.open('ab') as stream:
+                    try:
+                        while chunk := response.read(1024 * 1024):
+                            if stream.tell() + len(chunk) > end - start + 1:
+                                raise ValueError('Chrome range exceeds declared size')
+                            stream.write(chunk)
+                    finally:
+                        stream.flush()
+                        ledger.write_text(json.dumps(dict(start=start, end=end, bytes=target.stat().st_size, sha256=digest(target))), encoding='utf-8')
+            # Early EOF resumes only missing bytes, with the same pinned identity.
+            # A mismatching identity is never retried. No partial archive is used.
         if target.stat().st_size != end - start + 1:
-            raise ValueError('Truncated Chrome range')
+            raise ValueError('Truncated Chrome range after bounded continuation')
     with ThreadPoolExecutor(max_workers=4) as pool:
         list(pool.map(fetch_part, range(8)))
     with archive.open('xb') as stream:
