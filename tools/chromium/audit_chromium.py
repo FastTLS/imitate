@@ -28,6 +28,13 @@ def project_tls(hello):
         number = extension['id']
         if firefox.grease(number):
             special.append({'id': '0x0a0a'}); positions.append(index)
+        elif number == 51764:
+            # The observed Chromium provisional trust_anchors advertisement.
+            # Validate the draft's vector and retain exact bytes. This does not
+            # implement server negotiation, path selection, or retry semantics.
+            data = bytes.fromhex(extension['payload_hex'])
+            trust_anchor_ids(data)
+            special.append({'id': '0xca34', 'raw_hex': data.hex()}); positions.append(index)
         elif number in (17513, 17613):
             data = bytes.fromhex(extension['payload_hex'])
             if len(data) < 3 or int.from_bytes(data[:2], 'big') != len(data) - 2:
@@ -53,6 +60,25 @@ def project_tls(hello):
                 extension[field] = ['0x0a0a' if firefox.grease(int(v, 16)) else v for v in extension[field]]
     spec['extension_order'] = 'shuffle-chrome'
     return spec
+
+
+def trust_anchor_ids(data):
+    if len(data) < 2 or int.from_bytes(data[:2], 'big') != len(data) - 2:
+        raise ValueError('Malformed trust anchor list length')
+    offset, seen = 2, set()
+    while offset < len(data):
+        size = data[offset]; offset += 1
+        if not 1 <= size <= 32 or offset + size > len(data):
+            raise ValueError('Malformed trust anchor ID length')
+        value = data[offset:offset + size]; offset += size
+        if value in seen or value[-1] & 128:
+            raise ValueError('Duplicate or unfinished trust anchor ID')
+        seen.add(value)
+        start = True
+        for byte in value:
+            if start and byte == 128:
+                raise ValueError('Non-canonical relative OID')
+            start = not byte & 128
 
 
 def audit(root, catalog, browser):
@@ -139,6 +165,8 @@ def audit(root, catalog, browser):
     advertised = [v for e in spec['tls']['extensions'] for v in e.get('signature_algorithms', []) if v in ('0x0904', '0x0905', '0x0906')]
     if advertised:
         limitations.append('ML-DSA signature schemes are advertised only; the backend cannot verify ML-DSA CertificateVerify.')
+    if any(e['id'] == '0xca34' for e in spec['tls']['extensions']):
+        limitations.append('trust_anchors 0xca34 is a byte-exact static advertisement only; backend trust-anchor negotiation, certificate path selection and retry behavior are unverified.')
     spec['capabilities'].update(required_features=['tls.ordered.v1', 'http1.ordered.v1', 'http2.ordered.v1',
         'http.headers.protocol.v1', 'tls.shuffle-chrome.v1'] + (['tls.signature-advertised.v1'] if advertised else []),
         advertised_only=advertised, limitations=limitations)

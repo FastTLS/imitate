@@ -10,6 +10,8 @@ Edge 使用[微软发行源](https://edgeupdates.microsoft.com/api/products?view
 
 比较保留完整静态 TLS 参数、扩展成员/次数、头顺序和 H2 帧；扩展随机顺序单独保存，GREASE 值、ECH 随机内容和临时密钥不作逐字节等价声明。新未知扩展、缺失/重复/不稳定样本、冷握手不符及后端不支持会生成 `blocked` 报告。`candidate` 提供 ProfileBundle v1、摘要、语义差异和限制，必须显式审核、导入、pin；失败不替换有效配置。ML-DSA 广告能力不能当成 CertificateVerify 支持，H2 流级差异继续保留。
 
+本批审查了 Chrome 实测的临时编号 `0xca34`：按照 [Trust Anchor Identifiers 草案第 5.1 节](https://datatracker.ietf.org/doc/html/draft-ietf-tls-trust-anchor-ids-06#section-5.1)验证列表及 ID 长度/OID 编码，保留全部静态广告字节，使用已有 `raw_hex` 表达。关联行为见[固定 Chrome 源码](https://chromium.googlesource.com/chromium/src/+/refs/tags/156.0.8078.80/net/socket/ssl_client_socket_impl.cc)。该编号是本次实测标识，不写成 IANA 正式分配；仅广告回放，不宣称后端实现服务器协商、证书链选择或恢复重试。其它未知扩展仍阻止投影。
+
 `no_change` 仅接受目录中完整版本、平台、采集模式、三个传输和已回放字段均匹配的证据，不代表新后端认证。`--force-capture` 强制新样本；`--archive-cache` 仅复用匹配厂商 SHA256 的 Edge MSI，Chrome 不从外部归档缓存取文件。`--collector-cache` 为同源码和适配器的本地采集器提供摘要核对后的复用；任何输入或字节不符均拒绝。
 
 每次输出 `update-report.json`、官方清单、构建身份、原始样本、观察、语义差异、回放报告及 Bundle；报告分别记录下载、采集器构建、采集与回放耗时。只读手动 Actions 入口为 `.github/workflows/browser-update.yml`。旧 `firefox_version` 参数仍可用于 Firefox，不能与其它产品或 `browser_version` 混用。

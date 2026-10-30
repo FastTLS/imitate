@@ -123,6 +123,14 @@ class ChromiumContracts(unittest.TestCase):
         with self.assertRaises(ValueError):
             audit.project_tls(hello)
 
+    def test_reviewed_trust_anchor_bytes_preserved_and_malformed_vectors_rejected(self):
+        raw = '000403822101'
+        hello = dict(record_version=769, legacy_version=771, cipher_suites=[4865], extensions=[dict(id=51764, payload_hex=raw)])
+        self.assertEqual(audit.project_tls(hello)['extensions'], [dict(id='0xca34', raw_hex=raw)])
+        for payload in ['00', '00010201', '00020000', '00020180', '000403808100', '000401010101']:
+            with self.subTest(payload=payload), self.assertRaises(ValueError):
+                audit.trust_anchor_ids(bytes.fromhex(payload))
+
     def test_shuffle_normalization_retains_membership_and_values(self):
         hello = dict(record_version=769, legacy_version=771, cipher_suites=[4865], extensions=[
             dict(id=13, payload_hex='00020403'), dict(id=23, payload_hex='')])
