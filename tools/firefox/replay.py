@@ -63,7 +63,9 @@ def replay(run, repo, core, transport, gate=True, *, family='firefox', normalize
     if any('validation_error' in entry for entry in audit['catalog']):
         raise ValueError('Backend profile validation failed')
     observed = read(run / 'observations.json')
-    expected = {(f"{family}/{o['version'].split('.')[0]}/windows", scenario): case['normalized'] for o in observed['observations'] for scenario, case in o['cases'].items()}
+    # Recompute comparison fields from sealed raw events. Older reports did not
+    # independently expose stream IDs when HEADERS carried no priority tuple.
+    expected = {(f"{family}/{o['version'].split('.')[0]}/windows", scenario): normalizer(case['raw_events'], scenario) for o in observed['observations'] for scenario, case in o['cases'].items()}
     results, parity = [], {}
     for row in audit['requests']:
         if row.get('error') or row['status'] != 200:
@@ -94,6 +96,11 @@ def replay(run, repo, core, transport, gate=True, *, family='firefox', normalize
     if gate and any('tls' in r['differences'] or 'headers' in r['differences'] for r in results):
             raise ValueError('TLS/header replay differs from actual browser; candidate rejected')
     if gate:
+        catalog = read(repo / 'browser-specs.json')
+        for row in results:
+            if 'http2.stream.v1' in catalog[row['selector']]['spec']['capabilities']['required_features'] and row['differences']:
+                raise ValueError('Stream-capable candidate differs from observed frames; candidate rejected')
+    if gate:
         catalog_path = repo / 'browser-specs.json'
         catalog = read(catalog_path)
         fixture_path = repo / f'testdata/{family}/windows.json'
@@ -109,6 +116,8 @@ def replay(run, repo, core, transport, gate=True, *, family='firefox', normalize
             if len(rows) != 6:
                 raise ValueError('Incomplete online/offline replay for ' + identifier)
             fields = verified_fields or ['tls.static_client_hello.cold', 'http.headers.navigation.zh-CN']
+            if all(not r['differences'] for r in rows):
+                fields = list(fields) + ['http2.initial_frames.cold']
             catalog[identifier]['match']['verified_fields'] = fields
             for evidence in catalog[identifier]['spec']['evidence']:
                 evidence['verified_fields'] = fields

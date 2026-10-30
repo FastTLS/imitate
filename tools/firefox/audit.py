@@ -87,11 +87,36 @@ def normalize(events, scenario):
     hs = headers(events, scenario)
     hs = [{**h, 'value': '<authority>' if h['name'].lower() in ('host', ':authority') else '<path>' if h['name'] == ':path' else h['value']} for h in hs]
     frames = [{'type': e['type'], 'data': e['data']} for e in events if e['type'].startswith('http2.') and e['type'] not in ('http2.headers', 'http2.error')]
-    return {'tls': tls(event(events, 'tls.client_hello')), 'headers': hs, 'http2': frames}
+    value = {'tls': tls(event(events, 'tls.client_hello')), 'headers': hs, 'http2': frames}
+    if scenario.endswith('h2'):
+        value['http2_stream_id'] = event(events, 'http2.headers')['stream_id']
+    return value
 
 
 def code(value):
     return f'0x{value:04x}'
+
+
+def project_h2_stream(events):
+    """Project one cold request's observed initial stream behavior, strictly."""
+    heads = [i for i, e in enumerate(events) if e['type'] == 'http2.headers']
+    if len(heads) != 1:
+        raise ValueError('Expected exactly one cold H2 request')
+    head = heads[0]
+    stream = events[head]['data'].get('stream_id')
+    if type(stream) is not int or stream < 1 or stream > 0x7fffffff or stream % 2 == 0:
+        raise ValueError('Invalid observed client stream ID')
+    updates = [(i, e['data']) for i, e in enumerate(events)
+               if e['type'] == 'http2.window_update' and e['data']['stream_id'] != 0]
+    if len(updates) > 1 or any(i < head or u['stream_id'] != stream for i, u in updates):
+        raise ValueError('Unsupported initial stream WINDOW_UPDATE sequence')
+    result = {} if stream == 1 else {'first_stream_id': stream}
+    if updates:
+        increment = updates[0][1]['increment']
+        if type(increment) is not int or not 1 <= increment <= 0x7fffffff:
+            raise ValueError('Invalid stream window increment')
+        result['stream_window_increment'] = increment
+    return result
 
 
 def project_tls(hello):
@@ -210,13 +235,17 @@ def audit(root, catalog):
         spec['http2'] = {'settings': settings,
                          'connection_flow': sum(f['data']['increment'] for f in frames if f['type'] == 'http2.window_update' and f['data']['stream_id'] == 0),
                          'priority_frames': [f['data'] for f in frames if f['type'] == 'http2.priority']}
+
+        spec['http2'].update(project_h2_stream(cases['tls13-h2']['raw_events']))
         priority = next((f['data'] for f in frames if f['type'] == 'http2.header_priority'), None)
         if priority:
             spec['http2']['header_priority'] = {**priority, 'stream_id': 0}
         limitations = ['Windows x64 zh-CN ' + run['mode'] + ' navigation only; other platforms and headed/headless equivalence are unverified.',
                        'Cold connections only; resumption, opaque ECH bytes and ephemeral keys are not verified.',
-                       'Observed H2 initial stream ID and stream WINDOW_UPDATE are retained in the full input; current backend cannot express these fields. Whole-profile equivalence is unverified.']
+                       'Initial H2 frames are projected from one cold request; broader flow-control, resumption and whole-browser equivalence remain unverified.']
         spec['capabilities']['required_features'] = ['tls.ordered.v1', 'http1.ordered.v1', 'http2.ordered.v1', 'http.headers.protocol.v1']
+        if spec['http2'].get('first_stream_id') or spec['http2'].get('stream_window_increment'):
+            spec['capabilities']['required_features'].append('http2.stream.v1')
         spec['capabilities']['limitations'] = limitations
         source = f'testdata/firefox/windows.json#{version}'
         spec['evidence'] = [{'source': source + '-' + scenario, 'captured_at': cases[scenario]['samples'][0]['captured_at'],

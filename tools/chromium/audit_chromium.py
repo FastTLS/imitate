@@ -159,9 +159,10 @@ def audit(root, catalog, browser):
         if len(priority) != 1:
             raise ValueError('Unexpected multiple header priorities')
         spec['http2']['header_priority'] = {**priority[0], 'stream_id': 0}
+    spec['http2'].update(firefox.project_h2_stream(cases['tls13-h2']['raw_events']))
     limitations = ['Windows x64 en-US ' + run['mode'] + ' cold navigation only; other modes, contexts and platforms unverified.',
         'Extension membership/parameters verified separately from randomized order; no distributional shuffle, resumption, ECH or ephemeral-key equivalence claim.',
-        'H2 initial stream IDs and stream WINDOW_UPDATE remain explicit comparison fields; current backend cannot configure all stream-level behavior.']
+        'H2 initial frames are compared for one cold request; broader flow-control and whole-browser equivalence remain unverified.']
     advertised = [v for e in spec['tls']['extensions'] for v in e.get('signature_algorithms', []) if v in ('0x0904', '0x0905', '0x0906')]
     if advertised:
         limitations.append('ML-DSA signature schemes are advertised only; the backend cannot verify ML-DSA CertificateVerify.')
@@ -170,6 +171,8 @@ def audit(root, catalog, browser):
     spec['capabilities'].update(required_features=['tls.ordered.v1', 'http1.ordered.v1', 'http2.ordered.v1',
         'http.headers.protocol.v1', 'tls.shuffle-chrome.v1'] + (['tls.signature-advertised.v1'] if advertised else []),
         advertised_only=advertised, limitations=limitations)
+    if spec['http2'].get('first_stream_id') or spec['http2'].get('stream_window_increment'):
+        spec['capabilities']['required_features'].append('http2.stream.v1')
     fixture = f'testdata/{browser}/windows.json'
     spec['evidence'] = [dict(source=fixture + '#' + version + '-' + scenario, captured_at=cases[scenario]['samples'][0]['captured_at'],
         product_version=version, platform='windows', verified_fields=[], transport=scenario, sample_sha256=cases[scenario]['samples'][0]['sha256']) for scenario in SCENARIOS]

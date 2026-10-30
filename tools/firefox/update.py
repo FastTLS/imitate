@@ -48,7 +48,7 @@ def semantic_diff(previous, candidate, path=''):
 
 def known_build(catalog, version):
     entry = catalog.get('firefox/' + version.split('.')[0] + '/windows', {})
-    required = {'tls.static_client_hello.cold', 'http.headers.navigation.zh-CN'}
+    required = {'tls.static_client_hello.cold', 'http.headers.navigation.zh-CN', 'http2.initial_frames.cold'}
     return bool(entry.get('spec', {}).get('evidence')) and required.issubset(entry.get('match', {}).get('verified_fields', [])) and all(
         e.get('product_version') == version and required.issubset(e.get('verified_fields', [])) for e in entry['spec']['evidence'])
 

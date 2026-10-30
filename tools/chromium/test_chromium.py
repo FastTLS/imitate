@@ -77,6 +77,7 @@ class ChromiumContracts(unittest.TestCase):
                     dict(type='tls.negotiated', data=dict(version=771 if suffix == '12' else 772, alpn='h2' if scenario.endswith('h2') else 'http/1.1', resumed=False)),
                     dict(type='http2.headers' if scenario.endswith('h2') else 'http1.headers', data=dict(headers=[dict(name='User-Agent', value='Chrome/156.0.0.0')]))]
                 if scenario.endswith('h2'):
+                    events[-1]['data']['stream_id'] = 1
                     events.append(dict(type='http2.settings', data=[dict(id=2, value=0)]))
                 for item in events:
                     item.update(run_id='capture' + suffix, connection_id=connection)
