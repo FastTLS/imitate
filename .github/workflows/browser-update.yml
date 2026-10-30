@@ -1,0 +1,90 @@
+name: Browser profile candidate (manual, read-only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      firefox_version:
+        description: Full stable Firefox version (empty discovers current stable)
+        type: string
+        default: ''
+      force_capture:
+        description: Collect fresh samples even when the exact version is already verified
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: windows-2025
+    timeout-minutes: 25
+    env:
+      GOWORK: 'off'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          path: imitate
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: FastTLS/fastls
+          ref: 32699153caa15a9bbbe11e178465a315d3b59861
+          path: fastls
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: FastTLS/ftransport
+          ref: d5afcd1a2db48a40850363b76e8a19eb339c757c
+          path: ftransport
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: FastTLS/fastls-lab
+          ref: de2e3d6b83ceb748f7bad241ceb149b196174658
+          path: fastls-lab
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16
+        with:
+          go-version: '1.26.10'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+      - name: Verify updater failure and source-preservation contracts
+        run: python -m unittest discover -s imitate/tools/firefox -p 'test_*.py' -v
+      - name: Collect and verify candidate without changing source catalog
+        env:
+          FIREFOX_VERSION: ${{ inputs.firefox_version }}
+          FORCE_CAPTURE: ${{ inputs.force_capture }}
+        shell: pwsh
+        run: |
+          $updateArgs = @('--repo', 'imitate', '--core', 'fastls', '--transport', 'ftransport', '--lab', 'fastls-lab', '--output', 'browser-update')
+          if ($env:FIREFOX_VERSION) { $updateArgs += @('--version', $env:FIREFOX_VERSION) }
+          if ($env:FORCE_CAPTURE -eq 'true') { $updateArgs += '--force-capture' }
+          python imitate/tools/firefox/update.py @updateArgs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          git -C imitate diff --exit-code
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: browser-profile-candidate
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            browser-update/update-report.json
+            browser-update/semantic-diff.json
+            browser-update/downloads/discovery.json
+            browser-update/downloads/builds.json
+            browser-update/downloads/*/SHA512SUMS
+            browser-update/run.json
+            browser-update/browser-samples.json
+            browser-update/observations.json
+            browser-update/audit-summary.json
+            browser-update/candidate/browser-specs.json
+            browser-update/replay/comparison.json
+            browser-update/replay/catalog-check.json
+            browser-update/bundles/

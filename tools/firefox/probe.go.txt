@@ -1,0 +1,29 @@
+package main
+
+import (
+ "context"
+ "crypto/x509"
+ "encoding/json"
+ "fmt"
+ "io"
+ "os"
+ "strings"
+ fastls "github.com/FastTLS/fastls"
+ "github.com/FastTLS/fastls/imitate"
+ "github.com/FastTLS/fastls/profile"
+ generators "github.com/FastTLS/imitate"
+)
+
+type manifest struct {HTTPS string `json:"https"`; HTTPS2 string `json:"https2"`; CA string `json:"ca_file"`}
+type result struct {Selector string `json:"selector"`; Mode string `json:"mode"`; Scenario string `json:"scenario"`; Token string `json:"token"`; Status int `json:"status"`; Error string `json:"error,omitempty"`}
+func main(){
+ ctx:=context.Background();p:=generators.New();bundle,err:=p.Export(ctx);if err!=nil{panic(err)};data,err:=json.Marshal(bundle);if err!=nil{panic(err)};offline,err:=imitate.Register(data);if err!=nil{panic(err)}
+ var m13,m12 manifest;for i,m:=range []*manifest{&m13,&m12}{b,e:=os.ReadFile(os.Args[i+1]);if e!=nil{panic(e)};if e=json.Unmarshal(b,m);e!=nil{panic(e)}}
+ ids,err:=p.List();if err!=nil{panic(err)};rows:=[]result{};catalog:=[]map[string]any{}
+ for _,id:=range ids{if !strings.HasPrefix(id,"firefox/"){continue};resolved,e:=p.Resolve(ctx,profile.ResolveRequest{Selector:id});if e!=nil{panic(e)};_,recordedErr:=p.Resolve(ctx,profile.ResolveRequest{Selector:id,Policy:profile.RecordedOnly});entry:=map[string]any{"id":id,"match":resolved.Match,"spec":resolved.Spec,"recorded_only_accepted":recordedErr==nil};if e=fastls.ValidateProfile(*resolved.Spec);e!=nil{entry["validation_error"]=e.Error()};catalog=append(catalog,entry)
+  for _,provider:=range []struct{name string;p profile.Provider}{{"online",p},{"offline",offline}}{for _,scenario:=range []struct{name string;m manifest;h2 bool}{{"tls12-h1",m12,false},{"tls13-h1",m13,false},{"tls13-h2",m13,true}}{
+   token:=fmt.Sprintf("probe-%s-%d-%s",provider.name,len(rows),scenario.name);r:=result{Selector:id,Mode:provider.name,Scenario:scenario.name,Token:token};roots:=x509.NewCertPool();b,e:=os.ReadFile(scenario.m.CA);if e!=nil{panic(e)};if !roots.AppendCertsFromPEM(b){panic("CA")};o:=fastls.Options{Timeout:8,VerifyTLS:true,TLSRootCAs:roots};_,e=imitate.Use(&o,id,imitate.WithProvider(provider.p));if e==nil{url:=scenario.m.HTTPS;if scenario.h2{url=scenario.m.HTTPS2};url=strings.Replace(url,"127.0.0.1","localhost",1)+"/inspect?sample="+token;resp,requestErr:=fastls.NewClient().Do(url,o,"GET");e=requestErr;if e==nil{r.Status=resp.Status;_,e=io.Copy(io.Discard,resp.Body);resp.Body.Close();resp.Client.CloseIdleConnections()}};if e!=nil{r.Error=e.Error()};rows=append(rows,r)
+  }}
+ }
+ output:=map[string]any{"generator_version":generators.Version,"data_revision":generators.DataRevision,"catalog":catalog,"requests":rows};b,err:=json.MarshalIndent(output,"","  ");if err!=nil{panic(err)};if err=os.WriteFile(os.Args[3],b,0644);err!=nil{panic(err)};failed:=0;for _,r:=range rows{if r.Error!=""||r.Status!=200{failed++;fmt.Println(r.Selector,r.Scenario,r.Mode,r.Error)}};fmt.Printf("catalog=%d requests=%d failures=%d\n",len(catalog),len(rows),failed)
+}
