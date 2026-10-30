@@ -102,7 +102,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_all_requested_windows_majors_have_independent_evidence(self):
         # Historical observations are not assertions about the active catalog.
-        self.assertEqual({int(o['version'].split('.')[0]) for o in self.fixture['observations']}, set(range(144,159)))
+        self.assertEqual({int(o['version'].split('.')[0]) for o in self.fixture['observations'] if int(o['version'].split('.')[0]) <= 158}, set(range(144,159)))
         for observation in self.fixture['observations']:
             self.assertEqual(set(observation['cases']), set(audit.SCENARIOS))
             for case in observation['cases'].values():

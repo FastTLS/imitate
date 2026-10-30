@@ -23918,6 +23918,1604 @@
         "online_offline_pairs": 3,
         "whole_profile_match": false
       }
+    },
+    {
+      "version": "159.0",
+      "platform": "windows-x64",
+      "locale": "zh-CN",
+      "mode": "headless",
+      "build": {
+        "version": "159.0",
+        "url": "https://archive.mozilla.org/pub/firefox/releases/159.0/win64/zh-CN/Firefox%20Setup%20159.0.exe",
+        "sha512": "ffebf533bd57f8adfd7d4dc92567a68d52c25694cfde5fe44bd28958ca7d4a0729dd5e37d83fc95135504486ffe43897d6328c1b254dad82631b0098268bae6f",
+        "executable_sha256": "d8b5ed82fcd9c0f159dc86dc1c4526ceae981c4d9651f21908b6de90d0a56d85",
+        "checksum_source": "https://archive.mozilla.org/pub/firefox/releases/159.0/SHA512SUMS"
+      },
+      "cases": {
+        "tls12-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                4865,
+                4867,
+                4866,
+                49195,
+                49199,
+                52393,
+                52392,
+                49196,
+                49200,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    4588,
+                    29,
+                    23,
+                    24,
+                    25
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 34,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    515
+                  ]
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    4588,
+                    29,
+                    23
+                  ]
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    2052,
+                    2053,
+                    2054,
+                    1025,
+                    1281,
+                    1537,
+                    515,
+                    513
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 28,
+                  "value": "4001"
+                },
+                {
+                  "id": 27,
+                  "value": "06000100020003"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Priority",
+                "value": "u=0, i"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              4865,
+              4867,
+              4866,
+              49195,
+              49199,
+              52393,
+              52392,
+              49196,
+              49200,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a11ec001d001700180019"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 34,
+                "payload_hex": "00080403050306030203"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  4588,
+                  29,
+                  23
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "0403040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001604030503060308040805080604010501060102030201"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 28,
+                "payload_hex": "4001"
+              },
+              {
+                "id": 27,
+                "payload_hex": "06000100020003"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "000001000385002039bf4504983b13352fd8caf5c3ca04587a552c8957a11e7663a2bdc81363a6c500f034e493e88b89aea7c3da16f56d8885476995f83adc386e13d189dc153077888df3009f062c905dd7546481ce06114bea3a829bd72cd1fc7a2d63d44bfc700792754a0cdecfa9d1599219058ba80318463d35aa18e5181f590ab6b0db245a86feae8283ac6e8dabe50ae194289c0f0e68eebad643f025bf53e981b2d1e3aba667e00e2d18edcd1860caf754b73230d34dc5513566f1c1b4d623e560cfdb22ef789864b05b05649bde9e177713c23dabca304712bd23ff0e4a9e1463daea823bdf0d1c70afe96b52edec7b5471784681ffdf3abbb20d660e5b06b135e3d258f0ae8c484c9be0b829a78beb6ab53c8579d0"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture12",
+              "sequence": 1,
+              "connection_id": "conn-1",
+              "type": "tls.client_hello",
+              "time": "2026-10-30T06:53:38.10555Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  4865,
+                  4867,
+                  4866,
+                  49195,
+                  49199,
+                  52393,
+                  52392,
+                  49196,
+                  49200,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a11ec001d001700180019"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 34,
+                    "payload_hex": "00080403050306030203"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      4588,
+                      29,
+                      23
+                    ]
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "0403040303"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "001604030503060308040805080604010501060102030201"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 28,
+                    "payload_hex": "4001"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "06000100020003"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "000001000385002039bf4504983b13352fd8caf5c3ca04587a552c8957a11e7663a2bdc81363a6c500f034e493e88b89aea7c3da16f56d8885476995f83adc386e13d189dc153077888df3009f062c905dd7546481ce06114bea3a829bd72cd1fc7a2d63d44bfc700792754a0cdecfa9d1599219058ba80318463d35aa18e5181f590ab6b0db245a86feae8283ac6e8dabe50ae194289c0f0e68eebad643f025bf53e981b2d1e3aba667e00e2d18edcd1860caf754b73230d34dc5513566f1c1b4d623e560cfdb22ef789864b05b05649bde9e177713c23dabca304712bd23ff0e4a9e1463daea823bdf0d1c70afe96b52edec7b5471784681ffdf3abbb20d660e5b06b135e3d258f0ae8c484c9be0b829a78beb6ab53c8579d0"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 2,
+              "connection_id": "conn-1",
+              "type": "tls.negotiated",
+              "time": "2026-10-30T06:53:38.1070793Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 49195,
+                "resumed": false,
+                "version": 771
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 3,
+              "connection_id": "conn-1",
+              "type": "http1.headers",
+              "time": "2026-10-30T06:53:38.1081077Z",
+              "data": {
+                "request_line": "GET /inspect?sample=firefox-159.0-tls12-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:16778"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Priority",
+                    "value": "u=0, i"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3": {
+            "text": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25,0",
+            "md5": "9d42e90b0225e779f03141ddcd699df2"
+          },
+          "samples": [
+            {
+              "captured_at": "2026-10-30T06:53:36.653Z",
+              "sha256": "f95e687e4e1864a3ac14f77b880eb6db90ba1644a0c512dbe83c82b6e6ed8d48"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:38.519Z",
+              "sha256": "d5ffd78e96a64dd022418cafc067bfa1c3e08c7e9116645ca6091b9af2eb355e"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:40.092Z",
+              "sha256": "b2359673b12258c6d9993c1cb282ac9e3127b247fe21f01cc65f10cdbd1dc50e"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:41.682Z",
+              "sha256": "802b3a5e61aae122c2d77de6ad25ecea6d57fc24b385b087d590cffd6be04233"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:43.261Z",
+              "sha256": "148ad2147555b4f488e4b896b58f476c3f241bc14f92aa60100bba3cb5f0d7d2"
+            }
+          ]
+        },
+        "tls13-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                4865,
+                4867,
+                4866,
+                49195,
+                49199,
+                52393,
+                52392,
+                49196,
+                49200,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    4588,
+                    29,
+                    23,
+                    24,
+                    25
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 34,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    515
+                  ]
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    4588,
+                    29,
+                    23
+                  ]
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    2052,
+                    2053,
+                    2054,
+                    1025,
+                    1281,
+                    1537,
+                    515,
+                    513
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 28,
+                  "value": "4001"
+                },
+                {
+                  "id": 27,
+                  "value": "06000100020003"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Priority",
+                "value": "u=0, i"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              4865,
+              4867,
+              4866,
+              49195,
+              49199,
+              52393,
+              52392,
+              49196,
+              49200,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a11ec001d001700180019"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 34,
+                "payload_hex": "00080403050306030203"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  4588,
+                  29,
+                  23
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "0403040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001604030503060308040805080604010501060102030201"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 28,
+                "payload_hex": "4001"
+              },
+              {
+                "id": 27,
+                "payload_hex": "06000100020003"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100033900205bad77481e3f15aff4ea633a2110571a27851050cdd54b9dbd5264b44733dfa700f0af248cf530a904f29bd3f20e290f68c09c70e0f0fd1dc74735e5027a809b6d03c34f4fdeb6b837eb2cadfbf6ad8d3a13e77cbcf0e1bbf2b417ca7365faf05507c98193958f98167f180b141a494b0489dd8b55aa4e1fcadbf10de45863238b8c22bc6554c581781ab099a3de463f5b9c7b1ce422074fa33b710af4b605c16ffa2596df94e47ccbff0bdf4681c9b803cc6a83dc7e3164c6ebf2d5f2e8d9c88e7b4a64f040b530cb7574ba46b4cfa4b3067b302a983c547631007dac9a8c3f474842b4d4860af53921d8704109c6bb8d67238ad17f69d9ad45acdeb1064c6c0f18c143fecef1808e69390302b6d2186965"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 1,
+              "connection_id": "conn-1",
+              "type": "tls.client_hello",
+              "time": "2026-10-30T06:53:46.0280637Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  4865,
+                  4867,
+                  4866,
+                  49195,
+                  49199,
+                  52393,
+                  52392,
+                  49196,
+                  49200,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a11ec001d001700180019"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 34,
+                    "payload_hex": "00080403050306030203"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      4588,
+                      29,
+                      23
+                    ]
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "0403040303"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "001604030503060308040805080604010501060102030201"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 28,
+                    "payload_hex": "4001"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "06000100020003"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "00000100033900205bad77481e3f15aff4ea633a2110571a27851050cdd54b9dbd5264b44733dfa700f0af248cf530a904f29bd3f20e290f68c09c70e0f0fd1dc74735e5027a809b6d03c34f4fdeb6b837eb2cadfbf6ad8d3a13e77cbcf0e1bbf2b417ca7365faf05507c98193958f98167f180b141a494b0489dd8b55aa4e1fcadbf10de45863238b8c22bc6554c581781ab099a3de463f5b9c7b1ce422074fa33b710af4b605c16ffa2596df94e47ccbff0bdf4681c9b803cc6a83dc7e3164c6ebf2d5f2e8d9c88e7b4a64f040b530cb7574ba46b4cfa4b3067b302a983c547631007dac9a8c3f474842b4d4860af53921d8704109c6bb8d67238ad17f69d9ad45acdeb1064c6c0f18c143fecef1808e69390302b6d2186965"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 2,
+              "connection_id": "conn-1",
+              "type": "tls.negotiated",
+              "time": "2026-10-30T06:53:46.0310918Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 3,
+              "connection_id": "conn-1",
+              "type": "http1.headers",
+              "time": "2026-10-30T06:53:46.0310918Z",
+              "data": {
+                "request_line": "GET /inspect?sample=firefox-159.0-tls13-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:16782"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Priority",
+                    "value": "u=0, i"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3": {
+            "text": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25,0",
+            "md5": "9d42e90b0225e779f03141ddcd699df2"
+          },
+          "samples": [
+            {
+              "captured_at": "2026-10-30T06:53:44.845Z",
+              "sha256": "5e47ccb037329850f2ed513f3166ed905b9bd4cfbb6da1ffec2089edadc21ade"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:46.438Z",
+              "sha256": "16d2bd73544c75b8308aab54900ac79fe1de04c8b12e7e18d0f1ea3689d0857f"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:48.022Z",
+              "sha256": "2218b56ad78a017e9be7d40787ccd6836b05e9d4b7bbc064a0bb294eba2a880d"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:49.593Z",
+              "sha256": "60235b008e0adcd324216a7958387c9083fa4b0965fe9fa5eb49c4fd21b39380"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:51.189Z",
+              "sha256": "1088a6eb445ae7587c19c4dc115b9e33792c852240694f87832896b5100f36b7"
+            }
+          ]
+        },
+        "tls13-h2": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                4865,
+                4867,
+                4866,
+                49195,
+                49199,
+                52393,
+                52392,
+                49196,
+                49200,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    4588,
+                    29,
+                    23,
+                    24,
+                    25
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 34,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    515
+                  ]
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    4588,
+                    29,
+                    23
+                  ]
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    2052,
+                    2053,
+                    2054,
+                    1025,
+                    1281,
+                    1537,
+                    515,
+                    513
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 28,
+                  "value": "4001"
+                },
+                {
+                  "id": 27,
+                  "value": "06000100020003"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":path",
+                "value": "<path>"
+              },
+              {
+                "name": ":authority",
+                "value": "<authority>"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+              },
+              {
+                "name": "accept-language",
+                "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              },
+              {
+                "name": "te",
+                "value": "trailers"
+              }
+            ],
+            "http2": [
+              {
+                "type": "http2.settings",
+                "data": [
+                  {
+                    "id": 1,
+                    "value": 65536
+                  },
+                  {
+                    "id": 2,
+                    "value": 0
+                  },
+                  {
+                    "id": 4,
+                    "value": 131072
+                  },
+                  {
+                    "id": 5,
+                    "value": 16384
+                  }
+                ]
+              },
+              {
+                "type": "http2.window_update",
+                "data": {
+                  "increment": 12517377,
+                  "stream_id": 0
+                }
+              },
+              {
+                "type": "http2.header_priority",
+                "data": {
+                  "dependency": 0,
+                  "exclusive": false,
+                  "stream_id": 3,
+                  "weight": 42
+                }
+              },
+              {
+                "type": "http2.window_update",
+                "data": {
+                  "increment": 12451840,
+                  "stream_id": 3
+                }
+              }
+            ]
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              4865,
+              4867,
+              4866,
+              49195,
+              49199,
+              52393,
+              52392,
+              49196,
+              49200,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a11ec001d001700180019"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 34,
+                "payload_hex": "00080403050306030203"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  4588,
+                  29,
+                  23
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "0403040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001604030503060308040805080604010501060102030201"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 28,
+                "payload_hex": "4001"
+              },
+              {
+                "id": 27,
+                "payload_hex": "06000100020003"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010003720020ca7e1eae0a704dc8e8aa4fe33ce35e9f4384b60965e71ca0997d8b0004df69e100f00cfdd783cdd37c01bc545496e0dd40cc2ce4119924a1a4a8c9bf6a02369b207e8457b636a51974996669bd2406ff657297c6848ab445d9d72ad44e11b98c33e02fdc1273fd6325ce6ba8d00408f5bd8aef121b6e0672ba73e8a579acec6b409d1d208abf1664686f31ed0ccfd5fc937dabb93ce5bd9c93f2d87b86ea5840539a609dc4580df56fbe539f9e1ee0e459d28a6a4b5840c2fd3585ba58cb45dcc5209a81f5017812996033b147260184228e270aebf0d4744ea79130d54c95800b0169fb1339877cc8eae5d26999a919e898c1bb7ea0498e886895f9a27cf6ffd9925489b5407c7a24ebd105e4a93e5338e7"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 31,
+              "connection_id": "conn-11",
+              "type": "tls.client_hello",
+              "time": "2026-10-30T06:53:53.9387469Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  4865,
+                  4867,
+                  4866,
+                  49195,
+                  49199,
+                  52393,
+                  52392,
+                  49196,
+                  49200,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a11ec001d001700180019"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 34,
+                    "payload_hex": "00080403050306030203"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      4588,
+                      29,
+                      23
+                    ]
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "0403040303"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "001604030503060308040805080604010501060102030201"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 28,
+                    "payload_hex": "4001"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "06000100020003"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010003720020ca7e1eae0a704dc8e8aa4fe33ce35e9f4384b60965e71ca0997d8b0004df69e100f00cfdd783cdd37c01bc545496e0dd40cc2ce4119924a1a4a8c9bf6a02369b207e8457b636a51974996669bd2406ff657297c6848ab445d9d72ad44e11b98c33e02fdc1273fd6325ce6ba8d00408f5bd8aef121b6e0672ba73e8a579acec6b409d1d208abf1664686f31ed0ccfd5fc937dabb93ce5bd9c93f2d87b86ea5840539a609dc4580df56fbe539f9e1ee0e459d28a6a4b5840c2fd3585ba58cb45dcc5209a81f5017812996033b147260184228e270aebf0d4744ea79130d54c95800b0169fb1339877cc8eae5d26999a919e898c1bb7ea0498e886895f9a27cf6ffd9925489b5407c7a24ebd105e4a93e5338e7"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 32,
+              "connection_id": "conn-11",
+              "type": "tls.negotiated",
+              "time": "2026-10-30T06:53:53.9408407Z",
+              "data": {
+                "alpn": "h2",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 33,
+              "connection_id": "conn-11",
+              "type": "http2.settings",
+              "time": "2026-10-30T06:53:53.9408407Z",
+              "data": [
+                {
+                  "id": 1,
+                  "value": 65536
+                },
+                {
+                  "id": 2,
+                  "value": 0
+                },
+                {
+                  "id": 4,
+                  "value": 131072
+                },
+                {
+                  "id": 5,
+                  "value": 16384
+                }
+              ]
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 34,
+              "connection_id": "conn-11",
+              "type": "http2.window_update",
+              "time": "2026-10-30T06:53:53.9408407Z",
+              "data": {
+                "increment": 12517377,
+                "stream_id": 0
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 35,
+              "connection_id": "conn-11",
+              "type": "http2.header_priority",
+              "time": "2026-10-30T06:53:53.9408407Z",
+              "data": {
+                "dependency": 0,
+                "exclusive": false,
+                "stream_id": 3,
+                "weight": 42
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 36,
+              "connection_id": "conn-11",
+              "type": "http2.headers",
+              "time": "2026-10-30T06:53:53.9408407Z",
+              "data": {
+                "headers": [
+                  {
+                    "name": ":method",
+                    "value": "GET"
+                  },
+                  {
+                    "name": ":path",
+                    "value": "/inspect?sample=firefox-159.0-tls13-h2-0"
+                  },
+                  {
+                    "name": ":authority",
+                    "value": "localhost:16784"
+                  },
+                  {
+                    "name": ":scheme",
+                    "value": "https"
+                  },
+                  {
+                    "name": "user-agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0"
+                  },
+                  {
+                    "name": "accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                  },
+                  {
+                    "name": "accept-language",
+                    "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+                  },
+                  {
+                    "name": "accept-encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "upgrade-insecure-requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "sec-fetch-dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "sec-fetch-mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "sec-fetch-site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "sec-fetch-user",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "priority",
+                    "value": "u=0, i"
+                  },
+                  {
+                    "name": "te",
+                    "value": "trailers"
+                  }
+                ],
+                "scope": "first-request-per-connection",
+                "stream_id": 3
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 37,
+              "connection_id": "conn-11",
+              "type": "http2.window_update",
+              "time": "2026-10-30T06:53:53.9408407Z",
+              "data": {
+                "increment": 12451840,
+                "stream_id": 3
+              }
+            }
+          ],
+          "ja3": {
+            "text": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25,0",
+            "md5": "9d42e90b0225e779f03141ddcd699df2"
+          },
+          "samples": [
+            {
+              "captured_at": "2026-10-30T06:53:52.766Z",
+              "sha256": "cbf78e3816a4ecfc2622433c25eb6055650ec6c31219cfbac79cff802b803601"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:54.315Z",
+              "sha256": "cfb79f196e47d4a28834234653ea4b5de8d287bd07e893775ae744ab0d980543"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:55.871Z",
+              "sha256": "f3f22e5d239f64eefe1e5ff7946534027cd78339e83abb4f6f5464ddd603b202"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:57.431Z",
+              "sha256": "17a5aa2e2833a7412fb76d5676ef49723fc75d3b9a29c5a08ec15d8aecc97f9e"
+            },
+            {
+              "captured_at": "2026-10-30T06:53:59.016Z",
+              "sha256": "d2193699e45771ec61217488fb87a732e6aeed828a6e9818a838208fada956d9"
+            }
+          ]
+        }
+      },
+      "runtime_replay": {
+        "tls_and_headers_match": true,
+        "online_offline_pairs": 3,
+        "whole_profile_match": false,
+        "input_sources": {
+          "imitate": {
+            "commit": "9007f95a2513832f2aedba53358a482ec4d39b9b",
+            "tree_sha256": "cd1668a09bc5ef5ef518dca6e5ce29afdf40c685bf2246732f83aa04ebb7529d"
+          },
+          "core": {
+            "commit": "4c07fe9e4059e682b4bd5b9a2138401ab91dd91c",
+            "tree_sha256": "0d28703bfa90c08afc4e7bdbf58117c61f0ceadc7123f7c411856549119122ba"
+          },
+          "transport": {
+            "commit": "d5afcd1a2db48a40850363b76e8a19eb339c757c",
+            "tree_sha256": "0dbc4a67070069df85e5975ab0002c32f97ca2a44b9b9b671446f4807738b955"
+          },
+          "collector": {
+            "commit": "de2e3d6b83ceb748f7bad241ceb149b196174658",
+            "tree_sha256": "27fb1e99e39c6a9aff8708fef70771e4188524aeb628d7d46e8e4840921af696"
+          }
+        }
+      }
     }
   ]
 }
