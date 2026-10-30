@@ -106,6 +106,7 @@ def run(args, *, prepared=None):
                 if releases.digest(Path(build['archive'])) != build['archive_sha256'] or manifest.get('archive_sha256') and build['archive_sha256'] != manifest['archive_sha256']:
                     raise ValueError('Prepared browser archive checksum mismatch')
                 signature = releases.publisher(Path(build['executable']), args.browser)
+                build['installer_publisher'] = releases.publisher(Path(build['archive']), args.browser)
                 if signature['product_version'] != build['version'] or releases.digest(Path(build['executable'])) != build['executable_sha256']:
                     raise ValueError('Prepared browser executable changed')
                 build['publisher'] = signature

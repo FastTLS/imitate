@@ -11,12 +11,13 @@ import subprocess
 import tarfile
 import urllib.parse
 import urllib.request
-import zipfile
+from concurrent.futures import ThreadPoolExecutor
 
-CHROME = 'https://googlechromelabs.github.io/chrome-for-testing/'
+CHROME = 'https://versionhistory.googleapis.com/v1/chrome/platforms/win64/channels/stable/versions/all/releases?filter=endtime=none'
+CHROME_MSI = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi'
 EDGE = 'https://edgeupdates.microsoft.com/api/products?view=enterprise'
 VERSION = re.compile(r'[1-9][0-9]*\.[0-9]+\.[0-9]+\.[0-9]+')
-HOSTS = {'googlechromelabs.github.io', 'storage.googleapis.com', 'edgeupdates.microsoft.com',
+HOSTS = {'versionhistory.googleapis.com', 'dl.google.com', 'edgeupdates.microsoft.com',
          'msedge.sf.dl.delivery.mp.microsoft.com'}
 MAX_ARCHIVE = 512 * 1024 * 1024
 
@@ -51,19 +52,26 @@ def fetch(url, maximum=8 * 1024 * 1024):
 def discover(browser, version=None):
     if browser not in ('chrome', 'edge') or version is not None and not VERSION.fullmatch(version):
         raise ValueError('Expected browser and full four-component version')
-    url = CHROME + (version + '.json' if version else 'last-known-good-versions-with-downloads.json') if browser == 'chrome' else EDGE
+    url = CHROME if browser == 'chrome' else EDGE
     raw = fetch(url)
     data = json.loads(raw)
     if browser == 'chrome':
-        selected = data if version else data['channels']['Stable']
-        if version and selected['version'] != version:
-            raise ValueError('Chrome manifest version mismatch')
-        matches = [v for v in selected['downloads']['chrome'] if v['platform'] == 'win64']
-        if len(matches) != 1:
-            raise ValueError('Expected one official Chrome win64 archive')
-        result = dict(browser=browser, version=selected['version'], url=matches[0]['url'],
-                      archive_sha256=None, checksum_source=None,
-                      integrity='Official HTTPS archive; locally recorded SHA256; executable Authenticode required. No vendor archive checksum is advertised.')
+        stable = [r['version'] for r in data['releases'] if r.get('pinnable') is True and r.get('fraction', 0) > 0 and VERSION.fullmatch(r.get('version', ''))]
+        if not stable:
+            raise ValueError('No pinned ordinary stable Chrome release in the official feed')
+        selected = max(stable, key=lambda value: tuple(map(int, value.split('.'))))
+        if version and version != selected:
+            raise ValueError('Chrome enterprise MSI serves the current pinned stable build only; historical versions require a separately verified official archive')
+        request = urllib.request.Request(CHROME_MSI, method='HEAD')
+        with urllib.request.build_opener(Redirects()).open(request, timeout=30) as response:
+            checked_url(response.url)
+            size, etag = int(response.headers['Content-Length']), response.headers.get('ETag')
+            ranges = response.headers.get('Accept-Ranges') == 'bytes'
+        if not 0 < size <= MAX_ARCHIVE or not etag:
+            raise ValueError('Missing bounded Chrome download identity')
+        result = dict(browser=browser, version=selected, url=CHROME_MSI, archive_sha256=None, checksum_source=None,
+            size=size, etag=etag, ranges=ranges, distribution='enterprise-stable',
+            integrity='Official HTTPS MSI; pinned HTTP size/ETag; valid installer and executable Authenticode; locally recorded SHA256, not a vendor checksum.')
     else:
         releases = [r for p in data if p['Product'] == 'Stable' for r in p['Releases']
                     if r['Platform'] == 'Windows' and r['Architecture'] == 'x64' and
@@ -145,12 +153,14 @@ def publisher(executable, browser):
 def download(manifest, output, sevenzip='7z', archive_cache=None):
     output.mkdir(parents=True, exist_ok=False)
     browser, version = manifest['browser'], manifest['version']
-    archive = output / ('browser.zip' if browser == 'chrome' else 'browser.msi')
+    archive = output / 'browser.msi'
     expected = manifest['archive_sha256']
     # Only a producer checksum makes an external archive cache admissible.
     cached = archive_cache / (version + '.msi') if archive_cache and browser == 'edge' else None
     if cached and cached.is_file() and digest(cached) == expected:
         shutil.copyfile(cached, archive)
+    elif browser == 'chrome' and manifest.get('ranges'):
+        ranged_download(manifest, archive)
     else:
         with urllib.request.build_opener(Redirects()).open(checked_url(manifest['url']), timeout=90) as response, archive.open('xb') as target:
             checked_url(response.url)
@@ -160,22 +170,69 @@ def download(manifest, output, sevenzip='7z', archive_cache=None):
                 if count > MAX_ARCHIVE:
                     raise ValueError('Browser archive exceeds size limit')
                 target.write(chunk)
+    return extract_archive(manifest, archive, output, sevenzip)
+
+
+def ranged_download(manifest, archive):
+    """Bounded parallel ranges, all bound to the same official size and ETag."""
+    size, etag = manifest['size'], manifest['etag']
+    if not 0 < size <= MAX_ARCHIVE or not isinstance(etag, str) or not etag:
+        raise ValueError('Invalid range download identity')
+    directory = archive.parent / 'ranges'; directory.mkdir(exist_ok=False)
+    def fetch_part(index):
+        start, end = size * index // 8, size * (index + 1) // 8 - 1
+        request = urllib.request.Request(checked_url(manifest['url']), headers={'Range': f'bytes={start}-{end}', 'If-Match': etag})
+        target = directory / f'{index}.part'
+        with urllib.request.build_opener(Redirects()).open(request, timeout=90) as response, target.open('xb') as stream:
+            checked_url(response.url)
+            if response.status != 206 or response.headers.get('Content-Range') != f'bytes {start}-{end}/{size}' or response.headers.get('ETag') != etag:
+                raise ValueError('Chrome range identity mismatch')
+            count = 0
+            while chunk := response.read(1024 * 1024):
+                count += len(chunk)
+                if count > end - start + 1:
+                    raise ValueError('Chrome range exceeds declared size')
+                stream.write(chunk)
+        if target.stat().st_size != end - start + 1:
+            raise ValueError('Truncated Chrome range')
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        list(pool.map(fetch_part, range(8)))
+    with archive.open('xb') as stream:
+        for index in range(8):
+            with (directory / f'{index}.part').open('rb') as source:
+                shutil.copyfileobj(source, stream)
+
+
+def extract_archive(manifest, archive, output, sevenzip='7z'):
+    browser, version, expected = manifest['browser'], manifest['version'], manifest['archive_sha256']
     actual = digest(archive)
     if expected and actual != expected or manifest.get('size') and archive.stat().st_size != manifest['size']:
         raise ValueError('Official browser archive checksum/size mismatch')
     extracted = output / 'browser'
+    archive_signature = publisher(archive, browser)
+    def seven(source, destination, *names):
+        subprocess.run([sevenzip, 'x', str(source), '-o' + str(destination), *names, '-y'], check=True, stdout=subprocess.DEVNULL, timeout=180)
     if browser == 'chrome':
-        with zipfile.ZipFile(archive) as zipped:
-            if sum(i.file_size for i in zipped.infolist()) > 2 * 1024**3:
-                raise ValueError('Browser extraction exceeds size limit')
-            for info in zipped.infolist():
-                if '\\' in info.filename or not (extracted / info.filename).resolve().is_relative_to(extracted.resolve()) or (info.external_attr >> 16) & 0o170000 == 0o120000:
-                    raise ValueError('Unsafe archive member')
-            zipped.extractall(extracted)
-        executable = extracted / 'chrome-win64/chrome.exe'
+        seven(archive, output / 'outer', 'Binary.GoogleChromeInstaller')
+        seven(output / 'outer/Binary.GoogleChromeInstaller', output / 'wrapper')
+        wrappers = list((output / 'wrapper').rglob('updater.7z'))
+        if len(wrappers) != 1:
+            raise ValueError('Unexpected signed Chrome MSI wrapper')
+        seven(wrappers[0], output / 'updater')
+        installers = list((output / 'updater').rglob('*_chrome_installer.exe'))
+        if len(installers) != 1:
+            raise ValueError('Expected one pinned Chrome installer')
+        publisher(installers[0], browser)
+        seven(installers[0], output / 'installer')
+        payloads = list((output / 'installer').rglob('chrome.7z'))
+        if len(payloads) != 1:
+            raise ValueError('Unexpected signed Chrome payload')
+        seven(payloads[0], extracted)
+        matches = list(extracted.rglob('chrome.exe'))
+        if len(matches) != 1:
+            raise ValueError('Expected one signed Chrome executable')
+        executable = matches[0]
     else:
-        def seven(source, destination, *names):
-            subprocess.run([sevenzip, 'x', str(source), '-o' + str(destination), *names, '-y'], check=True, stdout=subprocess.DEVNULL, timeout=180)
         seven(archive, output / 'outer', 'Binary.MicrosoftEdgeInstaller')
         seven(output / 'outer/Binary.MicrosoftEdgeInstaller', output / 'lzma')
         streams = list((output / 'lzma').rglob('102~'))
@@ -203,7 +260,7 @@ def download(manifest, output, sevenzip='7z', archive_cache=None):
     if signature['product_version'] != version:
         raise ValueError('Extracted browser full version mismatch')
     return {**manifest, 'archive_sha256': actual, 'archive': str(archive.resolve()), 'executable': str(executable.resolve()),
-            'executable_sha256': digest(executable), 'publisher': signature}
+            'executable_sha256': digest(executable), 'publisher': signature, 'installer_publisher': archive_signature}
 
 
 if __name__ == '__main__':

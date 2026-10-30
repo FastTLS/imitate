@@ -4,7 +4,9 @@
 
 首批仅 Windows x64、en-US、有界面最小化冷导航。每产品三个场景 TLS 1.2/H1、TLS 1.3/H1、TLS 1.3/H2，各五个独立新进程/配置。CDP 核对产品及完整版本，叶证书 SPKI 例外只用于本次本地采集器；没有修改系统信任。回放仍校验采集器 CA。
 
-Chrome 使用 [官方 Chrome for Testing 清单](https://github.com/GoogleChromeLabs/chrome-for-testing)与 win64 ZIP；清单未提供厂商归档摘要，报告中的 SHA256 为本次 HTTPS 下载字节的本地记录，不能称为厂商校验和或归档签名。提取后核对有效 Google LLC Authenticode 和完整版本。Edge 使用[微软发行源](https://edgeupdates.microsoft.com/api/products?view=enterprise)的 MSI SHA256、大小及有效 Microsoft Corporation 可执行文件签名。签名失败、未知格式及错误版本均拒绝。解包复用了本工作区早期 Edge 工具的格式知识，BCJ2 实现在源码中有边界检查，不运行历史下载的解码程序。
+Chrome 从 [Google VersionHistory](https://developer.chrome.com/docs/web-platform/versionhistory/guide) 发现当前可固定的稳定版，使用[官方企业 MSI](https://chromeenterprise.google/download/)；固定下载大小与 ETag，各分段须严格匹配同一身份。MSI、嵌套安装器及浏览器必须有有效 Google LLC Authenticode，提取后的完整版本必须符合选择。MSI 入口只提供当前稳定版，不能据此下载任意历史版本；不匹配时阻止候选。SHA256 为本次实际下载的本地记录，不能写成厂商提供的摘要。没有签名的测试版文件不作为签名验证的替代来源。
+
+Edge 使用[微软发行源](https://edgeupdates.microsoft.com/api/products?view=enterprise)的 MSI SHA256、大小及有效 Microsoft Corporation MSI/可执行文件签名。签名失败、未知格式及错误版本均拒绝。两种 MSI 都只解包，不运行安装器；解包复用了本工作区早期 Edge 工具的格式知识，BCJ2 实现在源码中有边界检查，不运行历史下载的解码程序。
 
 比较保留完整静态 TLS 参数、扩展成员/次数、头顺序和 H2 帧；扩展随机顺序单独保存，GREASE 值、ECH 随机内容和临时密钥不作逐字节等价声明。新未知扩展、缺失/重复/不稳定样本、冷握手不符及后端不支持会生成 `blocked` 报告。`candidate` 提供 ProfileBundle v1、摘要、语义差异和限制，必须显式审核、导入、pin；失败不替换有效配置。ML-DSA 广告能力不能当成 CertificateVerify 支持，H2 流级差异继续保留。
 

@@ -123,7 +123,8 @@ def audit(root, catalog, browser):
     spec['headers'] = firefox.project_headers(h1, h2)
     spec['identity'] = dict(user_agent=ua)
     frames = cases['tls13-h2']['normalized']['http2']
-    settings = next(f['data']['settings'] for f in frames if f['type'] == 'http2.settings')
+    settings = next(f['data'] for f in frames if f['type'] == 'http2.settings')
+    settings = settings['settings'] if isinstance(settings, dict) else settings
     spec['http2'] = dict(settings=settings,
         connection_flow=sum(f['data']['increment'] for f in frames if f['type'] == 'http2.window_update' and f['data']['stream_id'] == 0),
         priority_frames=[f['data'] for f in frames if f['type'] == 'http2.priority'])
