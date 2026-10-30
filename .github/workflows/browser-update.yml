@@ -3,8 +3,17 @@ name: Browser profile candidate (manual, read-only)
 on:
   workflow_dispatch:
     inputs:
+      browser:
+        description: Browser product (manual candidate only)
+        type: choice
+        options: [firefox, chrome, edge]
+        default: firefox
+      browser_version:
+        description: Full stable version (empty discovers current stable)
+        type: string
+        default: ''
       firefox_version:
-        description: Full stable Firefox version (empty discovers current stable)
+        description: Legacy Firefox-only full version; cannot combine with browser_version
         type: string
         default: ''
       force_capture:
@@ -55,17 +64,26 @@ jobs:
         with:
           node-version: '24'
       - name: Verify updater failure and source-preservation contracts
-        run: python -m unittest discover -s imitate/tools/firefox -p 'test_*.py' -v
+        shell: pwsh
+        run: |
+          python -m unittest discover -s imitate/tools/firefox -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s imitate/tools/chromium -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Collect and verify candidate without changing source catalog
         env:
           FIREFOX_VERSION: ${{ inputs.firefox_version }}
+          BROWSER: ${{ inputs.browser || 'firefox' }}
+          BROWSER_VERSION: ${{ inputs.browser_version }}
           FORCE_CAPTURE: ${{ inputs.force_capture }}
         shell: pwsh
         run: |
-          $updateArgs = @('--repo', 'imitate', '--core', 'fastls', '--transport', 'ftransport', '--lab', 'fastls-lab', '--output', 'browser-update')
-          if ($env:FIREFOX_VERSION) { $updateArgs += @('--version', $env:FIREFOX_VERSION) }
+          if ($env:FIREFOX_VERSION -and ($env:BROWSER -ne 'firefox' -or $env:BROWSER_VERSION)) { throw 'Legacy Firefox version conflicts with browser selection/version' }
+          $updateArgs = @('--browser', $env:BROWSER, '--repo', 'imitate', '--core', 'fastls', '--transport', 'ftransport', '--lab', 'fastls-lab', '--output', 'browser-update')
+          $fullVersion = if ($env:BROWSER_VERSION) { $env:BROWSER_VERSION } else { $env:FIREFOX_VERSION }
+          if ($fullVersion) { $updateArgs += @('--version', $fullVersion) }
           if ($env:FORCE_CAPTURE -eq 'true') { $updateArgs += '--force-capture' }
-          python imitate/tools/firefox/update.py @updateArgs
+          python imitate/tools/browser_update.py @updateArgs
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           git -C imitate diff --exit-code
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
@@ -78,6 +96,7 @@ jobs:
             browser-update/update-report.json
             browser-update/semantic-diff.json
             browser-update/downloads/discovery.json
+            browser-update/downloads/official-manifest.json
             browser-update/downloads/builds.json
             browser-update/downloads/*/SHA512SUMS
             browser-update/run.json

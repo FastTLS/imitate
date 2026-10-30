@@ -29,4 +29,11 @@ jobs:
           go mod verify
           go test ./...
           go vet ./...
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.11'
+      - name: Check read-only updater selection and failure boundaries
+        run: |
+          python -m unittest discover -s tools/firefox -p 'test_*.py' -v
+          python -m unittest discover -s tools/chromium -p 'test_*.py' -v
 

@@ -27,7 +27,9 @@ def wait_json(path, child):
     raise TimeoutError('Collector start timeout')
 
 
-def replay(run, repo, core, transport, gate=True):
+def replay(run, repo, core, transport, gate=True, *, family='firefox', normalizer=normalize, verified_fields=None, selector=None):
+    if family not in ('firefox', 'chrome', 'edge'):
+        raise ValueError('Unsupported browser product')
     output = run / 'replay'
     output.mkdir(exist_ok=False)
     build = output / 'build'
@@ -47,7 +49,7 @@ def replay(run, repo, core, transport, gate=True):
             directory = output / ('capture' + suffix)
             child = subprocess.Popen([str((run / ('lab' + suffix + '.exe')).resolve()), '-output', str(directory.resolve())], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             labs.append((child, directory, wait_json(directory / 'lab-manifest.json', child)))
-        subprocess.run([str(executable.resolve()), str((labs[0][1] / 'lab-manifest.json').resolve()), str((labs[1][1] / 'lab-manifest.json').resolve()), str((output / 'catalog-check.json').resolve())], check=True, timeout=600)
+        subprocess.run([str(executable.resolve()), str((labs[0][1] / 'lab-manifest.json').resolve()), str((labs[1][1] / 'lab-manifest.json').resolve()), str((output / 'catalog-check.json').resolve())], env={**env, 'FASTLS_REPLAY_FAMILY': family, 'FASTLS_REPLAY_SELECTOR': selector or ''}, check=True, timeout=600)
     finally:
         for child, directory, manifest in labs:
             try:
@@ -61,7 +63,7 @@ def replay(run, repo, core, transport, gate=True):
     if any('validation_error' in entry for entry in audit['catalog']):
         raise ValueError('Backend profile validation failed')
     observed = read(run / 'observations.json')
-    expected = {(f"firefox/{o['version'].split('.')[0]}/windows", scenario): case['normalized'] for o in observed['observations'] for scenario, case in o['cases'].items()}
+    expected = {(f"{family}/{o['version'].split('.')[0]}/windows", scenario): case['normalized'] for o in observed['observations'] for scenario, case in o['cases'].items()}
     results, parity = [], {}
     for row in audit['requests']:
         if row.get('error') or row['status'] != 200:
@@ -73,7 +75,7 @@ def replay(run, repo, core, transport, gate=True):
         negotiation = event(events, 'tls.negotiated')
         if negotiation['resumed'] or negotiation['version'] != (771 if row['scenario'] == 'tls12-h1' else 772) or negotiation['alpn'] != ('h2' if row['scenario'].endswith('h2') else 'http/1.1'):
             raise ValueError('Replay negotiation mismatch')
-        value = normalize(events, row['scenario'])
+        value = normalizer(events, row['scenario'])
         key = (row['selector'], row['scenario'])
         if key in parity and parity[key] != digest(value):
             raise ValueError('Online/offline wire mismatch: ' + str(key))
@@ -90,23 +92,23 @@ def replay(run, repo, core, transport, gate=True):
     dump(output / 'comparison.json', summary)
     print(json.dumps({k: v for k, v in summary.items() if k != 'results'}, indent=2))
     if gate and any('tls' in r['differences'] or 'headers' in r['differences'] for r in results):
-        raise ValueError('TLS/header replay differs from actual Firefox; candidate rejected')
+            raise ValueError('TLS/header replay differs from actual browser; candidate rejected')
     if gate:
         catalog_path = repo / 'browser-specs.json'
         catalog = read(catalog_path)
-        fixture_path = repo / 'testdata/firefox/windows.json'
+        fixture_path = repo / f'testdata/{family}/windows.json'
         fixture = read(fixture_path)
         active_versions = {o['version'] for o in observed['observations']}
         for observation in fixture['observations']:
             if observation['version'] not in active_versions:
                 continue
-            identifier = f"firefox/{observation['version'].split('.')[0]}/windows"
+            identifier = f"{family}/{observation['version'].split('.')[0]}/windows"
             rows = [r for r in results if r['selector'] == identifier]
             if not rows:
                 continue
             if len(rows) != 6:
                 raise ValueError('Incomplete online/offline replay for ' + identifier)
-            fields = ['tls.static_client_hello.cold', 'http.headers.navigation.zh-CN']
+            fields = verified_fields or ['tls.static_client_hello.cold', 'http.headers.navigation.zh-CN']
             catalog[identifier]['match']['verified_fields'] = fields
             for evidence in catalog[identifier]['spec']['evidence']:
                 evidence['verified_fields'] = fields
