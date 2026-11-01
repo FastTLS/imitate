@@ -7,7 +7,7 @@ FastTLS 官方独立指纹生成库。模块为 `github.com/FastTLS/imitate`，�
 ## 安装
 
 ```sh
-go get github.com/FastTLS/imitate@v0.1.0
+go get github.com/FastTLS/imitate@v0.1.2
 ```
 
 需要 Go 1.26+。本库不联网获取或运行浏览器，不发送 HTTP 请求，不替代 TLS 传输。以下片段须配合 context、profile 与 imitate 的对应导入。
@@ -64,7 +64,7 @@ go test ./...
 
 导出文件通过 Fastls 的 `imitate.Register(data)` 得到隔离的离线 Provider，无全局注册、不加载脚本。数据仓库只维护证据和固定导出物，可执行配方的维护入口在本仓库。
 
-稳定模块版本为 `v0.1.0`；默认分支的数据修订不等于已经发布的新模块版本。来源与第三方声明见 [NOTICE.md](NOTICE.md)。
+稳定模块版本为 `v0.1.2`；默认分支的数据修订不等于已经发布的新模块版本。来源与第三方声明见 [NOTICE.md](NOTICE.md)。
 
 用户请求头优先于默认值，包括显式空值。WithUserAgent 只覆盖 HTTP UA，不再重新生成其余身份头；未找到指纹返回错误。详见 [指纹与请求头](https://fasttls.github.io/concepts/fingerprints)。
 
