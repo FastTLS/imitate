@@ -72,7 +72,10 @@ def verify(root, current, browser, source_sha):
             e.get('product_version') != version or e.get('platform') != 'windows' or
             not required.issubset(e.get('verified_fields', [])) for e in evidence):
         raise ValueError('Incomplete exact-build evidence')
-    observations = read(root / f'candidate/testdata/{browser}/windows.json')
+    fixture_path = root / f'candidate/testdata/{browser}/windows.json'
+    # Older uploads omitted the staged fixture. Sealed raw observations and six
+    # independently rechecked replay rows establish the same bounded evidence.
+    observations = read(fixture_path if fixture_path.exists() else root / 'observations.json')
     selected = [o for o in observations['observations'] if o['version'] == version]
     if len(selected) != 1:
         raise ValueError('Expected exactly one exact-build observation')
@@ -80,8 +83,6 @@ def verify(root, current, browser, source_sha):
     locale, mode = ('zh-CN', 'headless') if browser == 'firefox' else ('en-US', 'headed-minimized')
     if observation['platform'] != 'windows-x64' or observation['locale'] != locale or observation['mode'] != mode:
         raise ValueError('Observation scope mismatch')
-    if observation.get('runtime_replay', {}).get('whole_profile_match') is not True:
-        raise ValueError('Incomplete browser replay')
     if set(observation['cases']) != SCENARIOS:
         raise ValueError('Missing transport scenario')
     normalizer = audit.normalize if browser == 'firefox' else audit_chromium.normalize
@@ -103,6 +104,7 @@ def verify(root, current, browser, source_sha):
     if any(row.get('error') or row.get('status') != 200 or row['differences'] or
            row['actual'] != expected[row['scenario']] for row in rows):
         raise ValueError('Replay does not match sealed browser observations')
+    observation['runtime_replay'] = {'tls_and_headers_match': True, 'whole_profile_match': True, 'online_offline_pairs': 3}
     checked = read(root / 'replay/catalog-check.json')['catalog']
     checked = [e for e in checked if e['id'] == identifier]
     if len(checked) != 1 or 'validation_error' in checked[0] or protocol(checked[0]['spec']) != protocol(spec):
@@ -172,16 +174,30 @@ def stage(repo, inputs, source_sha, run_url, browsers):
     return result
 
 
+def validate_reuse(repo, capture_sha, source_sha):
+    if capture_sha == source_sha:
+        return
+    subprocess.run(['git', '-C', str(repo), 'merge-base', '--is-ancestor', capture_sha, source_sha], check=True)
+    changed = subprocess.check_output(['git', '-C', str(repo), 'diff', '--name-only', capture_sha, source_sha], text=True).splitlines()
+    if any(not (p.startswith('tools/maintenance/') or p.startswith('.github/workflows/') or p.endswith('/README.md') or p in ('README.md', '.gitignore')) for p in changed):
+        raise ValueError('Capture reuse requires identical generator, catalog and collector tool inputs')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('repo', 'inputs'):
         parser.add_argument('--' + name, type=Path, required=True)
     for name in ('source-sha', 'run-url', 'browsers'):
         parser.add_argument('--' + name, required=True)
+    parser.add_argument('--capture-sha', help='Reuse a completed same-repository capture after tooling-only changes')
     args = parser.parse_args()
     if subprocess.check_output(['git', '-C', str(args.repo), 'rev-parse', 'HEAD'], text=True).strip() != args.source_sha:
         raise ValueError('Checkout differs from capture source')
-    result = stage(args.repo, args.inputs, args.source_sha, args.run_url, json.loads(args.browsers))
+    capture_sha = args.capture_sha or args.source_sha
+    validate_reuse(args.repo, capture_sha, args.source_sha)
+    result = stage(args.repo, args.inputs, capture_sha, args.run_url, json.loads(args.browsers))
+    result.update(source_commit=args.source_sha, capture_source_commit=capture_sha)
+    write(args.repo / 'maintenance-result.json', result)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:

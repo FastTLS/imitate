@@ -115,6 +115,7 @@ jobs:
             browser-update/observations.json
             browser-update/audit-summary.json
             browser-update/candidate/browser-specs.json
+            browser-update/candidate/testdata/*/windows.json
             browser-update/replay/comparison.json
             browser-update/replay/catalog-check.json
             browser-update/bundles/

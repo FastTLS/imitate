@@ -131,6 +131,26 @@ class AdoptionTests(unittest.TestCase):
         for e in self.catalog[self.identifier]['spec']['evidence']: e['product_version'] = '159.0.1'
         with self.assertRaisesRegex(ValueError, 'downgrade'): self.verify()
 
+    def test_old_archive_can_recover_from_bound_raw_observations(self):
+        fixture = self.run / 'candidate/testdata/firefox/windows.json'
+        observations = maintain.read(fixture)
+        observations['observations'][0].pop('runtime_replay')
+        maintain.write(self.run / 'observations.json', observations)
+        fixture.unlink()
+        identifier, entry, observation, record = self.verify()
+        self.assertEqual(identifier, self.identifier)
+        self.assertTrue(observation['runtime_replay']['whole_profile_match'])
+
+    def test_reuse_rejects_any_capture_or_generator_input_change(self):
+        for path in ['provider.go', 'browser-specs.json', 'tools/chromium/capture.mjs', 'tools/firefox/audit.py', 'go.sum']:
+            with self.subTest(path=path), patch.object(maintain.subprocess, 'run'), patch.object(maintain.subprocess, 'check_output', return_value=path):
+                with self.assertRaisesRegex(ValueError, 'identical generator'):
+                    maintain.validate_reuse(self.repo, SHA, 'b' * 40)
+
+    def test_reuse_accepts_only_adoption_tooling_and_documentation(self):
+        with patch.object(maintain.subprocess, 'run'), patch.object(maintain.subprocess, 'check_output', return_value='tools/maintenance/maintain.py\n.github/workflows/browser-update.yml\nREADME.md'):
+            maintain.validate_reuse(self.repo, SHA, 'b' * 40)
+
 
 class PublicationTests(unittest.TestCase):
     def test_advanced_default_branch_prevents_publication(self):

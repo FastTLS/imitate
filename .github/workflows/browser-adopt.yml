@@ -1,0 +1,115 @@
+name: Recover verified browser adoption
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run:
+        description: Completed maintenance run containing sealed capture artifacts
+        type: string
+        required: true
+      browser:
+        description: Product to recover without recollecting browser samples
+        type: choice
+        options: [all, edge, chrome, firefox]
+        default: all
+      adopt:
+        description: Publish after verifying unchanged generator inputs
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser-maintenance
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GOWORK: 'off'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16
+        with:
+          go-version: '1.26.10'
+      - name: Resolve trusted completed capture
+        id: source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SOURCE_RUN: ${{ inputs.source_run }}
+          BROWSER: ${{ inputs.browser }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          python - <<'PY'
+          import json, os, re, subprocess
+          run_id = os.environ['SOURCE_RUN']
+          if not re.fullmatch(r'[0-9]+', run_id):
+              raise SystemExit('Expected numeric workflow run ID')
+          data = json.loads(subprocess.check_output(['gh', 'api', f'repos/{os.environ["REPOSITORY"]}/actions/runs/{run_id}'], text=True))
+          if data['status'] != 'completed' or data['path'] != '.github/workflows/browser-maintenance.yml' or data['event'] not in ('schedule', 'workflow_dispatch') or data['head_branch'] != os.environ['DEFAULT_BRANCH']:
+              raise SystemExit('Only completed default-branch maintenance evidence can be reused')
+          browser = os.environ['BROWSER']
+          if browser not in ('all', 'edge', 'chrome', 'firefox'):
+              raise SystemExit('Unsupported browser')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              print('sha=' + data['head_sha'], file=output)
+              print('browsers=' + json.dumps(['edge', 'chrome', 'firefox'] if browser == 'all' else [browser]), file=output)
+              print('url=' + data['html_url'], file=output)
+          PY
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: browser-profile-candidate-*
+          path: incoming
+          run-id: ${{ inputs.source_run }}
+          github-token: ${{ github.token }}
+      - name: Recheck evidence and unchanged production inputs
+        id: stage
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          CAPTURE_SHA: ${{ steps.source.outputs.sha }}
+          CAPTURE_URL: ${{ steps.source.outputs.url }}
+          BROWSERS: ${{ steps.source.outputs.browsers }}
+        run: python tools/maintenance/maintain.py --repo . --inputs incoming --source-sha "$SOURCE_SHA" --capture-sha "$CAPTURE_SHA" --run-url "$CAPTURE_URL" --browsers "$BROWSERS"
+      - name: Verify combined catalog and offline export
+        run: |
+          go mod verify
+          go test ./...
+          go test -race ./...
+          go vet ./...
+          python -m unittest discover -s tools/maintenance -p 'test_*.py' -v
+          mkdir -p verified-export
+          go run ./cmd/imitate-export -output verified-export/fingerprints.json
+      - name: Adopt verified data without repeating capture
+        if: ${{ steps.stage.outputs.changed == 'true' && inputs.adopt }}
+        env:
+          REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: python tools/maintenance/publish.py --repo . --repository "$REPOSITORY" --source-sha "$SOURCE_SHA" --base "$DEFAULT_BRANCH"
+      - name: Record exact export identity
+        run: python tools/maintenance/export_manifest.py --bundle verified-export/fingerprints.json --output verified-export/manifest.json --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: browser-maintenance-recovered
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            verified-export/
+            maintenance-result.json
+      - name: Fail visibly for blocked products
+        if: ${{ steps.stage.outputs.blocked == 'true' }}
+        run: exit 1

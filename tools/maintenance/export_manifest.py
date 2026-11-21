@@ -24,7 +24,7 @@ def manifest(bundle, run_url):
     source_commit = state.get('adopted_commit') or (None if dirty else source)
     return {'schema_version': 1, 'artifact': bundle.name, 'sha256': hashlib.sha256(raw).hexdigest(),
             'records': len(records), 'complete_specs': len(records), 'provider_version': version, 'data_revision': revision,
-            'source_commit': source_commit, 'capture_source_commit': state.get('source_commit', source),
+            'source_commit': source_commit, 'capture_source_commit': state.get('capture_source_commit', state.get('source_commit', source)),
             'catalog_sha256': hashlib.sha256(Path('browser-specs.json').read_bytes()).hexdigest(),
             'run_url': run_url, 'published_module': False,
             'note': 'This artifact is an explicit offline snapshot; it does not replace installed SDK profiles.'}
