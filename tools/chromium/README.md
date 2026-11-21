@@ -1,6 +1,6 @@
 # Chrome／Edge 配置候选
 
-[日常维护工作流](../maintenance/README.md)定时调用此只读采集器，在独立校验、组合测试和 PR 合并完成后记录采用状态。下面的本地命令及旧手动入口仍只生成候选。
+[日常维护工作流](../maintenance/README.md)定时调用此只读采集器，在独立校验、组合测试和 远端提交核验完成后记录采用状态。下面的本地命令及旧手动入口仍只生成候选。
 
 使用 `python tools/browser_update.py --browser chrome` 或 `--browser edge`，后接必需的 `--repo`、`--core`、`--transport`、`--lab`、`--output` 源码与新输出目录，`--version` 固定完整四段版本。省略版本时只发现官方稳定版；不会修改活动配置、创建 PR、安装浏览器或发布。
 

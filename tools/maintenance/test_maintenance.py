@@ -137,7 +137,7 @@ class PublicationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             repo = Path(directory)
             maintain.write(repo / 'maintenance-result.json', {'source_commit': SHA, 'changed': True, 'products': {}})
-            with patch.object(publish, 'execute', side_effect=['browser-specs.json', SHA, 'b' * 40]) as execute:
+            with patch.object(publish, 'execute', side_effect=['browser-specs.json', SHA, 'b' * 40 + '\trefs/heads/v2']) as execute:
                 with self.assertRaisesRegex(ValueError, 'advanced'):
                     publish.publish(repo, 'FastTLS/imitate', SHA, 'v2')
                 self.assertFalse(any('push' in call.args or 'merge' in call.args for call in execute.call_args_list))

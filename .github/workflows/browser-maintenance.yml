@@ -19,7 +19,7 @@ on:
         type: boolean
         default: false
       adopt:
-        description: Adopt verified candidates through a pull request
+        description: Adopt candidates after independent evidence and combined tests
         type: boolean
         default: true
 
@@ -69,7 +69,6 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: write
-      pull-requests: write
     env:
       GOWORK: 'off'
     steps:
@@ -104,10 +103,9 @@ jobs:
           mkdir -p verified-export
           go run ./cmd/imitate-export -output verified-export/fingerprints.json
           python tools/maintenance/export_manifest.py --bundle verified-export/fingerprints.json --output verified-export/manifest.json --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-      - name: Publish and merge the validated update
+      - name: Publish the validated data update
         if: ${{ steps.stage.outputs.changed == 'true' && (github.event_name == 'schedule' || inputs.adopt) }}
         env:
-          GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
           SOURCE_SHA: ${{ github.sha }}
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}

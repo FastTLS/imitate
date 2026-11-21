@@ -1,6 +1,6 @@
 # Firefox 配置候选更新
 
-本采集入口范围为 Firefox 普通稳定版、Windows x64、zh-CN、无头冷连接。工作流 `browser-update.yml` 保持只读，可单独手动执行，也由新的[日常维护工作流](../maintenance/README.md)调用；候选的定时检查、独立校验和 PR 采用由后者负责，采集器本身不修改输入目录或发布。
+本采集入口范围为 Firefox 普通稳定版、Windows x64、zh-CN、无头冷连接。工作流 `browser-update.yml` 保持只读，可单独手动执行，也由新的[日常维护工作流](../maintenance/README.md)调用；候选的定时检查、独立校验和受限数据采用由后者负责，采集器本身不修改输入目录或发布。
 
 ```powershell
 python imitate/tools/firefox/update.py --repo imitate --core fastls --transport ftransport --lab fastls-lab --output run-159 --version 159.0 --sevenzip 'D:/Program Files/7-Zip/7z.exe'
@@ -27,6 +27,6 @@ python imitate/tools/firefox/update.py --repo imitate --core fastls --transport 
 python -m unittest discover -s imitate/tools/firefox -p 'test_*.py' -v
 ```
 
-新增浏览器家族、平台或协议必须有真实采集与回放证据。Chrome/Edge 使用独立采集器；日常维护支持定时 PR 采用。Safari、ESR、移动端及 H3 指纹仍不在范围内。
+新增浏览器家族、平台或协议必须有真实采集与回放证据。Chrome/Edge 使用独立采集器；日常维护支持定时数据采用。Safari、ESR、移动端及 H3 指纹仍不在范围内。
 
 H2 候选会投影首流编号与 HEADERS 后的一次流窗口更新，非零字段要求 `http2.stream.v1`。回放从封存原始事件重新计算比较值，独立检查 stream ID；声明新能力的候选任何观测字段不符都阻断采用。该能力不会改写既有活动目录，旧限制及旧回放结论仍按各自来源保留。
