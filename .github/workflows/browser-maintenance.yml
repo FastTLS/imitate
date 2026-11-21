@@ -93,13 +93,16 @@ jobs:
           SOURCE_SHA: ${{ github.sha }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: python tools/maintenance/maintain.py --repo . --inputs incoming --source-sha "$SOURCE_SHA" --run-url "$RUN_URL" --browsers "$EXPECTED_BROWSERS"
-      - name: Validate combined catalog and export offline snapshot
+      - name: Validate changed combined catalog
+        if: ${{ steps.stage.outputs.changed == 'true' }}
         run: |
           go mod verify
           go test ./...
           go test -race ./...
           go vet ./...
           python -m unittest discover -s tools/maintenance -p 'test_*.py' -v
+      - name: Export the exact offline snapshot
+        run: |
           mkdir -p verified-export
           go run ./cmd/imitate-export -output verified-export/fingerprints.json
           python tools/maintenance/export_manifest.py --bundle verified-export/fingerprints.json --output verified-export/manifest.json --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

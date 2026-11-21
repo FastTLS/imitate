@@ -83,13 +83,16 @@ jobs:
           CAPTURE_URL: ${{ steps.source.outputs.url }}
           BROWSERS: ${{ steps.source.outputs.browsers }}
         run: python tools/maintenance/maintain.py --repo . --inputs incoming --source-sha "$SOURCE_SHA" --capture-sha "$CAPTURE_SHA" --run-url "$CAPTURE_URL" --browsers "$BROWSERS"
-      - name: Verify combined catalog and offline export
+      - name: Verify changed combined catalog
+        if: ${{ steps.stage.outputs.changed == 'true' }}
         run: |
           go mod verify
           go test ./...
           go test -race ./...
           go vet ./...
           python -m unittest discover -s tools/maintenance -p 'test_*.py' -v
+      - name: Export the exact offline snapshot
+        run: |
           mkdir -p verified-export
           go run ./cmd/imitate-export -output verified-export/fingerprints.json
       - name: Adopt verified data without repeating capture
