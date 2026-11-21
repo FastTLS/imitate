@@ -13,6 +13,19 @@
       ],
       "scope": "Windows x64 en-US headed-minimized; cold H1/H2 navigation",
       "run_url": "https://github.com/FastTLS/imitate/actions/runs/44911906351"
+    },
+    "firefox": {
+      "version": "160.0.1",
+      "profile_id": "firefox/160/windows",
+      "spec_sha256": "31c03a81f072f9f61b3eb5d0c76c80809f45508a5c85612e6a955b8a6a065e5f",
+      "source_commit": "05ac501cb11346efb18a7aa20992f69cc98a393d",
+      "verified_fields": [
+        "http.headers.navigation.zh-CN",
+        "http2.initial_frames.cold",
+        "tls.static_client_hello.cold"
+      ],
+      "scope": "Firefox stable; Windows x64 zh-CN; headless cold navigation",
+      "run_url": "https://github.com/FastTLS/imitate/actions/runs/44912744367"
     }
   }
 }

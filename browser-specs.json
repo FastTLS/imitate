@@ -44728,7 +44728,8 @@
         "product": "firefox",
         "product_version": "160",
         "platform": "windows",
-        "device": "desktop"
+        "device": "desktop",
+        "engine_version": "160"
       },
       "tls": {
         "min_version": "0x0303",
@@ -44841,6 +44842,14 @@
             "raw_hex": "4001"
           },
           {
+            "id": "0x001b",
+            "compression_algorithms": [
+              "0x0001",
+              "0x0002",
+              "0x0003"
+            ]
+          },
+          {
             "id": "0xfe0d",
             "strategy": "grease-ech"
           }
@@ -44869,93 +44878,104 @@
           }
         ],
         "connection_flow": 12517377,
+        "priority_frames": [],
+        "first_stream_id": 3,
+        "stream_window_increment": 12451840,
         "header_priority": {
-          "stream_id": 0,
           "dependency": 0,
-          "weight": 42,
-          "exclusive": false
-        },
-        "priority_frames": null
+          "exclusive": false,
+          "stream_id": 0,
+          "weight": 42
+        }
       },
       "headers": {
         "defaults": [
           {
-            "name": "Accept",
+            "name": "accept",
             "values": [
               "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
             ]
           },
           {
-            "name": "Accept-Encoding",
+            "name": "accept-language",
+            "values": [
+              "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+            ]
+          },
+          {
+            "name": "accept-encoding",
             "values": [
               "gzip, deflate, br, zstd"
             ]
           },
           {
-            "name": "Accept-Language",
+            "name": "upgrade-insecure-requests",
             "values": [
-              "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2"
+              "1"
             ]
           },
           {
-            "name": "Priority",
-            "values": [
-              "u=0, i"
-            ]
-          },
-          {
-            "name": "Sec-Fetch-Dest",
+            "name": "sec-fetch-dest",
             "values": [
               "document"
             ]
           },
           {
-            "name": "Sec-Fetch-Mode",
+            "name": "sec-fetch-mode",
             "values": [
               "navigate"
             ]
           },
           {
-            "name": "Sec-Fetch-Site",
+            "name": "sec-fetch-site",
             "values": [
               "none"
             ]
           },
           {
-            "name": "Sec-Fetch-User",
+            "name": "sec-fetch-user",
             "values": [
               "?1"
             ]
           },
           {
-            "name": "Te",
+            "name": "priority",
             "values": [
-              "trailers"
-            ]
-          },
-          {
-            "name": "Upgrade-Insecure-Requests",
-            "values": [
-              "1"
+              "u=0, i"
             ]
           }
         ],
+        "http1_defaults": [
+          {
+            "name": "connection",
+            "values": [
+              "keep-alive"
+            ]
+          }
+        ],
+        "http2_defaults": [
+          {
+            "name": "te",
+            "values": [
+              "trailers"
+            ]
+          }
+        ],
+        "http1_order": [
+          "Host",
+          "User-Agent",
+          "Accept",
+          "Accept-Language",
+          "Accept-Encoding",
+          "Connection",
+          "Upgrade-Insecure-Requests",
+          "Sec-Fetch-Dest",
+          "Sec-Fetch-Mode",
+          "Sec-Fetch-Site",
+          "Sec-Fetch-User",
+          "Priority"
+        ],
         "order": [
-          "host",
-          "connection",
-          "cache-control",
-          "device-memory",
-          "viewport-width",
-          "rtt",
-          "downlink",
-          "ect",
-          "sec-ch-ua",
-          "sec-ch-ua-mobile",
-          "sec-ch-ua-full-version",
-          "sec-ch-ua-arch",
-          "sec-ch-ua-platform",
-          "sec-ch-ua-platform-version",
-          "sec-ch-ua-model",
           "user-agent",
           "accept",
           "accept-language",
@@ -44965,8 +44985,6 @@
           "sec-fetch-mode",
           "sec-fetch-site",
           "sec-fetch-user",
-          "cookie",
-          "referer",
           "priority",
           "te"
         ],
@@ -44987,13 +45005,61 @@
           "http1",
           "http2"
         ],
-        "required_features": null,
+        "required_features": [
+          "tls.ordered.v1",
+          "http1.ordered.v1",
+          "http2.ordered.v1",
+          "http.headers.protocol.v1",
+          "http2.stream.v1"
+        ],
         "advertised_only": [],
         "limitations": [
-          "Materialized from historical recipe; no new live-browser verification. Cold connections only; no fabricated PSK identities."
+          "Windows x64 zh-CN headless navigation only; other platforms and headed/headless equivalence are unverified.",
+          "Cold connections only; resumption, opaque ECH bytes and ephemeral keys are not verified.",
+          "Initial H2 frames are projected from one cold request; broader flow-control, resumption and whole-browser equivalence remain unverified."
         ]
       },
-      "evidence": null
+      "evidence": [
+        {
+          "source": "testdata/firefox/windows.json#160.0.1-tls12-h1",
+          "captured_at": "2026-11-21T14:13:53.797Z",
+          "product_version": "160.0.1",
+          "platform": "windows",
+          "verified_fields": [
+            "tls.static_client_hello.cold",
+            "http.headers.navigation.zh-CN",
+            "http2.initial_frames.cold"
+          ],
+          "transport": "tls12-h1",
+          "sample_sha256": "6db8df89b83a5ffd13360f34da878dc44e024748793d08d3ba230ed41184830e"
+        },
+        {
+          "source": "testdata/firefox/windows.json#160.0.1-tls13-h1",
+          "captured_at": "2026-11-21T14:14:05.076Z",
+          "product_version": "160.0.1",
+          "platform": "windows",
+          "verified_fields": [
+            "tls.static_client_hello.cold",
+            "http.headers.navigation.zh-CN",
+            "http2.initial_frames.cold"
+          ],
+          "transport": "tls13-h1",
+          "sample_sha256": "9a3e1921eb6bd08751bb4d63a1ddb7c91e56645154875c6c40dd30536daf6c4f"
+        },
+        {
+          "source": "testdata/firefox/windows.json#160.0.1-tls13-h2",
+          "captured_at": "2026-11-21T14:14:14.972Z",
+          "product_version": "160.0.1",
+          "platform": "windows",
+          "verified_fields": [
+            "tls.static_client_hello.cold",
+            "http.headers.navigation.zh-CN",
+            "http2.initial_frames.cold"
+          ],
+          "transport": "tls13-h2",
+          "sample_sha256": "3c2bf4eb1621029a2a36741397645a9dd3f4a4a9c0eef0bd5be29bb86552f9c3"
+        }
+      ]
     },
     "headers": {},
     "match": {
@@ -45009,18 +45075,20 @@
       "platform": "windows",
       "device": "desktop",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:160.0) Gecko/20100101 Firefox/160.0",
-      "baseline_id": "Firefox158",
+      "baseline_id": "Firefox160.0.1",
       "method": "compatible",
-      "verified_fields": [],
+      "verified_fields": [
+        "tls.static_client_hello.cold",
+        "http.headers.navigation.zh-CN",
+        "http2.initial_frames.cold"
+      ],
       "compatibility_notes": [
-        "legacy configuration source; no live-client fields verified",
-        "explicit identity projection using the recorded baseline; protocol equivalence is unverified",
-        "complete neutral Spec; historical evidence level retained; session resumption not configured"
+        "Windows x64 zh-CN headless navigation only; other platforms and headed/headless equivalence are unverified.",
+        "Cold connections only; resumption, opaque ECH bytes and ephemeral keys are not verified.",
+        "Initial H2 frames are projected from one cold request; broader flow-control, resumption and whole-browser equivalence remain unverified."
       ],
       "source": {
-        "path": "imitate/firefox158.go",
-        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
-        "sha256_before_data_migration": "c09185378b116b54770394d45fd3ee19116ee55c3ec9cdde807ed14849555d24"
+        "path": "testdata/firefox/windows.json"
       }
     }
   },
