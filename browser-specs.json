@@ -9526,34 +9526,17 @@
             "id": "0x0a0a"
           },
           {
-            "id": "0xff01"
+            "id": "0x001b",
+            "compression_algorithms": [
+              "0x0002"
+            ]
+          },
+          {
+            "id": "0x0023"
           },
           {
             "id": "0x000b",
             "point_formats": "AA=="
-          },
-          {
-            "id": "0x0000"
-          },
-          {
-            "id": "0x44cd",
-            "alpn": [
-              "h2"
-            ]
-          },
-          {
-            "id": "0x0005"
-          },
-          {
-            "id": "0x002d",
-            "psk_modes": "AQ=="
-          },
-          {
-            "id": "0x0017"
-          },
-          {
-            "id": "0xfe0d",
-            "strategy": "grease-ech"
           },
           {
             "id": "0x0010",
@@ -9563,23 +9546,25 @@
             ]
           },
           {
-            "id": "0x001b",
-            "compression_algorithms": [
-              "0x0002"
+            "id": "0x0000"
+          },
+          {
+            "id": "0xca34",
+            "raw_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+          },
+          {
+            "id": "0x002b",
+            "versions": [
+              "0x0a0a",
+              "0x0304",
+              "0x0303"
             ]
           },
           {
-            "id": "0x000d",
-            "signature_algorithms": [
-              "0x0403",
-              "0x0804",
-              "0x0401",
-              "0x0503",
-              "0x0805",
-              "0x0501",
-              "0x0806",
-              "0x0601"
-            ]
+            "id": "0x0012"
+          },
+          {
+            "id": "0x0017"
           },
           {
             "id": "0x000a",
@@ -9592,12 +9577,6 @@
             ]
           },
           {
-            "id": "0x0012"
-          },
-          {
-            "id": "0x0023"
-          },
-          {
             "id": "0x0033",
             "key_shares": [
               "0x0a0a",
@@ -9606,18 +9585,47 @@
             ]
           },
           {
-            "id": "0x002b",
-            "versions": [
+            "id": "0x0005"
+          },
+          {
+            "id": "0x002d",
+            "psk_modes": "AQ=="
+          },
+          {
+            "id": "0xff01"
+          },
+          {
+            "id": "0x000d",
+            "signature_algorithms": [
               "0x0a0a",
-              "0x0304",
-              "0x0303"
+              "0x0904",
+              "0x0905",
+              "0x0906",
+              "0x0403",
+              "0x0804",
+              "0x0401",
+              "0x0503",
+              "0x0805",
+              "0x0501",
+              "0x0806",
+              "0x0601"
             ]
+          },
+          {
+            "id": "0x44cd",
+            "alpn": [
+              "h2"
+            ]
+          },
+          {
+            "id": "0xfe0d",
+            "strategy": "grease-ech"
           },
           {
             "id": "0x0a0a"
           }
         ],
-        "extension_order": "fixed",
+        "extension_order": "shuffle-chrome",
         "grease_policy": "per-connection",
         "session_policy": "disabled"
       },
@@ -9641,88 +9649,119 @@
           }
         ],
         "connection_flow": 15663105,
+        "priority_frames": [],
         "header_priority": {
-          "stream_id": 0,
           "dependency": 0,
-          "weight": 256,
-          "exclusive": true
-        },
-        "priority_frames": null
+          "exclusive": true,
+          "stream_id": 0,
+          "weight": 256
+        }
       },
       "headers": {
         "defaults": [
           {
-            "name": "Accept",
-            "values": [
-              "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
-            ]
-          },
-          {
-            "name": "Sec-Ch-Ua",
+            "name": "sec-ch-ua",
             "values": [
               "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
             ]
           },
           {
-            "name": "Sec-Ch-Ua-Mobile",
+            "name": "sec-ch-ua-mobile",
             "values": [
               "?0"
             ]
           },
           {
-            "name": "Sec-Ch-Ua-Platform",
+            "name": "sec-ch-ua-platform",
             "values": [
               "\"Windows\""
             ]
           },
           {
-            "name": "Sec-Fetch-Dest",
+            "name": "upgrade-insecure-requests",
             "values": [
-              "document"
+              "1"
             ]
           },
           {
-            "name": "Sec-Fetch-Mode",
+            "name": "accept",
             "values": [
-              "navigate"
+              "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
             ]
           },
           {
-            "name": "Sec-Fetch-Site",
+            "name": "sec-fetch-site",
             "values": [
               "none"
             ]
           },
           {
-            "name": "Sec-Fetch-User",
+            "name": "sec-fetch-mode",
+            "values": [
+              "navigate"
+            ]
+          },
+          {
+            "name": "sec-fetch-user",
             "values": [
               "?1"
             ]
           },
           {
-            "name": "Upgrade-Insecure-Requests",
+            "name": "sec-fetch-dest",
             "values": [
-              "1"
+              "document"
+            ]
+          },
+          {
+            "name": "accept-encoding",
+            "values": [
+              "gzip, deflate, br, zstd"
+            ]
+          },
+          {
+            "name": "accept-language",
+            "values": [
+              "en-US,en;q=0.9"
             ]
           }
         ],
-        "order": [
-          "pragma",
-          "host",
-          "connection",
-          "cache-control",
-          "device-memory",
-          "viewport-width",
-          "rtt",
-          "downlink",
-          "ect",
+        "http1_defaults": [
+          {
+            "name": "connection",
+            "values": [
+              "keep-alive"
+            ]
+          }
+        ],
+        "http2_defaults": [
+          {
+            "name": "priority",
+            "values": [
+              "u=0, i"
+            ]
+          }
+        ],
+        "http1_order": [
+          "Host",
+          "Connection",
           "sec-ch-ua",
           "sec-ch-ua-mobile",
-          "sec-ch-ua-full-version",
-          "sec-ch-ua-arch",
           "sec-ch-ua-platform",
-          "sec-ch-ua-platform-version",
-          "sec-ch-ua-model",
+          "Upgrade-Insecure-Requests",
+          "User-Agent",
+          "Accept",
+          "Sec-Fetch-Site",
+          "Sec-Fetch-Mode",
+          "Sec-Fetch-User",
+          "Sec-Fetch-Dest",
+          "Accept-Encoding",
+          "Accept-Language"
+        ],
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
           "upgrade-insecure-requests",
           "user-agent",
           "accept",
@@ -9730,10 +9769,8 @@
           "sec-fetch-mode",
           "sec-fetch-user",
           "sec-fetch-dest",
-          "referer",
           "accept-encoding",
           "accept-language",
-          "cookie",
           "priority"
         ],
         "pseudo_order": [
@@ -9753,13 +9790,68 @@
           "http1",
           "http2"
         ],
-        "required_features": null,
-        "advertised_only": [],
+        "required_features": [
+          "tls.ordered.v1",
+          "http1.ordered.v1",
+          "http2.ordered.v1",
+          "http.headers.protocol.v1",
+          "tls.shuffle-chrome.v1",
+          "tls.signature-advertised.v1"
+        ],
+        "advertised_only": [
+          "0x0904",
+          "0x0905",
+          "0x0906"
+        ],
         "limitations": [
-          "Materialized from historical recipe; no new live-browser verification. Cold connections only; no fabricated PSK identities."
+          "Windows x64 en-US headed-minimized cold navigation only; other modes, contexts and platforms unverified.",
+          "Extension membership/parameters verified separately from randomized order; no distributional shuffle, resumption, ECH or ephemeral-key equivalence claim.",
+          "H2 initial frames are compared for one cold request; broader flow-control and whole-browser equivalence remain unverified.",
+          "ML-DSA signature schemes are advertised only; the backend cannot verify ML-DSA CertificateVerify.",
+          "trust_anchors 0xca34 is a byte-exact static advertisement only; backend trust-anchor negotiation, certificate path selection and retry behavior are unverified."
         ]
       },
-      "evidence": null
+      "evidence": [
+        {
+          "source": "testdata/chrome/windows.json#158.0.8127.37-tls12-h1",
+          "captured_at": "2026-11-21T14:04:47.393Z",
+          "product_version": "158.0.8127.37",
+          "platform": "windows",
+          "verified_fields": [
+            "tls.static_client_hello.cold.chromium",
+            "http.headers.navigation.en-US",
+            "http2.initial_frames.cold"
+          ],
+          "transport": "tls12-h1",
+          "sample_sha256": "93029c14e291a8791b6be7a4aa537bb09c518972e14203b8e3b18558cabee87c"
+        },
+        {
+          "source": "testdata/chrome/windows.json#158.0.8127.37-tls13-h1",
+          "captured_at": "2026-11-21T14:04:52.164Z",
+          "product_version": "158.0.8127.37",
+          "platform": "windows",
+          "verified_fields": [
+            "tls.static_client_hello.cold.chromium",
+            "http.headers.navigation.en-US",
+            "http2.initial_frames.cold"
+          ],
+          "transport": "tls13-h1",
+          "sample_sha256": "4d7ab3ccea4021fe69044e7547498157a7aecaa4bd37419e1fe7894d4147f02c"
+        },
+        {
+          "source": "testdata/chrome/windows.json#158.0.8127.37-tls13-h2",
+          "captured_at": "2026-11-21T14:04:55.863Z",
+          "product_version": "158.0.8127.37",
+          "platform": "windows",
+          "verified_fields": [
+            "tls.static_client_hello.cold.chromium",
+            "http.headers.navigation.en-US",
+            "http2.initial_frames.cold"
+          ],
+          "transport": "tls13-h2",
+          "sample_sha256": "08ea07ff4ee7b28db9b51b109998d3b8406adc5d2085e511f0a7e182170b48ae"
+        }
+      ]
     },
     "headers": {},
     "match": {
@@ -9776,18 +9868,22 @@
       "platform": "windows",
       "device": "desktop",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
-      "baseline_id": "Chrome150",
+      "baseline_id": "chrome-158.0.8127.37",
       "method": "compatible",
-      "verified_fields": [],
+      "verified_fields": [
+        "tls.static_client_hello.cold.chromium",
+        "http.headers.navigation.en-US",
+        "http2.initial_frames.cold"
+      ],
       "compatibility_notes": [
-        "legacy configuration source; no live-client fields verified",
-        "explicit identity projection using the recorded baseline; protocol equivalence is unverified",
-        "complete neutral Spec; historical evidence level retained; session resumption not configured"
+        "Windows x64 en-US headed-minimized cold navigation only; other modes, contexts and platforms unverified.",
+        "Extension membership/parameters verified separately from randomized order; no distributional shuffle, resumption, ECH or ephemeral-key equivalence claim.",
+        "H2 initial frames are compared for one cold request; broader flow-control and whole-browser equivalence remain unverified.",
+        "ML-DSA signature schemes are advertised only; the backend cannot verify ML-DSA CertificateVerify.",
+        "trust_anchors 0xca34 is a byte-exact static advertisement only; backend trust-anchor negotiation, certificate path selection and retry behavior are unverified."
       ],
       "source": {
-        "path": "imitate/chrome150.go",
-        "head": "acbba4e2df60a0dd4f9b4238eeaf51ee5d5baf2c",
-        "sha256_before_data_migration": "bd0d137e157d508df1b04ccbbecfbcb2822f96c856fdbc34bb331eff13dc9e59"
+        "path": "testdata/chrome/windows.json"
       }
     }
   },

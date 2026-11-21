@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "products": {
+    "chrome": {
+      "version": "158.0.8127.37",
+      "profile_id": "chrome/158/windows",
+      "spec_sha256": "29f1d9f3a2927a38469e62899dcdba55eb8f035866a3fc9fac102073cc7829e5",
+      "source_commit": "e1cc7b6aa6464133dfa8ba944746c1bf4c56d387",
+      "verified_fields": [
+        "http.headers.navigation.en-US",
+        "http2.initial_frames.cold",
+        "tls.static_client_hello.cold.chromium"
+      ],
+      "scope": "Windows x64 en-US headed-minimized; cold H1/H2 navigation",
+      "run_url": "https://github.com/FastTLS/imitate/actions/runs/44911906351"
+    }
+  }
+}

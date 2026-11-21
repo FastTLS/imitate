@@ -1,0 +1,2087 @@
+{
+  "schema_version": 1,
+  "observations": [
+    {
+      "browser": "chrome",
+      "version": "158.0.8127.37",
+      "platform": "windows-x64",
+      "locale": "en-US",
+      "mode": "headed-minimized",
+      "build": {
+        "browser": "chrome",
+        "version": "158.0.8127.37",
+        "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi",
+        "archive_sha256": "3a6e02f372f35dd9f97b4109440c5622e02db4c42406a7fd99d08145a5276ba0",
+        "checksum_source": null,
+        "size": 175902720,
+        "etag": "\"71d5109\"",
+        "ranges": true,
+        "distribution": "enterprise-stable",
+        "integrity": "Official HTTPS MSI; pinned HTTP size/ETag; valid installer and executable Authenticode; locally recorded SHA256, not a vendor checksum.",
+        "source": "https://versionhistory.googleapis.com/v1/chrome/platforms/win64/channels/stable/versions/all/releases?filter=endtime=none",
+        "manifest_sha256": "7513db1c14cc322f9b529ddd208511d743a8b34b59b6a25f0a67a98e25b4c4df",
+        "platform": "windows-x64",
+        "locale": "en-US",
+        "archive": "D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser.msi",
+        "executable_sha256": "254f2d9b3e3b260e3eec3890a437598dddc553eba2bcfd411028716359ee492a",
+        "publisher": {
+          "product_version": "158.0.8127.37",
+          "thumbprint": "607A3EDAA64933E94422FC8F0C80388E0590986C",
+          "subject": "CN=Google LLC, O=Google LLC, L=Mountain View, S=California, C=US, SERIALNUMBER=3582691, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US",
+          "status": "Valid"
+        },
+        "installer_publisher": {
+          "thumbprint": "607A3EDAA64933E94422FC8F0C80388E0590986C",
+          "product_version": null,
+          "subject": "CN=Google LLC, O=Google LLC, L=Mountain View, S=California, C=US, SERIALNUMBER=3582691, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US",
+          "status": "Valid"
+        }
+      },
+      "cases": {
+        "tls12-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                "GREASE",
+                4865,
+                4866,
+                4867,
+                49195,
+                49199,
+                49196,
+                49200,
+                52393,
+                52392,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29,
+                    23,
+                    24
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    "GREASE",
+                    2308,
+                    2309,
+                    2310,
+                    1027,
+                    2052,
+                    1025,
+                    1283,
+                    2053,
+                    1281,
+                    2054,
+                    1537
+                  ]
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 17613,
+                  "value": "0003026832"
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 27,
+                  "value": "020002"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    "GREASE",
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29
+                  ]
+                },
+                {
+                  "id": 51764,
+                  "value": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              43690,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 64250,
+                "payload_hex": ""
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a7a7a11ec001d00170018"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 13,
+                "payload_hex": "00188a8a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  31354,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 51764,
+                "payload_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06caca03040303"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "000001000107002049046112c746c94b10e6a301af90d72566b8877949ecd0d438c9629abef88a090090945f54527baa63ab3c8244da9649e600b077c86090c5738988d223c997910b09bac5a7a1bca0ff761f316280263a7d41cd66d4335883950a3799c01c945ea6f4ed279eed4c21784b6029069a70c0deb40c27cad699814a394fcf24ca6682d557ee37b40ac05ea8a451162f4430db7d2588c726a86c9d2e8a37f57bd56b0486cfa3a93c16f47f1d43571f0dad6581ca10"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 35466,
+                "payload_hex": "00"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture12",
+              "sequence": 3,
+              "connection_id": "conn-2",
+              "type": "tls.client_hello",
+              "time": "2026-11-21T14:04:48.5078195Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  43690,
+                  4865,
+                  4866,
+                  4867,
+                  49195,
+                  49199,
+                  49196,
+                  49200,
+                  52393,
+                  52392,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 64250,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a7a7a11ec001d00170018"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "00188a8a09040905090604030804040105030805050108060601"
+                  },
+                  {
+                    "id": 17613,
+                    "payload_hex": "0003026832"
+                  },
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      31354,
+                      4588,
+                      29
+                    ]
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "020002"
+                  },
+                  {
+                    "id": 51764,
+                    "payload_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "06caca03040303"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "000001000107002049046112c746c94b10e6a301af90d72566b8877949ecd0d438c9629abef88a090090945f54527baa63ab3c8244da9649e600b077c86090c5738988d223c997910b09bac5a7a1bca0ff761f316280263a7d41cd66d4335883950a3799c01c945ea6f4ed279eed4c21784b6029069a70c0deb40c27cad699814a394fcf24ca6682d557ee37b40ac05ea8a451162f4430db7d2588c726a86c9d2e8a37f57bd56b0486cfa3a93c16f47f1d43571f0dad6581ca10"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 35466,
+                    "payload_hex": "00"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 4,
+              "connection_id": "conn-2",
+              "type": "tls.negotiated",
+              "time": "2026-11-21T14:04:48.5129245Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 49195,
+                "resumed": false,
+                "version": 771
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 5,
+              "connection_id": "conn-2",
+              "type": "http1.headers",
+              "time": "2026-11-21T14:04:48.5129245Z",
+              "data": {
+                "request_line": "GET /inspect?sample=chrome-158.0.8127.37-tls12-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:53539"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "sec-ch-ua",
+                    "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
+                  },
+                  {
+                    "name": "sec-ch-ua-mobile",
+                    "value": "?0"
+                  },
+                  {
+                    "name": "sec-ch-ua-platform",
+                    "value": "\"Windows\""
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "en-US,en;q=0.9"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3_samples": [
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,5-65281-23-35-10-11-45-13-17613-0-16-51-27-51764-43-65037-18,4588-29-23-24,0",
+              "md5": "9c7530216598d7745629d2ae7c3d576f"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,45-11-5-10-35-0-65037-27-16-18-23-51764-51-65281-43-17613-13,4588-29-23-24,0",
+              "md5": "1177287f792bfe56d773a22de6ef4ac7"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,13-5-65281-23-35-51-0-27-17613-18-45-65037-43-11-51764-16-10,4588-29-23-24,0",
+              "md5": "0b0b350758ea122892b98d8785a09c0a"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,16-10-35-65281-17613-0-65037-18-5-51-13-51764-45-11-23-43-27,4588-29-23-24,0",
+              "md5": "20461a57d281cbe3490d2fd2d28c8c63"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-0-10-65037-17613-5-65281-51764-18-23-16-51-27-13-35-11-45,4588-29-23-24,0",
+              "md5": "551cc626c29752737e0e61102c13631e"
+            }
+          ],
+          "extension_orders": [
+            [
+              "GREASE",
+              5,
+              65281,
+              23,
+              35,
+              10,
+              11,
+              45,
+              13,
+              17613,
+              0,
+              16,
+              51,
+              27,
+              51764,
+              43,
+              65037,
+              18,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              45,
+              11,
+              5,
+              10,
+              35,
+              0,
+              65037,
+              27,
+              16,
+              18,
+              23,
+              51764,
+              51,
+              65281,
+              43,
+              17613,
+              13,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              13,
+              5,
+              65281,
+              23,
+              35,
+              51,
+              0,
+              27,
+              17613,
+              18,
+              45,
+              65037,
+              43,
+              11,
+              51764,
+              16,
+              10,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              16,
+              10,
+              35,
+              65281,
+              17613,
+              0,
+              65037,
+              18,
+              5,
+              51,
+              13,
+              51764,
+              45,
+              11,
+              23,
+              43,
+              27,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              43,
+              0,
+              10,
+              65037,
+              17613,
+              5,
+              65281,
+              51764,
+              18,
+              23,
+              16,
+              51,
+              27,
+              13,
+              35,
+              11,
+              45,
+              "GREASE"
+            ]
+          ],
+          "samples": [
+            {
+              "captured_at": "2026-11-21T14:04:47.393Z",
+              "sha256": "93029c14e291a8791b6be7a4aa537bb09c518972e14203b8e3b18558cabee87c"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:48.725Z",
+              "sha256": "477639a77d0e18bd6e7acc8810874bffa4effeaab4b3e3bd4310fc95ead23de9"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:49.685Z",
+              "sha256": "5a6d200484cf1db2c589d5f716b35145ac1e30675758cf49e4025e6ed8cea1d0"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:50.559Z",
+              "sha256": "aa14360654555ba30f1b52a8b184c425e677efa61a365de228c632dca3654ba5"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:51.385Z",
+              "sha256": "6153dbcdbe874eb02e8c33f0aa4ba68853f9f928c9ed1a040691ada1d03d20b7"
+            }
+          ]
+        },
+        "tls13-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                "GREASE",
+                4865,
+                4866,
+                4867,
+                49195,
+                49199,
+                49196,
+                49200,
+                52393,
+                52392,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29,
+                    23,
+                    24
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    "GREASE",
+                    2308,
+                    2309,
+                    2310,
+                    1027,
+                    2052,
+                    1025,
+                    1283,
+                    2053,
+                    1281,
+                    2054,
+                    1537
+                  ]
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 17613,
+                  "value": "0003026832"
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 27,
+                  "value": "020002"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    "GREASE",
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29
+                  ]
+                },
+                {
+                  "id": 51764,
+                  "value": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              43690,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 6682,
+                "payload_hex": ""
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a7a7a11ec001d00170018"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  31354,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 65037,
+                "payload_hex": "00000100014f0020db4836a3f865337fbc6911c0d1f970e2a5a1a650b4d4b095c1a0e88eba27eb4800d07e9970e6616a696cc1ae981f2ecf26333290670f4c8e00109699843384fbe98ad93de7ccdbf3ae92de82ea377d9b4b9d87cdd8e64311156e056dc793afd30ba9f27be2e9cbd7b44cb0a0989689e0916e64061b60cf5fc7b89142531b01e5f69257e4264863bdd37d0d4ef90b1ede73c908f391dd4b331104681dcbd511e7b4163c4f7a4d5ec229a401c76cefb3629cd75e71bb2e490ee4d55a02284a9c4f5498e12a274210e39227cccd6af31fb8b5cf743b0c4fe081fdb09b7c82d410064bd22ea01b3673a6e6e93aa80a0e8686aa89"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 51764,
+                "payload_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06baba03040303"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018eaea09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 64250,
+                "payload_hex": "00"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 3,
+              "connection_id": "conn-2",
+              "type": "tls.client_hello",
+              "time": "2026-11-21T14:04:52.7463813Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  43690,
+                  4865,
+                  4866,
+                  4867,
+                  49195,
+                  49199,
+                  49196,
+                  49200,
+                  52393,
+                  52392,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 6682,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 17613,
+                    "payload_hex": "0003026832"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a7a7a11ec001d00170018"
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      31354,
+                      4588,
+                      29
+                    ]
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "00000100014f0020db4836a3f865337fbc6911c0d1f970e2a5a1a650b4d4b095c1a0e88eba27eb4800d07e9970e6616a696cc1ae981f2ecf26333290670f4c8e00109699843384fbe98ad93de7ccdbf3ae92de82ea377d9b4b9d87cdd8e64311156e056dc793afd30ba9f27be2e9cbd7b44cb0a0989689e0916e64061b60cf5fc7b89142531b01e5f69257e4264863bdd37d0d4ef90b1ede73c908f391dd4b331104681dcbd511e7b4163c4f7a4d5ec229a401c76cefb3629cd75e71bb2e490ee4d55a02284a9c4f5498e12a274210e39227cccd6af31fb8b5cf743b0c4fe081fdb09b7c82d410064bd22ea01b3673a6e6e93aa80a0e8686aa89"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 51764,
+                    "payload_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "06baba03040303"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "020002"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "0018eaea09040905090604030804040105030805050108060601"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 64250,
+                    "payload_hex": "00"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 4,
+              "connection_id": "conn-2",
+              "type": "tls.negotiated",
+              "time": "2026-11-21T14:04:52.7486685Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 5,
+              "connection_id": "conn-2",
+              "type": "http1.headers",
+              "time": "2026-11-21T14:04:52.7486685Z",
+              "data": {
+                "request_line": "GET /inspect?sample=chrome-158.0.8127.37-tls13-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:53544"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "sec-ch-ua",
+                    "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
+                  },
+                  {
+                    "name": "sec-ch-ua-mobile",
+                    "value": "?0"
+                  },
+                  {
+                    "name": "sec-ch-ua-platform",
+                    "value": "\"Windows\""
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "en-US,en;q=0.9"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3_samples": [
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,35-16-17613-18-10-51-65037-45-51764-43-27-23-0-13-5-65281-11,4588-29-23-24,0",
+              "md5": "4582eaeb76950587ecf706643291fd02"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,35-0-51-13-65281-65037-45-11-23-43-16-51764-10-17613-27-18-5,4588-29-23-24,0",
+              "md5": "3a6a58c474c81e58f2554588695a2e3f"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,45-18-65281-23-13-5-51-10-65037-11-35-16-0-43-17613-51764-27,4588-29-23-24,0",
+              "md5": "c5f4dc369e6ee9c6d965ed154525dedf"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,11-0-65037-16-23-5-51764-43-18-27-35-17613-10-45-51-13-65281,4588-29-23-24,0",
+              "md5": "6a0bdefa4023134a947828b62434407f"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-11-51764-10-27-5-0-65037-17613-51-45-13-23-43-16-35-18,4588-29-23-24,0",
+              "md5": "f124cc42d1df6013bb7f0738bdfdc89a"
+            }
+          ],
+          "extension_orders": [
+            [
+              "GREASE",
+              35,
+              16,
+              17613,
+              18,
+              10,
+              51,
+              65037,
+              45,
+              51764,
+              43,
+              27,
+              23,
+              0,
+              13,
+              5,
+              65281,
+              11,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              35,
+              0,
+              51,
+              13,
+              65281,
+              65037,
+              45,
+              11,
+              23,
+              43,
+              16,
+              51764,
+              10,
+              17613,
+              27,
+              18,
+              5,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              45,
+              18,
+              65281,
+              23,
+              13,
+              5,
+              51,
+              10,
+              65037,
+              11,
+              35,
+              16,
+              0,
+              43,
+              17613,
+              51764,
+              27,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              11,
+              0,
+              65037,
+              16,
+              23,
+              5,
+              51764,
+              43,
+              18,
+              27,
+              35,
+              17613,
+              10,
+              45,
+              51,
+              13,
+              65281,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              65281,
+              11,
+              51764,
+              10,
+              27,
+              5,
+              0,
+              65037,
+              17613,
+              51,
+              45,
+              13,
+              23,
+              43,
+              16,
+              35,
+              18,
+              "GREASE"
+            ]
+          ],
+          "samples": [
+            {
+              "captured_at": "2026-11-21T14:04:52.164Z",
+              "sha256": "4d7ab3ccea4021fe69044e7547498157a7aecaa4bd37419e1fe7894d4147f02c"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:52.889Z",
+              "sha256": "da6da2e47619983e6041a33ea5246f35cb3c6a035bcc1cd045510e1551230c9f"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:53.675Z",
+              "sha256": "955ffac1aaf1a70b3fcee06c5c4d3c1ae7d8e5f2728ed4ccb26b65f521372b83"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:54.454Z",
+              "sha256": "fa97d7c93832018e74e2440c787c79a567cdf26bd4121658f2b1d92ae19edb14"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:55.158Z",
+              "sha256": "fc2c3a2c905a295dcf80feac7ae29fa50413d55324f7dd863add2decee4e1cd2"
+            }
+          ]
+        },
+        "tls13-h2": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                "GREASE",
+                4865,
+                4866,
+                4867,
+                49195,
+                49199,
+                49196,
+                49200,
+                52393,
+                52392,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29,
+                    23,
+                    24
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    "GREASE",
+                    2308,
+                    2309,
+                    2310,
+                    1027,
+                    2052,
+                    1025,
+                    1283,
+                    2053,
+                    1281,
+                    2054,
+                    1537
+                  ]
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 17613,
+                  "value": "0003026832"
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 27,
+                  "value": "020002"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    "GREASE",
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29
+                  ]
+                },
+                {
+                  "id": 51764,
+                  "value": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "<authority>"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "<path>"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "http2": [
+              {
+                "type": "http2.settings",
+                "data": [
+                  {
+                    "id": 1,
+                    "value": 65536
+                  },
+                  {
+                    "id": 2,
+                    "value": 0
+                  },
+                  {
+                    "id": 4,
+                    "value": 6291456
+                  },
+                  {
+                    "id": 6,
+                    "value": 262144
+                  }
+                ]
+              },
+              {
+                "type": "http2.window_update",
+                "data": {
+                  "increment": 15663105,
+                  "stream_id": 0
+                }
+              },
+              {
+                "type": "http2.header_priority",
+                "data": {
+                  "dependency": 0,
+                  "exclusive": true,
+                  "stream_id": 1,
+                  "weight": 256
+                }
+              }
+            ],
+            "http2_stream_id": 1
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              31354,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 19018,
+                "payload_hex": ""
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 51764,
+                "payload_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+              },
+              {
+                "id": 43,
+                "payload_hex": "06caca03040303"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a3a3a11ec001d00170018"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  14906,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 13,
+                "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001c000200ec6c752fc3a45175e119b0b56d0beb00145160a477b8f8543fd3db14b6cd92500f070e36372559317aff58bf4b121f8705f9ae1ffeb1b3f30f8cce3138ad2a57f7eed5845b2efbf132237c9076cdb7163102bbb0a84c2cb118fecf132e07e530b4b601fddca190ceb238cd4402477bb40b771823167b6cdd044d3d6742fe1a9d772cb23b8a7945034bde836938d4c3150d6740574fea279bf655b52d6b852369c2bbb8503fc2962af6875d715f6434af6275b1da04fa50f4358f3277ce59cec2ad0aa36292bce893302d6919ffeda6b732a8aa2d6b20f04263cdcaf85c9e7dad6a3bedde1acd2a12b652674175f1c471737f48be5584355c1df7df4e8d2e1626e1adeea1c1a77111dba128a5461cc54b538"
+              },
+              {
+                "id": 2570,
+                "payload_hex": "00"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 24,
+              "connection_id": "conn-10",
+              "type": "tls.client_hello",
+              "time": "2026-11-21T14:04:56.3987124Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  31354,
+                  4865,
+                  4866,
+                  4867,
+                  49195,
+                  49199,
+                  49196,
+                  49200,
+                  52393,
+                  52392,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 19018,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "020002"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 51764,
+                    "payload_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "06caca03040303"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a3a3a11ec001d00170018"
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      14906,
+                      4588,
+                      29
+                    ]
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+                  },
+                  {
+                    "id": 17613,
+                    "payload_hex": "0003026832"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010001c000200ec6c752fc3a45175e119b0b56d0beb00145160a477b8f8543fd3db14b6cd92500f070e36372559317aff58bf4b121f8705f9ae1ffeb1b3f30f8cce3138ad2a57f7eed5845b2efbf132237c9076cdb7163102bbb0a84c2cb118fecf132e07e530b4b601fddca190ceb238cd4402477bb40b771823167b6cdd044d3d6742fe1a9d772cb23b8a7945034bde836938d4c3150d6740574fea279bf655b52d6b852369c2bbb8503fc2962af6875d715f6434af6275b1da04fa50f4358f3277ce59cec2ad0aa36292bce893302d6919ffeda6b732a8aa2d6b20f04263cdcaf85c9e7dad6a3bedde1acd2a12b652674175f1c471737f48be5584355c1df7df4e8d2e1626e1adeea1c1a77111dba128a5461cc54b538"
+                  },
+                  {
+                    "id": 2570,
+                    "payload_hex": "00"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 25,
+              "connection_id": "conn-10",
+              "type": "tls.negotiated",
+              "time": "2026-11-21T14:04:56.4012833Z",
+              "data": {
+                "alpn": "h2",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 26,
+              "connection_id": "conn-10",
+              "type": "http2.settings",
+              "time": "2026-11-21T14:04:56.4053615Z",
+              "data": [
+                {
+                  "id": 1,
+                  "value": 65536
+                },
+                {
+                  "id": 2,
+                  "value": 0
+                },
+                {
+                  "id": 4,
+                  "value": 6291456
+                },
+                {
+                  "id": 6,
+                  "value": 262144
+                }
+              ]
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 27,
+              "connection_id": "conn-10",
+              "type": "http2.window_update",
+              "time": "2026-11-21T14:04:56.4058832Z",
+              "data": {
+                "increment": 15663105,
+                "stream_id": 0
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 28,
+              "connection_id": "conn-10",
+              "type": "http2.header_priority",
+              "time": "2026-11-21T14:04:56.4058832Z",
+              "data": {
+                "dependency": 0,
+                "exclusive": true,
+                "stream_id": 1,
+                "weight": 256
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 29,
+              "connection_id": "conn-10",
+              "type": "http2.headers",
+              "time": "2026-11-21T14:04:56.4064879Z",
+              "data": {
+                "headers": [
+                  {
+                    "name": ":method",
+                    "value": "GET"
+                  },
+                  {
+                    "name": ":authority",
+                    "value": "localhost:53546"
+                  },
+                  {
+                    "name": ":scheme",
+                    "value": "https"
+                  },
+                  {
+                    "name": ":path",
+                    "value": "/inspect?sample=chrome-158.0.8127.37-tls13-h2-0"
+                  },
+                  {
+                    "name": "sec-ch-ua",
+                    "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Google Chrome\";v=\"158\""
+                  },
+                  {
+                    "name": "sec-ch-ua-mobile",
+                    "value": "?0"
+                  },
+                  {
+                    "name": "sec-ch-ua-platform",
+                    "value": "\"Windows\""
+                  },
+                  {
+                    "name": "upgrade-insecure-requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "user-agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36"
+                  },
+                  {
+                    "name": "accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "name": "sec-fetch-site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "sec-fetch-mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "sec-fetch-user",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "sec-fetch-dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "accept-encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "accept-language",
+                    "value": "en-US,en;q=0.9"
+                  },
+                  {
+                    "name": "priority",
+                    "value": "u=0, i"
+                  }
+                ],
+                "scope": "first-request-per-connection",
+                "stream_id": 1
+              }
+            }
+          ],
+          "ja3_samples": [
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,27-35-11-16-0-51764-43-18-23-10-51-5-45-65281-13-17613-65037,4588-29-23-24,0",
+              "md5": "d66c2b0bae856dff7bd619574b4ba8f0"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,51-43-5-13-0-65037-27-51764-65281-35-10-16-11-45-23-17613-18,4588-29-23-24,0",
+              "md5": "b50c4ac15265926c298eb0a3c48318cb"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-65281-35-13-18-0-51764-65037-45-17613-5-10-27-11-23-16-51,4588-29-23-24,0",
+              "md5": "7e57533f43d206662be1a941d749cad1"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-17613-43-16-51764-45-0-35-18-13-27-23-11-5-65281-10-51,4588-29-23-24,0",
+              "md5": "d7a4c9de9a5dc3d5aa563e905894d940"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-45-5-23-35-51-18-0-27-51764-11-10-65281-16-65037-13-17613,4588-29-23-24,0",
+              "md5": "5ecf635237b7a6ec1c4ccc6e416f57b1"
+            }
+          ],
+          "extension_orders": [
+            [
+              "GREASE",
+              27,
+              35,
+              11,
+              16,
+              0,
+              51764,
+              43,
+              18,
+              23,
+              10,
+              51,
+              5,
+              45,
+              65281,
+              13,
+              17613,
+              65037,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              51,
+              43,
+              5,
+              13,
+              0,
+              65037,
+              27,
+              51764,
+              65281,
+              35,
+              10,
+              16,
+              11,
+              45,
+              23,
+              17613,
+              18,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              43,
+              65281,
+              35,
+              13,
+              18,
+              0,
+              51764,
+              65037,
+              45,
+              17613,
+              5,
+              10,
+              27,
+              11,
+              23,
+              16,
+              51,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              65037,
+              17613,
+              43,
+              16,
+              51764,
+              45,
+              0,
+              35,
+              18,
+              13,
+              27,
+              23,
+              11,
+              5,
+              65281,
+              10,
+              51,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              43,
+              45,
+              5,
+              23,
+              35,
+              51,
+              18,
+              0,
+              27,
+              51764,
+              11,
+              10,
+              65281,
+              16,
+              65037,
+              13,
+              17613,
+              "GREASE"
+            ]
+          ],
+          "samples": [
+            {
+              "captured_at": "2026-11-21T14:04:55.863Z",
+              "sha256": "08ea07ff4ee7b28db9b51b109998d3b8406adc5d2085e511f0a7e182170b48ae"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:56.558Z",
+              "sha256": "b5f863b2587c2721485436a4a6493e380ee32298824cc2e765a9a81b87374d04"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:57.255Z",
+              "sha256": "d3362aba2ec64a5dd7efefdae1b0241d30820948d1f8394b9d340c2cb9620d31"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:57.951Z",
+              "sha256": "e0ab4970baae1fc8774f6dac67c63b6638a07bba5992adb9cd55f2a402453ae4"
+            },
+            {
+              "captured_at": "2026-11-21T14:04:58.778Z",
+              "sha256": "34839cb687702a737e5a9c09ecbcc7cce77d4288895bb8ab89c1361e2f9126c2"
+            }
+          ]
+        }
+      },
+      "runtime_replay": {
+        "tls_and_headers_match": true,
+        "whole_profile_match": true,
+        "online_offline_pairs": 3
+      }
+    }
+  ]
+}
