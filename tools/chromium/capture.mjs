@@ -133,11 +133,12 @@ try {
       } catch (error) { row.error = String(error.message || error); }
       finally {
         // Close the whole isolated browser before the next fresh profile starts.
-        // Force-killing the launcher tree left Edge 158's next renderer stalled.
+        // Keep launcher cleanup from racing the next isolated renderer startup.
         if (call) await Promise.race([call('Browser.close').catch(() => {}), pause(3000)]);
-        if (child.exitCode === null) await Promise.race([new Promise(resolve => child.once('exit', resolve)), pause(3000)]);
-        row.cleanup = child.exitCode === null ? 'forced-after-graceful-timeout' : 'browser-exited';
-        ws?.close(); kill(child);
+        const running = () => child.exitCode === null && child.signalCode === null;
+        if (running()) await Promise.race([new Promise(resolve => child.once('exit', resolve)), pause(3000)]);
+        row.cleanup = running() ? 'forced-after-graceful-timeout' : 'browser-exited';
+        ws?.close(); if (running()) kill(child);
       }
       samples.push(row); save('browser-samples.json', samples);
       console.log(token, row.status, row.error || '');
