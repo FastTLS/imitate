@@ -37,4 +37,5 @@ jobs:
           python -m unittest discover -s tools/firefox -p 'test_*.py' -v
           python -m unittest discover -s tools/chromium -p 'test_*.py' -v
           python -m unittest discover -s tools/maintenance -p 'test_*.py' -v
+          node --test tools/chromium/startup.test.mjs
 

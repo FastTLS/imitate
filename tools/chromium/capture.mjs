@@ -4,6 +4,7 @@ import path from 'node:path';
 import tls from 'node:tls';
 import {X509Certificate, createHash} from 'node:crypto';
 import {spawn, spawnSync} from 'node:child_process';
+import {prepareTarget} from './startup.mjs';
 
 const root = path.resolve(process.argv[2]);
 const count = Number(process.argv[3] || 5);
@@ -107,6 +108,7 @@ try {
         const product = (build.browser === 'edge' ? 'Edg/' : 'Chrome/') + build.version;
         if (row.browser_identity.product !== product) throw Error('Wrong browser/full version: ' + row.browser_identity.product);
         row.browser_version = build.version;
+        row.startup_document = await prepareTarget(call, ready);
         const url = scenario.lab.manifest[scenario.key].replace('127.0.0.1', 'localhost') + '/inspect?sample=' + token;
         row.navigation = await call('Page.navigate', {url});
         if (row.navigation.errorText) throw Error(row.navigation.errorText);

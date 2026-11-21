@@ -80,11 +80,13 @@ try {
       const profile = path.join(root, 'profiles', token);
       if (fs.existsSync(profile)) throw Error('Refusing reused browser profile: ' + profile);
       fs.mkdirSync(profile, {recursive: true});
-      fs.writeFileSync(path.join(profile, 'user.js'), 'user_pref("browser.shell.checkDefaultBrowser",false);\nuser_pref("browser.startup.homepage_override.mstone","ignore");\n');
+      const preferences = {'browser.shell.checkDefaultBrowser': false, 'browser.startup.homepage_override.mstone': 'ignore',
+        'browser.chrome.site_icons': false, 'browser.chrome.favicons': false};
+      fs.writeFileSync(path.join(profile, 'user.js'), Object.entries(preferences).map(([key, value]) => `user_pref(${JSON.stringify(key)},${JSON.stringify(value)});`).join('\n') + '\n');
       const port = await freePort();
       const args = [...(headed ? [] : ['--headless']), '--no-remote', '--profile', profile, '--remote-debugging-port', String(port), 'about:blank'];
       const child = spawn(build.executable, args, {windowsHide: true, stdio: 'ignore'});
-      const sample = {version: build.version, scenario: scenario.id, sample: i, time: new Date().toISOString(), mode: headed ? 'headed' : 'headless', args, status: 'error'};
+      const sample = {version: build.version, scenario: scenario.id, sample: i, time: new Date().toISOString(), mode: headed ? 'headed' : 'headless', args, preferences, status: 'error'};
       const url = scenario.lab.manifest[scenario.key].replace('127.0.0.1', 'localhost') + '/inspect?sample=' + token;
       let ws;
       try {
