@@ -168,10 +168,10 @@ class ChromiumContracts(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             self.assertFalse(update.known_build({}, root, 'chrome', '156.0.1.2'))
-            fields = update.FIELDS
+            fields = update.FIELDS + ['http2.initial_frames.cold']
             catalog = {'chrome/156/windows': dict(match=dict(verified_fields=fields), spec=dict(evidence=[
                 dict(product_version='156.0.1.2', platform='windows', transport=s, verified_fields=fields) for s in audit.SCENARIOS]))}
-            observation = dict(browser='chrome', version='156.0.1.2', platform='windows-x64', locale='en-US', mode='headed-minimized', runtime_replay=dict(tls_and_headers_match=True))
+            observation = dict(browser='chrome', version='156.0.1.2', platform='windows-x64', locale='en-US', mode='headed-minimized', runtime_replay=dict(tls_and_headers_match=True, whole_profile_match=True))
             path = root / 'testdata/chrome/windows.json'
             audit.dump(path, dict(observations=[observation]))
             self.assertTrue(update.known_build(catalog, root, 'chrome', '156.0.1.2'))

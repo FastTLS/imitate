@@ -1,6 +1,17 @@
 name: Browser profile candidate (manual, read-only)
 
 on:
+  workflow_call:
+    inputs:
+      browser:
+        type: string
+        required: true
+      browser_version:
+        type: string
+        default: ''
+      force_capture:
+        type: boolean
+        default: false
   workflow_dispatch:
     inputs:
       browser:
@@ -89,7 +100,7 @@ jobs:
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:
-          name: browser-profile-candidate
+          name: browser-profile-candidate-${{ inputs.browser || 'firefox' }}
           retention-days: 90
           if-no-files-found: error
           path: |

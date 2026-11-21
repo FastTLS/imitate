@@ -1,5 +1,7 @@
 # imitate
 
+浏览器日常维护通过 [自动采集、校验与采用流程](tools/maintenance/README.md) 每日检查 Edge、Chrome、Firefox；仅通过完整门禁的 Windows 候选才能进入默认目录。已有兼容条目不等于已采集对应浏览器，安装的 SDK 不会隐式更新。
+
 [English documentation](https://fasttls.github.io/en/ecosystem/imitate)
 
 FastTLS 官方独立指纹生成库。模块为 `github.com/FastTLS/imitate`，只依赖 Go 标准库和 `github.com/FastTLS/fastls/profile` 小规范模块；不发送请求，不导入 Fastls 根包、fhttp、uTLS 或 quic-go。

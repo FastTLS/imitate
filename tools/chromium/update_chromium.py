@@ -24,12 +24,13 @@ def known_build(catalog, repo, browser, version):
     entry = catalog.get(f'{browser}/{version.split(".")[0]}/windows', {})
     evidence = entry.get('spec', {}).get('evidence', [])
     fixture = repo / f'testdata/{browser}/windows.json'
-    if not fixture.is_file() or not evidence or not set(FIELDS).issubset(entry.get('match', {}).get('verified_fields', [])):
+    required = set(FIELDS) | {'http2.initial_frames.cold'}
+    if not fixture.is_file() or not evidence or not required.issubset(entry.get('match', {}).get('verified_fields', [])):
         return False
     return (len(evidence) == len(audit.SCENARIOS) and {e.get('transport') for e in evidence} == set(audit.SCENARIOS) and all(
-        e.get('product_version') == version and e.get('platform') == 'windows' and set(FIELDS).issubset(e.get('verified_fields', [])) for e in evidence)
+        e.get('product_version') == version and e.get('platform') == 'windows' and required.issubset(e.get('verified_fields', [])) for e in evidence)
         and any(o.get('version') == version and o.get('browser') == browser and o.get('platform') == 'windows-x64' and
-                o.get('locale') == 'en-US' and o.get('mode') == 'headed-minimized' and o.get('runtime_replay', {}).get('tls_and_headers_match') is True
+                o.get('locale') == 'en-US' and o.get('mode') == 'headed-minimized' and o.get('runtime_replay', {}).get('tls_and_headers_match') is True and o.get('runtime_replay', {}).get('whole_profile_match') is True
                 for o in audit.read(fixture).get('observations', [])))
 
 

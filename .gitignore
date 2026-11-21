@@ -11,3 +11,7 @@ __pycache__/
 *.dylib
 *.test
 *.log
+incoming/
+verified-export/
+maintenance-result.json
+maintenance-pr-body.txt

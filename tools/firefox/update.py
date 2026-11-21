@@ -49,8 +49,9 @@ def semantic_diff(previous, candidate, path=''):
 def known_build(catalog, version):
     entry = catalog.get('firefox/' + version.split('.')[0] + '/windows', {})
     required = {'tls.static_client_hello.cold', 'http.headers.navigation.zh-CN', 'http2.initial_frames.cold'}
-    return bool(entry.get('spec', {}).get('evidence')) and required.issubset(entry.get('match', {}).get('verified_fields', [])) and all(
-        e.get('product_version') == version and required.issubset(e.get('verified_fields', [])) for e in entry['spec']['evidence'])
+    evidence = entry.get('spec', {}).get('evidence') or []
+    return len(evidence) == 3 and {e.get('transport') for e in evidence} == set(audit.SCENARIOS) and required.issubset(entry.get('match', {}).get('verified_fields', [])) and all(
+        e.get('product_version') == version and e.get('platform') == 'windows' and required.issubset(e.get('verified_fields', [])) for e in evidence)
 
 
 def write_bundles(directory, catalog, version, provenance):

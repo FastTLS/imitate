@@ -13,7 +13,7 @@ import (
 
 const ChromiumVersionMin = 100
 const ChromiumVersionMax = 160
-const Version = "0.1.0"
+const Version = "0.1.2"
 const DataRevision = "firefox-20261030.159"
 
 type Provider struct{}

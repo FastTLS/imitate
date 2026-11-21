@@ -20,7 +20,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_known_build_requires_matching_full_version_and_verified_fields(self):
         fields=['tls.static_client_hello.cold','http.headers.navigation.zh-CN']
-        candidate={'firefox/159/windows':{'match':{'verified_fields':fields},'spec':{'evidence':[{'product_version':'159.0','verified_fields':fields}]}}}
+        candidate={'firefox/159/windows':{'match':{'verified_fields':fields},'spec':{'evidence':[{'product_version':'159.0','platform':'windows','transport':scenario,'verified_fields':fields} for scenario in audit.SCENARIOS]}}}
         self.assertFalse(update.known_build(candidate,'159.0'))
         fields.append('http2.initial_frames.cold')
         self.assertTrue(update.known_build(candidate,'159.0'))

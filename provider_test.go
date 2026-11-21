@@ -59,7 +59,15 @@ func TestFiniteRangeCancellationAndIndependentOwnership(t *testing.T) {
 		}
 	}
 	ids, err := p.List()
-	if err != nil || len(ids) != 152 {
+	var catalog map[string]json.RawMessage
+	data, readErr := os.ReadFile("browser-specs.json")
+	if readErr != nil {
+		t.Fatal(readErr)
+	}
+	if err := json.Unmarshal(data, &catalog); err != nil {
+		t.Fatal(err)
+	}
+	if err != nil || len(ids) != len(catalog)+3 {
 		t.Fatal(len(ids), err)
 	}
 	r, err := p.Resolve(context.Background(), profile.ResolveRequest{Selector: "chrome/155/windows"})
