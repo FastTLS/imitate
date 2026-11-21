@@ -16,6 +16,21 @@ REPO = Path(__file__).resolve().parents[2]
 
 
 class ChromiumContracts(unittest.TestCase):
+    def test_isolated_browser_acl_grants_only_read_execute_and_propagates_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            with patch.object(releases.sys, 'platform', 'win32'), patch.object(releases.subprocess, 'run') as run:
+                run.return_value.stdout = 'Successfully processed files'
+                receipt = releases.sandbox_read_access(root)
+                self.assertEqual(receipt['access'], 'read-execute only')
+                command = run.call_args.args[0]
+                self.assertEqual(command[1], str(root.resolve()))
+                self.assertEqual(command[3:5], ['*S-1-15-2-1:(OI)(CI)(RX)', '*S-1-15-2-2:(OI)(CI)(RX)'])
+                self.assertTrue(run.call_args.kwargs['check'])
+                run.side_effect = releases.subprocess.CalledProcessError(5, command)
+                with self.assertRaises(releases.subprocess.CalledProcessError):
+                    releases.sandbox_read_access(root)
+
     def test_range_rejects_wrong_identity_and_truncation(self):
         class Response(io.BytesIO):
             status = 206

@@ -8,6 +8,7 @@ import re
 import shutil
 import struct
 import subprocess
+import sys
 import tarfile
 import urllib.parse
 import urllib.request
@@ -25,6 +26,17 @@ MAX_ARCHIVE = 512 * 1024 * 1024
 def digest(path):
     with path.open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def sandbox_read_access(directory):
+    """Give sandboxed renderer tokens RX on this isolated public browser tree."""
+    directory = directory.resolve()
+    if sys.platform != 'win32' or not directory.is_dir():
+        raise ValueError('Sandbox browser ACL setup requires an extracted Windows directory')
+    principals = ['*S-1-15-2-1:(OI)(CI)(RX)', '*S-1-15-2-2:(OI)(CI)(RX)']
+    result = subprocess.run(['icacls', str(directory), '/grant', *principals, '/T'], check=True, capture_output=True, text=True)
+    return {'scope': str(directory), 'principals': ['ALL APPLICATION PACKAGES', 'ALL RESTRICTED APPLICATION PACKAGES'],
+            'access': 'read-execute only', 'verification': result.stdout[-2000:]}
 
 
 def checked_url(url):
@@ -285,7 +297,8 @@ def extract_archive(manifest, archive, output, sevenzip='7z'):
     signature = publisher(executable, browser)
     if signature['product_version'] != version:
         raise ValueError('Extracted browser full version mismatch')
-    return {**manifest, 'archive_sha256': actual, 'archive': str(archive.resolve()), 'executable': str(executable.resolve()),
+    sandbox_access = sandbox_read_access(extracted) if browser == 'edge' else None
+    return {**manifest, 'sandbox_read_access': sandbox_access, 'archive_sha256': actual, 'archive': str(archive.resolve()), 'executable': str(executable.resolve()),
             'executable_sha256': digest(executable), 'publisher': signature, 'installer_publisher': archive_signature}
 
 
