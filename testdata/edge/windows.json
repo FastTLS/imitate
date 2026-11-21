@@ -1,0 +1,2042 @@
+{
+  "schema_version": 1,
+  "observations": [
+    {
+      "browser": "edge",
+      "version": "158.0.4370.33",
+      "platform": "windows-x64",
+      "locale": "en-US",
+      "mode": "headed-offscreen-software",
+      "build": {
+        "browser": "edge",
+        "version": "158.0.4370.33",
+        "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/12946913-9fc9-450d-a43e-5eee4a0f6819/MicrosoftEdgeEnterpriseX64.msi",
+        "archive_sha256": "54eeab6848e54294ca9c5ae62032304bf2f078dbd76eda8efd4c05791335c4ec",
+        "checksum_source": "https://edgeupdates.microsoft.com/api/products?view=enterprise",
+        "size": 294612992,
+        "integrity": "Official feed SHA256 and executable Authenticode",
+        "source": "https://edgeupdates.microsoft.com/api/products?view=enterprise",
+        "manifest_sha256": "4d07380aacbecb6802e79a26645cf47dc84c3bfd889ec37ae367c57c5b2e516c",
+        "platform": "windows-x64",
+        "locale": "en-US",
+        "sandbox_read_access": {
+          "scope": "D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser",
+          "principals": [
+            "ALL APPLICATION PACKAGES",
+            "ALL RESTRICTED APPLICATION PACKAGES"
+          ],
+          "access": "read-execute only",
+          "verification": "essed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\StoreLogo.scale-200.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\StoreLogo.scale-400.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\Wide310x150Logo.scale-100.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\Wide310x150Logo.scale-125.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\Wide310x150Logo.scale-150.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\Wide310x150Logo.scale-200.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\VisualElements\\CopilotStable\\Wide310x150Logo.scale-400.png\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\WidevineCdm\\LICENSE\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\WidevineCdm\\manifest.json\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\WidevineCdm\\_platform_specific\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\WidevineCdm\\_platform_specific\\win_x64\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\WidevineCdm\\_platform_specific\\win_x64\\widevinecdm.dll\nprocessed file: D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser\\Chrome-bin\\158.0.4370.33\\WidevineCdm\\_platform_specific\\win_x64\\widevinecdm.dll.sig\nSuccessfully processed 521 files; Failed processing 0 files\n"
+        },
+        "archive": "D:\\a\\imitate\\imitate\\browser-update\\downloads\\build\\browser.msi",
+        "executable_sha256": "5b07e50eaba5ca60fe6b900cc418a2081cdb8de6c621bfaf85b58865ede378ee",
+        "publisher": {
+          "thumbprint": "4028CAD637509D4744B17EC5B42AED8D7A31E6AF",
+          "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+          "product_version": "158.0.4370.33",
+          "status": "Valid"
+        },
+        "installer_publisher": {
+          "thumbprint": "1C74821BF8D0EC04326C05EAED18ADB3841B44F9",
+          "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+          "product_version": null,
+          "status": "Valid"
+        }
+      },
+      "cases": {
+        "tls12-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                "GREASE",
+                4865,
+                4866,
+                4867,
+                49195,
+                49199,
+                49196,
+                49200,
+                52393,
+                52392,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29,
+                    23,
+                    24
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    "GREASE",
+                    2308,
+                    2309,
+                    2310,
+                    1027,
+                    2052,
+                    1025,
+                    1283,
+                    2053,
+                    1281,
+                    2054,
+                    1537
+                  ]
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 17613,
+                  "value": "0003026832"
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 27,
+                  "value": "020002"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    "GREASE",
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29
+                  ]
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Microsoft Edge\";v=\"158\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              14906,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 19018,
+                "payload_hex": ""
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "00180a0a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001200020f9194395b560eb3beddb2d6f0c4ca75c807dfda95f8d2b15476a4772f4b3097600f0b38a1eb65e2e9da13abc81f7867497486f5ed963b89155dddd92bbfbee4f08de1ef9d38cbc5b82bede5044783e7070937da90247f0eed18e263fe87969eb091f784d056e21c929183865ad196c1e89bc6637a24f130e17c16c0a0018abd2250ac3988cc9af54c979794ed904fa367cdfd6292b03d176a75814deafafa72d318e45c44778043c3f0aadf11c9a5901e34f47914deabe8f01d7a2a6a5099be895f9837db9cd935535f8812500718e210a17f4e9e8075375ecd6b8ad4fcc14deeeda5670d626df9ab2b42054b4b36bdc37eee7a40a29af13fe2a0c24ecb8ebd1db1a50b07ba05404d10519a7ce9e94d70da8"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a4a4a11ec001d00170018"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  19018,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 43,
+                "payload_hex": "063a3a03040303"
+              },
+              {
+                "id": 2570,
+                "payload_hex": "00"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture12",
+              "sequence": 3,
+              "connection_id": "conn-2",
+              "type": "tls.client_hello",
+              "time": "2026-11-21T14:46:38.1194144Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  14906,
+                  4865,
+                  4866,
+                  4867,
+                  49195,
+                  49199,
+                  49196,
+                  49200,
+                  52393,
+                  52392,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 19018,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "00180a0a09040905090604030804040105030805050108060601"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010001200020f9194395b560eb3beddb2d6f0c4ca75c807dfda95f8d2b15476a4772f4b3097600f0b38a1eb65e2e9da13abc81f7867497486f5ed963b89155dddd92bbfbee4f08de1ef9d38cbc5b82bede5044783e7070937da90247f0eed18e263fe87969eb091f784d056e21c929183865ad196c1e89bc6637a24f130e17c16c0a0018abd2250ac3988cc9af54c979794ed904fa367cdfd6292b03d176a75814deafafa72d318e45c44778043c3f0aadf11c9a5901e34f47914deabe8f01d7a2a6a5099be895f9837db9cd935535f8812500718e210a17f4e9e8075375ecd6b8ad4fcc14deeeda5670d626df9ab2b42054b4b36bdc37eee7a40a29af13fe2a0c24ecb8ebd1db1a50b07ba05404d10519a7ce9e94d70da8"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "020002"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a4a4a11ec001d00170018"
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      19018,
+                      4588,
+                      29
+                    ]
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 17613,
+                    "payload_hex": "0003026832"
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "063a3a03040303"
+                  },
+                  {
+                    "id": 2570,
+                    "payload_hex": "00"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 4,
+              "connection_id": "conn-2",
+              "type": "tls.negotiated",
+              "time": "2026-11-21T14:46:38.1272072Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 49195,
+                "resumed": false,
+                "version": 771
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 5,
+              "connection_id": "conn-2",
+              "type": "http1.headers",
+              "time": "2026-11-21T14:46:38.1277079Z",
+              "data": {
+                "request_line": "GET /inspect?sample=edge-158.0.4370.33-tls12-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:52284"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "sec-ch-ua",
+                    "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Microsoft Edge\";v=\"158\""
+                  },
+                  {
+                    "name": "sec-ch-ua-mobile",
+                    "value": "?0"
+                  },
+                  {
+                    "name": "sec-ch-ua-platform",
+                    "value": "\"Windows\""
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "en-US,en;q=0.9"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3_samples": [
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,35-13-65037-5-65281-16-45-0-11-27-10-51-18-23-17613-43,4588-29-23-24,0",
+              "md5": "ae710ddf277576f1af1bfebf618c5131"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-65281-11-23-27-17613-43-35-16-45-5-65037-13-18-10-51,4588-29-23-24,0",
+              "md5": "7b96ccdc3fff0295d9b9a5c4536d40b3"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-65037-17613-43-18-23-5-45-11-27-0-51-10-13-16-35,4588-29-23-24,0",
+              "md5": "70d718c114b693389cfbdd24ba2187b7"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-65281-0-51-16-17613-23-43-18-11-13-35-10-5-27-45,4588-29-23-24,0",
+              "md5": "2a6a405903da5697e887bb80326c867b"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,13-10-5-11-45-0-43-16-35-51-17613-23-65037-27-65281-18,4588-29-23-24,0",
+              "md5": "386d26ed47489f841c3d7f8b4ae8ed0b"
+            }
+          ],
+          "extension_orders": [
+            [
+              "GREASE",
+              35,
+              13,
+              65037,
+              5,
+              65281,
+              16,
+              45,
+              0,
+              11,
+              27,
+              10,
+              51,
+              18,
+              23,
+              17613,
+              43,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              0,
+              65281,
+              11,
+              23,
+              27,
+              17613,
+              43,
+              35,
+              16,
+              45,
+              5,
+              65037,
+              13,
+              18,
+              10,
+              51,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              65281,
+              65037,
+              17613,
+              43,
+              18,
+              23,
+              5,
+              45,
+              11,
+              27,
+              0,
+              51,
+              10,
+              13,
+              16,
+              35,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              65037,
+              65281,
+              0,
+              51,
+              16,
+              17613,
+              23,
+              43,
+              18,
+              11,
+              13,
+              35,
+              10,
+              5,
+              27,
+              45,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              13,
+              10,
+              5,
+              11,
+              45,
+              0,
+              43,
+              16,
+              35,
+              51,
+              17613,
+              23,
+              65037,
+              27,
+              65281,
+              18,
+              "GREASE"
+            ]
+          ],
+          "samples": [
+            {
+              "captured_at": "2026-11-21T14:46:36.597Z",
+              "sha256": "87a147d8fab2c0b9e175ebc0dcf02d1d8984329a0e5c953293a0ffef13bec62d"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:38.505Z",
+              "sha256": "aeab5e74f78b967c0e63243d078cfdc704f3d82def16bb58eb112e73d0b4dd73"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:39.743Z",
+              "sha256": "b6463824d4005c119039c814bcde0136d137dd732f7528e7dc48d56f876da478"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:41.329Z",
+              "sha256": "6f6030f1ab7297526eb0e9a42ccd727b22654e5af7cfa1b5450738228173006d"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:42.513Z",
+              "sha256": "b46ce06fe9a49a508d7f27831d9921a778a595cd3bdcfc153aee4f34a30b2810"
+            }
+          ]
+        },
+        "tls13-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                "GREASE",
+                4865,
+                4866,
+                4867,
+                49195,
+                49199,
+                49196,
+                49200,
+                52393,
+                52392,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29,
+                    23,
+                    24
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    "GREASE",
+                    2308,
+                    2309,
+                    2310,
+                    1027,
+                    2052,
+                    1025,
+                    1283,
+                    2053,
+                    1281,
+                    2054,
+                    1537
+                  ]
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 17613,
+                  "value": "0003026832"
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 27,
+                  "value": "020002"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    "GREASE",
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29
+                  ]
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Microsoft Edge\";v=\"158\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              51914,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 2570,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 43,
+                "payload_hex": "065a5a03040303"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "0018dada09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001c70020cec589da3535615a4b04d2f81006d1995ec28f79f2bd2a68f091aad3fcd9391f00f00b01a0010d3e9c18b6733c300b130a12055d41a46f78719c9d5acbc271606b09e1453142c4bfdb90805ec254805249e06cd9436f0c7bf9a9383fff35e43f4597abf26ce8a1510185ab4be815240f37c4efa94b6cfbd763f4664e36428f9ca7e5d66052c0c181badf2ed9f5050a6d44c49b4e9b171cb0d17e4a540b499e413454c428f3f77790694f80feb179b6fa3918f61d5d5f3ab0b26a8f3a63e6592f23ded5a23907e21187756ea8873435996aa3974557a7265dfc2cb1e42608d71bc2dfb3fae432dcb26015f2afdf6da087bbd46d31167e9f4cc74937b9969a542683b4a59943be69ae939704c2c5b769400fb6"
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  56026,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 10,
+                "payload_hex": "000adada11ec001d00170018"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 14906,
+                "payload_hex": "00"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 3,
+              "connection_id": "conn-2",
+              "type": "tls.client_hello",
+              "time": "2026-11-21T14:46:45.0416865Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  51914,
+                  4865,
+                  4866,
+                  4867,
+                  49195,
+                  49199,
+                  49196,
+                  49200,
+                  52393,
+                  52392,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 2570,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "065a5a03040303"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "0018dada09040905090604030804040105030805050108060601"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010001c70020cec589da3535615a4b04d2f81006d1995ec28f79f2bd2a68f091aad3fcd9391f00f00b01a0010d3e9c18b6733c300b130a12055d41a46f78719c9d5acbc271606b09e1453142c4bfdb90805ec254805249e06cd9436f0c7bf9a9383fff35e43f4597abf26ce8a1510185ab4be815240f37c4efa94b6cfbd763f4664e36428f9ca7e5d66052c0c181badf2ed9f5050a6d44c49b4e9b171cb0d17e4a540b499e413454c428f3f77790694f80feb179b6fa3918f61d5d5f3ab0b26a8f3a63e6592f23ded5a23907e21187756ea8873435996aa3974557a7265dfc2cb1e42608d71bc2dfb3fae432dcb26015f2afdf6da087bbd46d31167e9f4cc74937b9969a542683b4a59943be69ae939704c2c5b769400fb6"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "020002"
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      56026,
+                      4588,
+                      29
+                    ]
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000adada11ec001d00170018"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 17613,
+                    "payload_hex": "0003026832"
+                  },
+                  {
+                    "id": 14906,
+                    "payload_hex": "00"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 5,
+              "connection_id": "conn-2",
+              "type": "tls.negotiated",
+              "time": "2026-11-21T14:46:45.1451768Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 6,
+              "connection_id": "conn-2",
+              "type": "http1.headers",
+              "time": "2026-11-21T14:46:45.1451768Z",
+              "data": {
+                "request_line": "GET /inspect?sample=edge-158.0.4370.33-tls13-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:52289"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "sec-ch-ua",
+                    "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Microsoft Edge\";v=\"158\""
+                  },
+                  {
+                    "name": "sec-ch-ua-mobile",
+                    "value": "?0"
+                  },
+                  {
+                    "name": "sec-ch-ua-platform",
+                    "value": "\"Windows\""
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "en-US,en;q=0.9"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3_samples": [
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-43-45-18-13-65037-27-51-11-23-35-10-5-16-0-17613,4588-29-23-24,0",
+              "md5": "d0d4271c98576456744baead92eb74ef"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,18-65281-51-16-17613-45-10-65037-35-0-5-11-43-27-13-23,4588-29-23-24,0",
+              "md5": "5c7b274ea08e014386ff8ff5ec04bea4"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,27-10-0-35-16-51-23-45-5-13-18-43-17613-65281-11-65037,4588-29-23-24,0",
+              "md5": "cf06c77b8c139e4e5bad082a2ac26169"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-35-18-27-65037-11-0-13-17613-23-65281-51-5-16-10-45,4588-29-23-24,0",
+              "md5": "2810b7079e598bd76d4965b5a3a305ca"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-27-65037-5-65281-23-11-35-18-13-10-0-17613-45-16-51,4588-29-23-24,0",
+              "md5": "829c697d078e3425996e5c0b08445078"
+            }
+          ],
+          "extension_orders": [
+            [
+              "GREASE",
+              65281,
+              43,
+              45,
+              18,
+              13,
+              65037,
+              27,
+              51,
+              11,
+              23,
+              35,
+              10,
+              5,
+              16,
+              0,
+              17613,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              18,
+              65281,
+              51,
+              16,
+              17613,
+              45,
+              10,
+              65037,
+              35,
+              0,
+              5,
+              11,
+              43,
+              27,
+              13,
+              23,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              27,
+              10,
+              0,
+              35,
+              16,
+              51,
+              23,
+              45,
+              5,
+              13,
+              18,
+              43,
+              17613,
+              65281,
+              11,
+              65037,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              43,
+              35,
+              18,
+              27,
+              65037,
+              11,
+              0,
+              13,
+              17613,
+              23,
+              65281,
+              51,
+              5,
+              16,
+              10,
+              45,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              43,
+              27,
+              65037,
+              5,
+              65281,
+              23,
+              11,
+              35,
+              18,
+              13,
+              10,
+              0,
+              17613,
+              45,
+              16,
+              51,
+              "GREASE"
+            ]
+          ],
+          "samples": [
+            {
+              "captured_at": "2026-11-21T14:46:44.189Z",
+              "sha256": "2d97f86fd7243df4681c2839df9fd7196d7b39cfc1f85eb94f8bd3848fcda4a3"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:45.491Z",
+              "sha256": "d139a336ae5619bf1d6fe83d4077f9f0360f883a9ef5e867ef60ddcfe63363fd"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:46.865Z",
+              "sha256": "6c942ed44ad37d37961e735de10ddc859fe801e4eab7115d893b3528bd6dd819"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:48.393Z",
+              "sha256": "e419789025bde05af5d01390f0af2cd0c3c6815644b42ba9b22663a41fc02961"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:49.743Z",
+              "sha256": "39cc89656cee0202dbce94e23e5903f821f52c75699d4f6f61568b195476a8ac"
+            }
+          ]
+        },
+        "tls13-h2": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                "GREASE",
+                4865,
+                4866,
+                4867,
+                49195,
+                49199,
+                49196,
+                49200,
+                52393,
+                52392,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29,
+                    23,
+                    24
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    "GREASE",
+                    2308,
+                    2309,
+                    2310,
+                    1027,
+                    2052,
+                    1025,
+                    1283,
+                    2053,
+                    1281,
+                    2054,
+                    1537
+                  ]
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 17613,
+                  "value": "0003026832"
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 27,
+                  "value": "020002"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    "GREASE",
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    "GREASE",
+                    4588,
+                    29
+                  ]
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                },
+                {
+                  "id": "GREASE",
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":authority",
+                "value": "<authority>"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": ":path",
+                "value": "<path>"
+              },
+              {
+                "name": "sec-ch-ua",
+                "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Microsoft Edge\";v=\"158\""
+              },
+              {
+                "name": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "name": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "accept-language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              }
+            ],
+            "http2": [
+              {
+                "type": "http2.settings",
+                "data": [
+                  {
+                    "id": 1,
+                    "value": 65536
+                  },
+                  {
+                    "id": 2,
+                    "value": 0
+                  },
+                  {
+                    "id": 4,
+                    "value": 6291456
+                  },
+                  {
+                    "id": 6,
+                    "value": 262144
+                  }
+                ]
+              },
+              {
+                "type": "http2.window_update",
+                "data": {
+                  "increment": 15663105,
+                  "stream_id": 0
+                }
+              },
+              {
+                "type": "http2.header_priority",
+                "data": {
+                  "dependency": 0,
+                  "exclusive": true,
+                  "stream_id": 1,
+                  "weight": 256
+                }
+              }
+            ],
+            "http2_stream_id": 1
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              31354,
+              4865,
+              4866,
+              4867,
+              49195,
+              49199,
+              49196,
+              49200,
+              52393,
+              52392,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 56026,
+                "payload_hex": ""
+              },
+              {
+                "id": 13,
+                "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001fb0020c90414a40943de2a8b81cfe9b7eced0e133ade8396c022cd9c1ba1bb1025871100f0a08da19dfece815d849266513d2473c8b0b8ff901a2862637e735b1e79660bdbe3c420e58bc2384e8e72ba75d7cce790032e13fccbc244c1fd3a1c5872c3353ffcb2a34dfc466c6e155ceb4238f9a33a613cdb4adbb44f39a0e15fd245323906d2acd2056d5146d44b2fb66ac111bb26db5936f09e0a7c2e57dc616f1018e9bf8ed4e213d9d2f02233bd3a26465f75533194a69024b9912eab0b5fac9731e412f4c859ed27d6e2b4220b26c2f5b10139b49759f0f9a04536f5188f539e3a5c230ebac23f317ea2b7e3e9f25be692db7a75bc6b8369b02ffbf1009a9bd502c04d63f4e5ae7a2146e93f49f0fac7af20a2"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000aeaea11ec001d00170018"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 17613,
+                "payload_hex": "0003026832"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  60138,
+                  4588,
+                  29
+                ]
+              },
+              {
+                "id": 27,
+                "payload_hex": "020002"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 43,
+                "payload_hex": "063a3a03040303"
+              },
+              {
+                "id": 23130,
+                "payload_hex": "00"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 26,
+              "connection_id": "conn-11",
+              "type": "tls.client_hello",
+              "time": "2026-11-21T14:46:52.321147Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  31354,
+                  4865,
+                  4866,
+                  4867,
+                  49195,
+                  49199,
+                  49196,
+                  49200,
+                  52393,
+                  52392,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 56026,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "00187a7a09040905090604030804040105030805050108060601"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010001fb0020c90414a40943de2a8b81cfe9b7eced0e133ade8396c022cd9c1ba1bb1025871100f0a08da19dfece815d849266513d2473c8b0b8ff901a2862637e735b1e79660bdbe3c420e58bc2384e8e72ba75d7cce790032e13fccbc244c1fd3a1c5872c3353ffcb2a34dfc466c6e155ceb4238f9a33a613cdb4adbb44f39a0e15fd245323906d2acd2056d5146d44b2fb66ac111bb26db5936f09e0a7c2e57dc616f1018e9bf8ed4e213d9d2f02233bd3a26465f75533194a69024b9912eab0b5fac9731e412f4c859ed27d6e2b4220b26c2f5b10139b49759f0f9a04536f5188f539e3a5c230ebac23f317ea2b7e3e9f25be692db7a75bc6b8369b02ffbf1009a9bd502c04d63f4e5ae7a2146e93f49f0fac7af20a2"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000aeaea11ec001d00170018"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 17613,
+                    "payload_hex": "0003026832"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      60138,
+                      4588,
+                      29
+                    ]
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "020002"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "063a3a03040303"
+                  },
+                  {
+                    "id": 23130,
+                    "payload_hex": "00"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 28,
+              "connection_id": "conn-11",
+              "type": "tls.negotiated",
+              "time": "2026-11-21T14:46:52.323598Z",
+              "data": {
+                "alpn": "h2",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 31,
+              "connection_id": "conn-11",
+              "type": "http2.settings",
+              "time": "2026-11-21T14:46:52.3251454Z",
+              "data": [
+                {
+                  "id": 1,
+                  "value": 65536
+                },
+                {
+                  "id": 2,
+                  "value": 0
+                },
+                {
+                  "id": 4,
+                  "value": 6291456
+                },
+                {
+                  "id": 6,
+                  "value": 262144
+                }
+              ]
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 32,
+              "connection_id": "conn-11",
+              "type": "http2.window_update",
+              "time": "2026-11-21T14:46:52.3251454Z",
+              "data": {
+                "increment": 15663105,
+                "stream_id": 0
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 33,
+              "connection_id": "conn-11",
+              "type": "http2.header_priority",
+              "time": "2026-11-21T14:46:52.3251454Z",
+              "data": {
+                "dependency": 0,
+                "exclusive": true,
+                "stream_id": 1,
+                "weight": 256
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 34,
+              "connection_id": "conn-11",
+              "type": "http2.headers",
+              "time": "2026-11-21T14:46:52.3256097Z",
+              "data": {
+                "headers": [
+                  {
+                    "name": ":method",
+                    "value": "GET"
+                  },
+                  {
+                    "name": ":authority",
+                    "value": "localhost:52291"
+                  },
+                  {
+                    "name": ":scheme",
+                    "value": "https"
+                  },
+                  {
+                    "name": ":path",
+                    "value": "/inspect?sample=edge-158.0.4370.33-tls13-h2-0"
+                  },
+                  {
+                    "name": "sec-ch-ua",
+                    "value": "\"Chromium\";v=\"158\", \"Not.A/Brand\";v=\"24\", \"Microsoft Edge\";v=\"158\""
+                  },
+                  {
+                    "name": "sec-ch-ua-mobile",
+                    "value": "?0"
+                  },
+                  {
+                    "name": "sec-ch-ua-platform",
+                    "value": "\"Windows\""
+                  },
+                  {
+                    "name": "upgrade-insecure-requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "user-agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0"
+                  },
+                  {
+                    "name": "accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                  },
+                  {
+                    "name": "sec-fetch-site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "sec-fetch-mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "sec-fetch-user",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "sec-fetch-dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "accept-encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "accept-language",
+                    "value": "en-US,en;q=0.9"
+                  },
+                  {
+                    "name": "priority",
+                    "value": "u=0, i"
+                  }
+                ],
+                "scope": "first-request-per-connection",
+                "stream_id": 1
+              }
+            }
+          ],
+          "ja3_samples": [
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,13-5-65037-45-65281-11-16-10-35-17613-18-0-51-27-23-43,4588-29-23-24,0",
+              "md5": "d92902ec5533d2ad1e62d123e713e51b"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,18-27-23-16-35-65037-51-11-65281-13-0-5-17613-45-43-10,4588-29-23-24,0",
+              "md5": "3d2c87db2f6525472248e29255926666"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-11-65037-18-35-16-10-13-45-23-51-43-0-17613-27-5,4588-29-23-24,0",
+              "md5": "940dfdb29aee4a9bad6378ccbbbd8822"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-16-5-45-35-18-65037-13-17613-10-65281-27-51-23-0-11,4588-29-23-24,0",
+              "md5": "0da36b953264957b2ae6c765590f6a57"
+            },
+            {
+              "text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,27-65037-18-65281-5-17613-23-45-13-51-43-10-16-35-0-11,4588-29-23-24,0",
+              "md5": "797ce1c0dcc041251001bc637eedd871"
+            }
+          ],
+          "extension_orders": [
+            [
+              "GREASE",
+              13,
+              5,
+              65037,
+              45,
+              65281,
+              11,
+              16,
+              10,
+              35,
+              17613,
+              18,
+              0,
+              51,
+              27,
+              23,
+              43,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              18,
+              27,
+              23,
+              16,
+              35,
+              65037,
+              51,
+              11,
+              65281,
+              13,
+              0,
+              5,
+              17613,
+              45,
+              43,
+              10,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              65281,
+              11,
+              65037,
+              18,
+              35,
+              16,
+              10,
+              13,
+              45,
+              23,
+              51,
+              43,
+              0,
+              17613,
+              27,
+              5,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              43,
+              16,
+              5,
+              45,
+              35,
+              18,
+              65037,
+              13,
+              17613,
+              10,
+              65281,
+              27,
+              51,
+              23,
+              0,
+              11,
+              "GREASE"
+            ],
+            [
+              "GREASE",
+              27,
+              65037,
+              18,
+              65281,
+              5,
+              17613,
+              23,
+              45,
+              13,
+              51,
+              43,
+              10,
+              16,
+              35,
+              0,
+              11,
+              "GREASE"
+            ]
+          ],
+          "samples": [
+            {
+              "captured_at": "2026-11-21T14:46:51.459Z",
+              "sha256": "4f8d88564621b05ed24f6793ccc2259524bfa751e6210d7182b93adae59a6ab6"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:52.762Z",
+              "sha256": "b6badbe4fcc592bef34c40dbff4a60d9f2267a2a3a7d5cb4d99d940918f9f9f4"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:54.137Z",
+              "sha256": "a3b337bd5f3f786b1450b4040a77e5e6a78280c1be2c0cd0be6e193a2cebe860"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:55.565Z",
+              "sha256": "5807249de20b07ddc907f1b8d660b6c299baedc87ca75a424008100ecd2f50ff"
+            },
+            {
+              "captured_at": "2026-11-21T14:46:57.298Z",
+              "sha256": "5e1499cd9112dc78c9a23f258cb04a4af879f9b86e92b318188d3858ae7bc8ed"
+            }
+          ]
+        }
+      },
+      "runtime_replay": {
+        "tls_and_headers_match": true,
+        "whole_profile_match": true,
+        "online_offline_pairs": 3
+      }
+    }
+  ]
+}
