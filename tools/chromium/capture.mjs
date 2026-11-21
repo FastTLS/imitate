@@ -53,6 +53,12 @@ async function start(suffix) {
 function rpc(ws) {
   let sequence = 0;
   const pending = new Map();
+  ws.addEventListener('close', () => {
+    for (const request of pending.values()) {
+      clearTimeout(request.timer); request.reject(Error('CDP connection closed'));
+    }
+    pending.clear();
+  }, {once: true});
   ws.addEventListener('message', event => {
     const message = JSON.parse(String(event.data));
     const request = pending.get(message.id);
@@ -88,7 +94,7 @@ try {
       const child = spawn(build.executable, args, {windowsHide: true, stdio: 'ignore'});
       const row = {browser: build.browser, version: build.version, scenario: scenario.id, sample: i, time: new Date().toISOString(),
         mode: 'headed-minimized', args, executable_sha256: build.executable_sha256, status: 'error'};
-      let ws;
+      let ws, call;
       try {
         const port = await ready(() => {
           const lines = fs.readFileSync(path.join(profile, 'DevToolsActivePort'), 'utf8').split('\n');
@@ -104,7 +110,7 @@ try {
           socket.addEventListener('open', () => { clearTimeout(timer); resolve(socket); }, {once: true});
           socket.addEventListener('error', e => { clearTimeout(timer); reject(e); }, {once: true});
         });
-        const call = rpc(ws);
+        call = rpc(ws);
         row.browser_identity = await call('Browser.getVersion');
         const product = (build.browser === 'edge' ? 'Edg/' : 'Chrome/') + build.version;
         if (row.browser_identity.product !== product) throw Error('Wrong browser/full version: ' + row.browser_identity.product);
@@ -125,7 +131,14 @@ try {
             !row.events.some(e => e.type === 'tls.client_hello') || row.events.some(e => e.type.endsWith('.error') || e.type === 'capture.incomplete')) throw Error('Invalid/incomplete cold connection');
         row.status = 'observed';
       } catch (error) { row.error = String(error.message || error); }
-      finally { ws?.close(); kill(child); }
+      finally {
+        // Close the whole isolated browser before the next fresh profile starts.
+        // Force-killing the launcher tree left Edge 158's next renderer stalled.
+        if (call) await Promise.race([call('Browser.close').catch(() => {}), pause(3000)]);
+        if (child.exitCode === null) await Promise.race([new Promise(resolve => child.once('exit', resolve)), pause(3000)]);
+        row.cleanup = child.exitCode === null ? 'forced-after-graceful-timeout' : 'browser-exited';
+        ws?.close(); kill(child);
+      }
       samples.push(row); save('browser-samples.json', samples);
       console.log(token, row.status, row.error || '');
       if (row.status !== 'observed') throw Error('Sample failed; raw row retained');
