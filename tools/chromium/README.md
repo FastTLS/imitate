@@ -6,6 +6,8 @@
 
 首批仅 Windows x64、en-US、有界面最小化冷导航。每产品三个场景 TLS 1.2/H1、TLS 1.3/H1、TLS 1.3/H2，各五个独立新进程/配置。CDP 核对产品及完整版本，叶证书 SPKI 例外只用于本次本地采集器；没有修改系统信任。回放仍校验采集器 CA。
 
+最小化采集关闭被遮挡窗口/后台渲染进程的降优先级，并等待初始空白文档就绪后才发出唯一目标导航；完整参数进入原始样本。此模式避免后台 renderer 挂起导致 CDP 命令超时，不删除失败样本、不重试目标请求或放宽协议比较。
+
 Chrome 从 [Google VersionHistory](https://developer.chrome.com/docs/web-platform/versionhistory/guide) 发现当前可固定的稳定版，使用[官方企业 MSI](https://chromeenterprise.google/download/)；固定下载大小与 ETag，各分段须严格匹配同一身份。MSI、嵌套安装器及浏览器必须有有效 Google LLC Authenticode，提取后的完整版本必须符合选择。MSI 入口只提供当前稳定版，不能据此下载任意历史版本；不匹配时阻止候选。SHA256 为本次实际下载的本地记录，不能写成厂商提供的摘要。没有签名的测试版文件不作为签名验证的替代来源。
 
 Edge 使用[微软发行源](https://edgeupdates.microsoft.com/api/products?view=enterprise)的 MSI SHA256、大小及有效 Microsoft Corporation MSI/可执行文件签名。签名失败、未知格式及错误版本均拒绝。两种 MSI 都只解包，不运行安装器；解包复用了本工作区早期 Edge 工具的格式知识，BCJ2 实现在源码中有边界检查，不运行历史下载的解码程序。

@@ -181,6 +181,15 @@ def validate_reuse(repo, capture_sha, source_sha):
     changed = subprocess.check_output(['git', '-C', str(repo), 'diff', '--name-only', capture_sha, source_sha], text=True).splitlines()
     if any(not (p.startswith('tools/maintenance/') or p.startswith('.github/workflows/') or p.endswith('/README.md') or p in ('README.md', '.gitignore')) for p in changed):
         raise ValueError('Capture reuse requires identical generator, catalog and collector tool inputs')
+    workflow = '.github/workflows/browser-update.yml'
+    if workflow in changed:
+        before, after = [subprocess.check_output(['git', '-C', str(repo), 'show', sha + ':' + workflow], text=True)
+                         for sha in (capture_sha, source_sha)]
+        # Archive manifests may be repaired without changing the collector,
+        # backend pins, toolchain or invocation used for the original evidence.
+        marker = '      - uses: actions/upload-artifact@'
+        if marker not in before or marker not in after or before.split(marker)[0] != after.split(marker)[0]:
+            raise ValueError('Capture workflow production inputs changed')
 
 
 def main():

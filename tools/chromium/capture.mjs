@@ -82,6 +82,7 @@ try {
       const profile = path.join(root, 'profiles', token);
       if (fs.existsSync(profile)) throw Error('Refusing reused profile');
       const args = ['--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--no-proxy-server', '--lang=en-US',
+        '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding',
         '--window-position=-32000,-32000', '--start-minimized', '--user-data-dir=' + profile,
         '--remote-debugging-port=0', '--ignore-certificate-errors-spki-list=' + scenario.lab.pin, 'about:blank'];
       const child = spawn(build.executable, args, {windowsHide: true, stdio: 'ignore'});

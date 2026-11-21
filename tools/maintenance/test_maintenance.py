@@ -148,8 +148,15 @@ class AdoptionTests(unittest.TestCase):
                     maintain.validate_reuse(self.repo, SHA, 'b' * 40)
 
     def test_reuse_accepts_only_adoption_tooling_and_documentation(self):
-        with patch.object(maintain.subprocess, 'run'), patch.object(maintain.subprocess, 'check_output', return_value='tools/maintenance/maintain.py\n.github/workflows/browser-update.yml\nREADME.md'):
+        with patch.object(maintain.subprocess, 'run'), patch.object(maintain.subprocess, 'check_output', return_value='tools/maintenance/maintain.py\n.github/workflows/browser-adopt.yml\nREADME.md'):
             maintain.validate_reuse(self.repo, SHA, 'b' * 40)
+
+    def test_workflow_backend_and_toolchain_changes_prevent_reuse(self):
+        marker = '      - uses: actions/upload-artifact@fixed\n'
+        for after in ['core=new\n' + marker, 'go=new\n' + marker]:
+            with patch.object(maintain.subprocess, 'run'), patch.object(maintain.subprocess, 'check_output', side_effect=['.github/workflows/browser-update.yml', 'core=old\n' + marker, after]):
+                with self.assertRaisesRegex(ValueError, 'production inputs changed'):
+                    maintain.validate_reuse(self.repo, SHA, 'b' * 40)
 
 
 class PublicationTests(unittest.TestCase):

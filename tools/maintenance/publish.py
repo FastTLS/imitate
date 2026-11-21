@@ -1,6 +1,7 @@
 """Publish only validated profile data through a normal fast-forward push."""
 import argparse
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -43,6 +44,9 @@ def publish(repo, repository, source_sha, base):
         raise ValueError('Remote adoption identity differs from validated commit')
     result.update(adopted=True, adopted_commit=head)
     (repo / 'maintenance-result.json').write_text(json.dumps(result, indent=2) + '\n')
+    if os.environ.get('GITHUB_STEP_SUMMARY'):
+        with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+            print(f'\nAdopted verified profiles: [{head}](https://github.com/{repository}/commit/{head}). Remote commit identity verified.\n', file=summary)
     print(json.dumps(result, indent=2))
     return result
 
