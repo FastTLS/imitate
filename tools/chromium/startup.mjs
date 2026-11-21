@@ -1,4 +1,10 @@
 // Settle the newly created blank target before its single measured navigation.
+export function initialTarget(targets) {
+  const pages = targets.filter(target => target.type === 'page' && target.url === 'about:blank');
+  if (pages.length !== 1 || !pages[0].webSocketDebuggerUrl) throw Error('Expected one initial blank browser page');
+  return pages[0];
+}
+
 export async function prepareTarget(call, ready) {
   await call('Page.enable');
   const document = await ready(async () => {

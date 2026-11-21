@@ -4,7 +4,7 @@ import path from 'node:path';
 import tls from 'node:tls';
 import {X509Certificate, createHash} from 'node:crypto';
 import {spawn, spawnSync} from 'node:child_process';
-import {prepareTarget} from './startup.mjs';
+import {initialTarget, prepareTarget} from './startup.mjs';
 
 const root = path.resolve(process.argv[2]);
 const count = Number(process.argv[3] || 5);
@@ -91,19 +91,26 @@ try {
         '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding',
         '--window-position=-32000,-32000', '--start-minimized', '--user-data-dir=' + profile,
         '--remote-debugging-port=0', '--ignore-certificate-errors-spki-list=' + scenario.lab.pin, 'about:blank'];
-      const child = spawn(build.executable, args, {windowsHide: true, stdio: 'ignore'});
+      const logPath = path.join(root, 'browser-' + token + '.stderr.log');
+      const log = fs.openSync(logPath, 'wx');
+      let child;
+      try { child = spawn(build.executable, args, {windowsHide: true, stdio: ['ignore', log, log]}); }
+      finally { fs.closeSync(log); }
       const row = {browser: build.browser, version: build.version, scenario: scenario.id, sample: i, time: new Date().toISOString(),
         mode: 'headed-minimized', args, executable_sha256: build.executable_sha256, status: 'error'};
-      let ws, call;
+      let ws, call, port;
       try {
-        const port = await ready(() => {
+        port = await ready(() => {
           const lines = fs.readFileSync(path.join(profile, 'DevToolsActivePort'), 'utf8').split('\n');
           if (!/^\d+$/.test(lines[0])) throw Error('Invalid DevTools port');
           return Number(lines[0]);
         });
-        const response = await fetch('http://127.0.0.1:' + port + '/json/new?about:blank', {method: 'PUT', signal: AbortSignal.timeout(10000)});
-        if (!response.ok) throw Error('Cannot create browser target');
-        const target = await response.json();
+        const target = await ready(async () => {
+          const response = await fetch('http://127.0.0.1:' + port + '/json/list', {signal: AbortSignal.timeout(10000)});
+          if (!response.ok) throw Error('Cannot inspect initial browser page');
+          return initialTarget(await response.json());
+        });
+        row.initial_target = {id: target.id, url: target.url};
         ws = await new Promise((resolve, reject) => {
           const socket = new WebSocket(target.webSocketDebuggerUrl);
           const timer = setTimeout(() => { socket.close(); reject(Error('CDP connection timeout')); }, 10000);
@@ -130,7 +137,13 @@ try {
         if (negotiated?.version !== scenario.version || negotiated?.alpn !== scenario.alpn || negotiated?.resumed !== false ||
             !row.events.some(e => e.type === 'tls.client_hello') || row.events.some(e => e.type.endsWith('.error') || e.type === 'capture.incomplete')) throw Error('Invalid/incomplete cold connection');
         row.status = 'observed';
-      } catch (error) { row.error = String(error.message || error); }
+      } catch (error) {
+        row.error = String(error.message || error);
+        row.browser_stderr = fs.readFileSync(logPath, 'utf8').slice(-16384);
+        if (port) try {
+          row.failed_targets = await (await fetch('http://127.0.0.1:' + port + '/json/list', {signal: AbortSignal.timeout(2000)})).json();
+        } catch (diagnostic) { row.target_diagnostic_error = String(diagnostic.message || diagnostic); }
+      }
       finally {
         // Close the whole isolated browser before the next fresh profile starts.
         // Keep launcher cleanup from racing the next isolated renderer startup.

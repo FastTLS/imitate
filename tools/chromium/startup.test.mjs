@@ -1,6 +1,14 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {prepareTarget} from './startup.mjs';
+import {initialTarget, prepareTarget} from './startup.mjs';
+
+test('uses the existing blank tab and rejects missing or ambiguous pages', () => {
+  const page = {type: 'page', url: 'about:blank', webSocketDebuggerUrl: 'ws://localhost/page'};
+  assert.equal(initialTarget([page, {type: 'background_page', url: 'about:blank'}]), page);
+  for (const targets of [[], [page, page], [{...page, url: 'edge://welcome'}]]) {
+    assert.throws(() => initialTarget(targets), /one initial/);
+  }
+});
 
 test('settles blank target before stopping its initial load; never navigates', async () => {
   const methods = [];

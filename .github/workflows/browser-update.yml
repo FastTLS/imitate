@@ -114,6 +114,7 @@ jobs:
             browser-update/downloads/*/SHA512SUMS
             browser-update/run.json
             browser-update/browser-samples.json
+            browser-update/browser-*.stderr.log
             browser-update/capture*/management-events.json
             browser-update/observations.json
             browser-update/audit-summary.json

@@ -10,6 +10,8 @@
 
 每个样本完成后通过 CDP 关闭整个隔离浏览器并等待进程退出，再启动下一个新 profile。超时清理及退出状态记录在样本中，避免强杀启动器后残留状态影响第二次启动。
 
+测量复用命令行创建的唯一初始 `about:blank` 标签页，不再额外创建一张标签页。初始页身份、失败时的目标列表和 browser stderr 均保留，便于诊断特定托管 runner 的 renderer 启动故障。
+
 Chrome 从 [Google VersionHistory](https://developer.chrome.com/docs/web-platform/versionhistory/guide) 发现当前可固定的稳定版，使用[官方企业 MSI](https://chromeenterprise.google/download/)；固定下载大小与 ETag，各分段须严格匹配同一身份。MSI、嵌套安装器及浏览器必须有有效 Google LLC Authenticode，提取后的完整版本必须符合选择。MSI 入口只提供当前稳定版，不能据此下载任意历史版本；不匹配时阻止候选。SHA256 为本次实际下载的本地记录，不能写成厂商提供的摘要。没有签名的测试版文件不作为签名验证的替代来源。
 
 Edge 使用[微软发行源](https://edgeupdates.microsoft.com/api/products?view=enterprise)的 MSI SHA256、大小及有效 Microsoft Corporation MSI/可执行文件签名。签名失败、未知格式及错误版本均拒绝。两种 MSI 都只解包，不运行安装器；解包复用了本工作区早期 Edge 工具的格式知识，BCJ2 实现在源码中有边界检查，不运行历史下载的解码程序。
