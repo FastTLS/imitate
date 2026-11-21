@@ -80,7 +80,7 @@ def verify(root, current, browser, source_sha):
     if len(selected) != 1:
         raise ValueError('Expected exactly one exact-build observation')
     observation = selected[0]
-    locale, mode = ('zh-CN', 'headless') if browser == 'firefox' else ('en-US', 'headed-minimized')
+    locale, mode = ('zh-CN', 'headless') if browser == 'firefox' else ('en-US', audit_chromium.MODES[browser])
     if observation['platform'] != 'windows-x64' or observation['locale'] != locale or observation['mode'] != mode:
         raise ValueError('Observation scope mismatch')
     if set(observation['cases']) != SCENARIOS:

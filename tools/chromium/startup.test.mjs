@@ -1,6 +1,13 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {initialTarget, prepareTarget} from './startup.mjs';
+import {captureMode, initialTarget, prepareTarget} from './startup.mjs';
+
+test('Edge uses a headed software-rendered window without minimized state', () => {
+  assert.equal(captureMode('edge').name, 'headed-offscreen-software');
+  assert.equal(captureMode('edge').flags.includes('--start-minimized'), false);
+  assert.equal(captureMode('edge').flags.includes('--headless'), false);
+  assert.throws(() => captureMode('unknown'), /Unsupported/);
+});
 
 test('uses the existing blank tab and rejects missing or ambiguous pages', () => {
   const page = {type: 'page', url: 'about:blank', webSocketDebuggerUrl: 'ws://localhost/page'};

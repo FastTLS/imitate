@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'firefox'))
 import audit as firefox
 
 SCENARIOS = firefox.SCENARIOS
+MODES = {'chrome': 'headed-minimized', 'edge': 'headed-offscreen-software'}
 read, dump, digest, event = firefox.read, firefox.dump, firefox.digest, firefox.event
 
 
@@ -85,6 +86,8 @@ def audit(root, catalog, browser):
     if browser not in ('chrome', 'edge'):
         raise ValueError('Unsupported Chromium product')
     run, samples = read(root / 'run.json'), read(root / 'browser-samples.json')
+    if run['mode'] != MODES[browser]:
+        raise ValueError('Unexpected product-specific browser capture mode')
     builds = read(root / 'downloads/builds.json')
     if len(builds) != 1 or builds[0]['browser'] != browser or run['expected_samples_per_scenario'] < 5:
         raise ValueError('Expected one pinned product and at least five independent samples')

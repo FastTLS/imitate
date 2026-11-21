@@ -4,7 +4,7 @@
 
 使用 `python tools/browser_update.py --browser chrome` 或 `--browser edge`，后接必需的 `--repo`、`--core`、`--transport`、`--lab`、`--output` 源码与新输出目录，`--version` 固定完整四段版本。省略版本时只发现官方稳定版；不会修改活动配置、创建 PR、安装浏览器或发布。
 
-首批仅 Windows x64、en-US、有界面最小化冷导航。每产品三个场景 TLS 1.2/H1、TLS 1.3/H1、TLS 1.3/H2，各五个独立新进程/配置。CDP 核对产品及完整版本，叶证书 SPKI 例外只用于本次本地采集器；没有修改系统信任。回放仍校验采集器 CA。
+范围仅 Windows x64、en-US、有界面冷导航。Chrome 使用最小化窗口；Edge 使用屏幕外普通窗口和软件渲染，模式为 `headed-offscreen-software`，用于隔离 Windows Server 托管 runner 的图形/最小化初始化问题，不代表与其它渲染模式等价。每产品三个场景 TLS 1.2/H1、TLS 1.3/H1、TLS 1.3/H2，各五个独立新进程/配置。CDP 核对产品及完整版本，叶证书 SPKI 例外只用于本次本地采集器；没有修改系统信任。回放仍校验采集器 CA。
 
 最小化采集关闭被遮挡窗口/后台渲染进程的降优先级，并等待初始空白文档就绪后才发出唯一目标导航；完整参数进入原始样本。此模式避免后台 renderer 挂起导致 CDP 命令超时，不删除失败样本、不重试目标请求或放宽协议比较。
 

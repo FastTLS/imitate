@@ -4,7 +4,7 @@ import path from 'node:path';
 import tls from 'node:tls';
 import {X509Certificate, createHash} from 'node:crypto';
 import {spawn, spawnSync} from 'node:child_process';
-import {initialTarget, prepareTarget} from './startup.mjs';
+import {captureMode, initialTarget, prepareTarget} from './startup.mjs';
 
 const root = path.resolve(process.argv[2]);
 const count = Number(process.argv[3] || 5);
@@ -74,10 +74,13 @@ function rpc(ws) {
 }
 
 const samples = [], labs = [];
+let recordedMode;
 try {
   const builds = JSON.parse(fs.readFileSync(path.join(root, 'downloads/builds.json'), 'utf8'));
   for (const suffix of ['12', '13']) labs.push(await start(suffix));
   for (const build of builds) {
+    const mode = captureMode(build.browser);
+    recordedMode = mode.name;
     if (createHash('sha256').update(fs.readFileSync(build.executable)).digest('hex') !== build.executable_sha256) throw Error('Executable digest drift');
     for (const scenario of [
       {id: 'tls12-h1', lab: labs[0], key: 'https', version: 771, alpn: 'http/1.1'},
@@ -89,7 +92,7 @@ try {
       if (fs.existsSync(profile)) throw Error('Refusing reused profile');
       const args = ['--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--no-proxy-server', '--lang=en-US',
         '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding',
-        '--window-position=-32000,-32000', '--start-minimized', '--user-data-dir=' + profile,
+        '--window-position=-32000,-32000', ...mode.flags, '--user-data-dir=' + profile,
         '--remote-debugging-port=0', '--ignore-certificate-errors-spki-list=' + scenario.lab.pin, 'about:blank'];
       const logPath = path.join(root, 'browser-' + token + '.stderr.log');
       const log = fs.openSync(logPath, 'wx');
@@ -97,7 +100,7 @@ try {
       try { child = spawn(build.executable, args, {windowsHide: true, stdio: ['ignore', log, log]}); }
       finally { fs.closeSync(log); }
       const row = {browser: build.browser, version: build.version, scenario: scenario.id, sample: i, time: new Date().toISOString(),
-        mode: 'headed-minimized', args, executable_sha256: build.executable_sha256, status: 'error'};
+        mode: mode.name, args, executable_sha256: build.executable_sha256, status: 'error'};
       let ws, call, port;
       try {
         port = await ready(() => {
@@ -162,6 +165,6 @@ try {
   for (const lab of labs) {
     try { save(lab.manifest.run_id + '/management-events.json', await lab.events()); } finally { kill(lab.child); }
   }
-  save('run.json', {samples: samples.length, expected_samples_per_scenario: count, mode: 'headed-minimized',
+  save('run.json', {samples: samples.length, expected_samples_per_scenario: count, mode: recordedMode,
     scope: 'Windows x64 en-US; fresh cold process/profile; exact local SPKI exception; no certificate-validation, resumption or other-mode equivalence claim'});
 }

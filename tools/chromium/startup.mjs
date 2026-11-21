@@ -1,4 +1,10 @@
 // Settle the newly created blank target before its single measured navigation.
+export function captureMode(browser) {
+  if (browser === 'edge') return {name: 'headed-offscreen-software', flags: ['--disable-gpu']};
+  if (browser === 'chrome') return {name: 'headed-minimized', flags: ['--start-minimized']};
+  throw Error('Unsupported browser capture mode');
+}
+
 export function initialTarget(targets) {
   const pages = targets.filter(target => target.type === 'page' && target.url === 'about:blank');
   if (pages.length !== 1 || !pages[0].webSocketDebuggerUrl) throw Error('Expected one initial blank browser page');
