@@ -9526,73 +9526,17 @@
             "id": "0x0a0a"
           },
           {
-            "id": "0x001b",
-            "compression_algorithms": [
-              "0x0002"
-            ]
-          },
-          {
-            "id": "0x0023"
-          },
-          {
-            "id": "0x000b",
-            "point_formats": "AA=="
-          },
-          {
-            "id": "0x0010",
+            "id": "0x44cd",
             "alpn": [
-              "h2",
-              "http/1.1"
+              "h2"
             ]
+          },
+          {
+            "id": "0xfe0d",
+            "strategy": "grease-ech"
           },
           {
             "id": "0x0000"
-          },
-          {
-            "id": "0xca34",
-            "raw_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
-          },
-          {
-            "id": "0x002b",
-            "versions": [
-              "0x0a0a",
-              "0x0304",
-              "0x0303"
-            ]
-          },
-          {
-            "id": "0x0012"
-          },
-          {
-            "id": "0x0017"
-          },
-          {
-            "id": "0x000a",
-            "groups": [
-              "0x0a0a",
-              "0x11ec",
-              "0x001d",
-              "0x0017",
-              "0x0018"
-            ]
-          },
-          {
-            "id": "0x0033",
-            "key_shares": [
-              "0x0a0a",
-              "0x11ec",
-              "0x001d"
-            ]
-          },
-          {
-            "id": "0x0005"
-          },
-          {
-            "id": "0x002d",
-            "psk_modes": "AQ=="
-          },
-          {
-            "id": "0xff01"
           },
           {
             "id": "0x000d",
@@ -9612,14 +9556,70 @@
             ]
           },
           {
-            "id": "0x44cd",
-            "alpn": [
-              "h2"
+            "id": "0x0012"
+          },
+          {
+            "id": "0xff01"
+          },
+          {
+            "id": "0x002b",
+            "versions": [
+              "0x0a0a",
+              "0x0304",
+              "0x0303"
             ]
           },
           {
-            "id": "0xfe0d",
-            "strategy": "grease-ech"
+            "id": "0x000b",
+            "point_formats": "AA=="
+          },
+          {
+            "id": "0x002d",
+            "psk_modes": "AQ=="
+          },
+          {
+            "id": "0xca34",
+            "raw_hex": "00b80582df1302010582df1302060582df13020d0582df13020e0582df13020f0582df1302120582df1302130582df13021408839a648c9b2d010708839a648c9b2d010808839a648c9b2d010908839a648c9b2d010a08839a648c9b2d010b08839a648c9b2d010c08839a648c9b2d010d08839a648c9b2d011208839a648c9b2d011304d679090104d679090404d679090504d679090604d679090704d679090804d679090a04d679090b04d679090c04d679090d04d679090f"
+          },
+          {
+            "id": "0x0010",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          {
+            "id": "0x000a",
+            "groups": [
+              "0x0a0a",
+              "0x11ec",
+              "0x001d",
+              "0x0017",
+              "0x0018"
+            ]
+          },
+          {
+            "id": "0x0023"
+          },
+          {
+            "id": "0x0033",
+            "key_shares": [
+              "0x0a0a",
+              "0x11ec",
+              "0x001d"
+            ]
+          },
+          {
+            "id": "0x001b",
+            "compression_algorithms": [
+              "0x0002"
+            ]
+          },
+          {
+            "id": "0x0005"
+          },
+          {
+            "id": "0x0017"
           },
           {
             "id": "0x0a0a"
@@ -9813,9 +9813,9 @@
       },
       "evidence": [
         {
-          "source": "testdata/chrome/windows.json#158.0.8127.37-tls12-h1",
-          "captured_at": "2026-11-21T14:04:47.393Z",
-          "product_version": "158.0.8127.37",
+          "source": "testdata/chrome/windows.json#158.0.8127.89-tls12-h1",
+          "captured_at": "2026-11-24T12:31:06.870Z",
+          "product_version": "158.0.8127.89",
           "platform": "windows",
           "verified_fields": [
             "tls.static_client_hello.cold.chromium",
@@ -9823,12 +9823,12 @@
             "http2.initial_frames.cold"
           ],
           "transport": "tls12-h1",
-          "sample_sha256": "93029c14e291a8791b6be7a4aa537bb09c518972e14203b8e3b18558cabee87c"
+          "sample_sha256": "7ee439cdbc8d20ab0a85d85d80163b60933882b5509428b31f912dd7f69f737d"
         },
         {
-          "source": "testdata/chrome/windows.json#158.0.8127.37-tls13-h1",
-          "captured_at": "2026-11-21T14:04:52.164Z",
-          "product_version": "158.0.8127.37",
+          "source": "testdata/chrome/windows.json#158.0.8127.89-tls13-h1",
+          "captured_at": "2026-11-24T12:31:11.525Z",
+          "product_version": "158.0.8127.89",
           "platform": "windows",
           "verified_fields": [
             "tls.static_client_hello.cold.chromium",
@@ -9836,12 +9836,12 @@
             "http2.initial_frames.cold"
           ],
           "transport": "tls13-h1",
-          "sample_sha256": "4d7ab3ccea4021fe69044e7547498157a7aecaa4bd37419e1fe7894d4147f02c"
+          "sample_sha256": "26cfe0d429e17cd65ccfd4a7818d303bcf4ed6f540ccafade42e0d9f4981debd"
         },
         {
-          "source": "testdata/chrome/windows.json#158.0.8127.37-tls13-h2",
-          "captured_at": "2026-11-21T14:04:55.863Z",
-          "product_version": "158.0.8127.37",
+          "source": "testdata/chrome/windows.json#158.0.8127.89-tls13-h2",
+          "captured_at": "2026-11-24T12:31:14.754Z",
+          "product_version": "158.0.8127.89",
           "platform": "windows",
           "verified_fields": [
             "tls.static_client_hello.cold.chromium",
@@ -9849,7 +9849,7 @@
             "http2.initial_frames.cold"
           ],
           "transport": "tls13-h2",
-          "sample_sha256": "08ea07ff4ee7b28db9b51b109998d3b8406adc5d2085e511f0a7e182170b48ae"
+          "sample_sha256": "29cd495484615acfd5643af774f69141d03da704e503a5484940663bc2a4f58f"
         }
       ]
     },
@@ -9868,7 +9868,7 @@
       "platform": "windows",
       "device": "desktop",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
-      "baseline_id": "chrome-158.0.8127.37",
+      "baseline_id": "chrome-158.0.8127.89",
       "method": "compatible",
       "verified_fields": [
         "tls.static_client_hello.cold.chromium",
