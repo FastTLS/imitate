@@ -14,7 +14,7 @@ import (
 const ChromiumVersionMin = 100
 const ChromiumVersionMax = 160
 const Version = "0.1.3"
-const DataRevision = "browser-02434936c895a739"
+const DataRevision = "browser-cafa8c1aef366352"
 
 type Provider struct{}
 

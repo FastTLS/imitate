@@ -27097,6 +27097,1587 @@
         "whole_profile_match": true,
         "online_offline_pairs": 3
       }
+    },
+    {
+      "version": "161.0",
+      "platform": "windows-x64",
+      "locale": "zh-CN",
+      "mode": "headless",
+      "build": {
+        "version": "161.0",
+        "url": "https://archive.mozilla.org/pub/firefox/releases/161.0/win64/zh-CN/Firefox%20Setup%20161.0.exe",
+        "sha512": "d442c5a7c3398a9f435c7a2788e128c1d68f150c795511d4baea81b5a8049101ce25572bafb5526daa2382584efe3c6ea7be7ca9eb0bf560ba53a43f780d09ef",
+        "executable_sha256": "d2b492b1702b53422cac0beeb93b6e0089631fa61c407831d077988a78c8e27f",
+        "checksum_source": "https://archive.mozilla.org/pub/firefox/releases/161.0/SHA512SUMS"
+      },
+      "cases": {
+        "tls12-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                4865,
+                4867,
+                4866,
+                49195,
+                49199,
+                52393,
+                52392,
+                49196,
+                49200,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    4588,
+                    29,
+                    23,
+                    24,
+                    25
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 34,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    515
+                  ]
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    4588,
+                    29,
+                    23
+                  ]
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    2052,
+                    2053,
+                    2054,
+                    1025,
+                    1281,
+                    1537,
+                    515,
+                    513
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 28,
+                  "value": "4001"
+                },
+                {
+                  "id": 27,
+                  "value": "06000100020003"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Priority",
+                "value": "u=0, i"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              4865,
+              4867,
+              4866,
+              49195,
+              49199,
+              52393,
+              52392,
+              49196,
+              49200,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a11ec001d001700180019"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 34,
+                "payload_hex": "00080403050306030203"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  4588,
+                  29,
+                  23
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "0403040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001604030503060308040805080604010501060102030201"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 28,
+                "payload_hex": "4001"
+              },
+              {
+                "id": 27,
+                "payload_hex": "06000100020003"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010001210020b9644ac430b3aa9b31f11a81ffe6de9197ad908f1873ddb03cad20c8e848067000f0a1cbfd46a202416ed4596ef8f3ad1ca65d52241fd3a38f2733dcdabf5674de896681fd5471b3b692a0517838ee59aabbdc6baea03a67da7ad33edd726864882bffdbda79b758c733239855b8e0ade8265e77b3468c19c9b2854478144749c4737fe7784ea7f5864ed77449eaa4df9506719b271bfdc6e126ec5f6105e7241bac9fb7337f3b38913ea91aace44632852b8e25dadd139f5d9514df125d20121e829735f6737ab13e38f4a6d2acdc51762650b337a15adb4ed9e7a6267a3913d983cd2884e8cbf5b27a5e307294b9ff3e6333323bec8e87f0312ee25446642f33177b12266896199fada2fa6918d1bd1b2b"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture12",
+              "sequence": 1,
+              "connection_id": "conn-1",
+              "type": "tls.client_hello",
+              "time": "2026-11-25T11:20:05.1703699Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  4865,
+                  4867,
+                  4866,
+                  49195,
+                  49199,
+                  52393,
+                  52392,
+                  49196,
+                  49200,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a11ec001d001700180019"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 34,
+                    "payload_hex": "00080403050306030203"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      4588,
+                      29,
+                      23
+                    ]
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "0403040303"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "001604030503060308040805080604010501060102030201"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 28,
+                    "payload_hex": "4001"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "06000100020003"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010001210020b9644ac430b3aa9b31f11a81ffe6de9197ad908f1873ddb03cad20c8e848067000f0a1cbfd46a202416ed4596ef8f3ad1ca65d52241fd3a38f2733dcdabf5674de896681fd5471b3b692a0517838ee59aabbdc6baea03a67da7ad33edd726864882bffdbda79b758c733239855b8e0ade8265e77b3468c19c9b2854478144749c4737fe7784ea7f5864ed77449eaa4df9506719b271bfdc6e126ec5f6105e7241bac9fb7337f3b38913ea91aace44632852b8e25dadd139f5d9514df125d20121e829735f6737ab13e38f4a6d2acdc51762650b337a15adb4ed9e7a6267a3913d983cd2884e8cbf5b27a5e307294b9ff3e6333323bec8e87f0312ee25446642f33177b12266896199fada2fa6918d1bd1b2b"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 2,
+              "connection_id": "conn-1",
+              "type": "tls.negotiated",
+              "time": "2026-11-25T11:20:05.1785707Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 49195,
+                "resumed": false,
+                "version": 771
+              }
+            },
+            {
+              "run_id": "capture12",
+              "sequence": 3,
+              "connection_id": "conn-1",
+              "type": "http1.headers",
+              "time": "2026-11-25T11:20:05.1785707Z",
+              "data": {
+                "request_line": "GET /inspect?sample=firefox-161.0-tls12-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:57561"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Priority",
+                    "value": "u=0, i"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3": {
+            "text": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25,0",
+            "md5": "9d42e90b0225e779f03141ddcd699df2"
+          },
+          "samples": [
+            {
+              "captured_at": "2026-11-25T11:20:00.621Z",
+              "sha256": "389af1872255654e0a0c077ed913f496768d861156ba70463b4bdc1ab95c2bb6"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:07.081Z",
+              "sha256": "ba8e4174fe43b6bb2742750ad7003fc3740c47802562bbd95fc46f9327118456"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:09.942Z",
+              "sha256": "cd87589cf4e35001e85f04e97aa3dda2f859c402f5846ba02a2e4cc07f7c589c"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:12.623Z",
+              "sha256": "1737f377d059b3a0b1e3db066a3a2458263208777dc2f4dd776e4b1c90740228"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:15.204Z",
+              "sha256": "eb0576fd99ece8dc4461e485954ec39db680edb6185aa7781e01f9469848035b"
+            }
+          ]
+        },
+        "tls13-h1": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                4865,
+                4867,
+                4866,
+                49195,
+                49199,
+                52393,
+                52392,
+                49196,
+                49200,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    4588,
+                    29,
+                    23,
+                    24,
+                    25
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 34,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    515
+                  ]
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    4588,
+                    29,
+                    23
+                  ]
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    2052,
+                    2053,
+                    2054,
+                    1025,
+                    1281,
+                    1537,
+                    515,
+                    513
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 28,
+                  "value": "4001"
+                },
+                {
+                  "id": 27,
+                  "value": "06000100020003"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": "Host",
+                "value": "<authority>"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0"
+              },
+              {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "Upgrade-Insecure-Requests",
+                "value": "1"
+              },
+              {
+                "name": "Sec-Fetch-Dest",
+                "value": "document"
+              },
+              {
+                "name": "Sec-Fetch-Mode",
+                "value": "navigate"
+              },
+              {
+                "name": "Sec-Fetch-Site",
+                "value": "none"
+              },
+              {
+                "name": "Sec-Fetch-User",
+                "value": "?1"
+              },
+              {
+                "name": "Priority",
+                "value": "u=0, i"
+              }
+            ],
+            "http2": []
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              4865,
+              4867,
+              4866,
+              49195,
+              49199,
+              52393,
+              52392,
+              49196,
+              49200,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a11ec001d001700180019"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 34,
+                "payload_hex": "00080403050306030203"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  4588,
+                  29,
+                  23
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "0403040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001604030503060308040805080604010501060102030201"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 28,
+                "payload_hex": "4001"
+              },
+              {
+                "id": 27,
+                "payload_hex": "06000100020003"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010003e6002064a3f12354ae575142ba2e88e8f8f0a2ae9b7d951163381c595aa2e03b6af62f00f0f471966ff3773951ed78f49795efce0369611751ef741a26b8b834bc45c536b6ba2ed9d77acd6fffa00b04b667d3ccffc699deeeaf2e812e29371250ff459ffb2fa476c13749c56b066cc746e4516208eff5fe650f91c53a6b3846481be3d66d56b7ee96652cd4c0e7fc25f16f128ed268b9e33087b446ba281bef4058a375850030d0d75fb27926497f974babbc3ae48712fe33d60e4ed3bb16f55120a615dda56fd160cf0abad1012eb6400e54bc4ea5fe83920105713de789c0659c88314d43b1371ec936b0576827d79d6c37eb7c02c146d1e239cc4b9cb11c5262d08b69cbf2de5737f99afc126eb81c65ccc691"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 1,
+              "connection_id": "conn-1",
+              "type": "tls.client_hello",
+              "time": "2026-11-25T11:20:19.9174722Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  4865,
+                  4867,
+                  4866,
+                  49195,
+                  49199,
+                  52393,
+                  52392,
+                  49196,
+                  49200,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a11ec001d001700180019"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 34,
+                    "payload_hex": "00080403050306030203"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      4588,
+                      29,
+                      23
+                    ]
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "0403040303"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "001604030503060308040805080604010501060102030201"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 28,
+                    "payload_hex": "4001"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "06000100020003"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010003e6002064a3f12354ae575142ba2e88e8f8f0a2ae9b7d951163381c595aa2e03b6af62f00f0f471966ff3773951ed78f49795efce0369611751ef741a26b8b834bc45c536b6ba2ed9d77acd6fffa00b04b667d3ccffc699deeeaf2e812e29371250ff459ffb2fa476c13749c56b066cc746e4516208eff5fe650f91c53a6b3846481be3d66d56b7ee96652cd4c0e7fc25f16f128ed268b9e33087b446ba281bef4058a375850030d0d75fb27926497f974babbc3ae48712fe33d60e4ed3bb16f55120a615dda56fd160cf0abad1012eb6400e54bc4ea5fe83920105713de789c0659c88314d43b1371ec936b0576827d79d6c37eb7c02c146d1e239cc4b9cb11c5262d08b69cbf2de5737f99afc126eb81c65ccc691"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 2,
+              "connection_id": "conn-1",
+              "type": "tls.negotiated",
+              "time": "2026-11-25T11:20:19.9319789Z",
+              "data": {
+                "alpn": "http/1.1",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 3,
+              "connection_id": "conn-1",
+              "type": "http1.headers",
+              "time": "2026-11-25T11:20:19.9319789Z",
+              "data": {
+                "request_line": "GET /inspect?sample=firefox-161.0-tls13-h1-0 HTTP/1.1",
+                "headers": [
+                  {
+                    "name": "Host",
+                    "value": "localhost:57565"
+                  },
+                  {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0"
+                  },
+                  {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                  },
+                  {
+                    "name": "Accept-Language",
+                    "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+                  },
+                  {
+                    "name": "Accept-Encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                  },
+                  {
+                    "name": "Upgrade-Insecure-Requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "Sec-Fetch-Dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "Sec-Fetch-Mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "Sec-Fetch-Site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "Sec-Fetch-User",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "Priority",
+                    "value": "u=0, i"
+                  }
+                ],
+                "scope": "first-request-per-connection"
+              }
+            }
+          ],
+          "ja3": {
+            "text": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25,0",
+            "md5": "9d42e90b0225e779f03141ddcd699df2"
+          },
+          "samples": [
+            {
+              "captured_at": "2026-11-25T11:20:17.913Z",
+              "sha256": "e99bffdf643fb0c048cf74c02f026c87766771c3ea7ec8178eba83678d2fa33e"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:20.608Z",
+              "sha256": "78633834b4b819d2fbdf581b759b9fe2c908c1983f6cfd189bb6788590923e1f"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:23.236Z",
+              "sha256": "86167effce556214f968b0280f10620bca42cdcfad4addb0cd062e0a213be0a0"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:25.948Z",
+              "sha256": "15e80eaa7923a355e159d4ea59735320063c43e3b7ad455a2d1b6c8b4b6d645f"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:28.530Z",
+              "sha256": "74a3c901f5ef8d0e4e10feb3256cb5877a396f4ca839f52c60ef7061f5aa97f5"
+            }
+          ]
+        },
+        "tls13-h2": {
+          "normalized": {
+            "tls": {
+              "record_version": 769,
+              "legacy_version": 771,
+              "cipher_suites": [
+                4865,
+                4867,
+                4866,
+                49195,
+                49199,
+                52393,
+                52392,
+                49196,
+                49200,
+                49171,
+                49172,
+                156,
+                157,
+                47,
+                53
+              ],
+              "extensions": [
+                {
+                  "id": 0,
+                  "value": "000c0000096c6f63616c686f7374"
+                },
+                {
+                  "id": 23,
+                  "value": ""
+                },
+                {
+                  "id": 65281,
+                  "value": "00"
+                },
+                {
+                  "id": 10,
+                  "value": [
+                    4588,
+                    29,
+                    23,
+                    24,
+                    25
+                  ]
+                },
+                {
+                  "id": 11,
+                  "value": "0100"
+                },
+                {
+                  "id": 35,
+                  "value": ""
+                },
+                {
+                  "id": 16,
+                  "value": "000c02683208687474702f312e31"
+                },
+                {
+                  "id": 5,
+                  "value": "0100000000"
+                },
+                {
+                  "id": 34,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    515
+                  ]
+                },
+                {
+                  "id": 18,
+                  "value": ""
+                },
+                {
+                  "id": 51,
+                  "value": [
+                    4588,
+                    29,
+                    23
+                  ]
+                },
+                {
+                  "id": 43,
+                  "value": [
+                    772,
+                    771
+                  ]
+                },
+                {
+                  "id": 13,
+                  "value": [
+                    1027,
+                    1283,
+                    1539,
+                    2052,
+                    2053,
+                    2054,
+                    1025,
+                    1281,
+                    1537,
+                    515,
+                    513
+                  ]
+                },
+                {
+                  "id": 45,
+                  "value": "0101"
+                },
+                {
+                  "id": 28,
+                  "value": "4001"
+                },
+                {
+                  "id": 27,
+                  "value": "06000100020003"
+                },
+                {
+                  "id": 65037,
+                  "value": "<randomized>"
+                }
+              ]
+            },
+            "headers": [
+              {
+                "name": ":method",
+                "value": "GET"
+              },
+              {
+                "name": ":path",
+                "value": "<path>"
+              },
+              {
+                "name": ":authority",
+                "value": "<authority>"
+              },
+              {
+                "name": ":scheme",
+                "value": "https"
+              },
+              {
+                "name": "user-agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0"
+              },
+              {
+                "name": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+              },
+              {
+                "name": "accept-language",
+                "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+              },
+              {
+                "name": "accept-encoding",
+                "value": "gzip, deflate, br, zstd"
+              },
+              {
+                "name": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "name": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "name": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "name": "sec-fetch-site",
+                "value": "none"
+              },
+              {
+                "name": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "name": "priority",
+                "value": "u=0, i"
+              },
+              {
+                "name": "te",
+                "value": "trailers"
+              }
+            ],
+            "http2": [
+              {
+                "type": "http2.settings",
+                "data": [
+                  {
+                    "id": 1,
+                    "value": 65536
+                  },
+                  {
+                    "id": 2,
+                    "value": 0
+                  },
+                  {
+                    "id": 4,
+                    "value": 131072
+                  },
+                  {
+                    "id": 5,
+                    "value": 16384
+                  }
+                ]
+              },
+              {
+                "type": "http2.window_update",
+                "data": {
+                  "increment": 12517377,
+                  "stream_id": 0
+                }
+              },
+              {
+                "type": "http2.header_priority",
+                "data": {
+                  "dependency": 0,
+                  "exclusive": false,
+                  "stream_id": 3,
+                  "weight": 42
+                }
+              },
+              {
+                "type": "http2.window_update",
+                "data": {
+                  "increment": 12451840,
+                  "stream_id": 3
+                }
+              }
+            ],
+            "http2_stream_id": 3
+          },
+          "hello": {
+            "record_version": 769,
+            "legacy_version": 771,
+            "cipher_suites": [
+              4865,
+              4867,
+              4866,
+              49195,
+              49199,
+              52393,
+              52392,
+              49196,
+              49200,
+              49171,
+              49172,
+              156,
+              157,
+              47,
+              53
+            ],
+            "extensions": [
+              {
+                "id": 0,
+                "payload_hex": "000c0000096c6f63616c686f7374"
+              },
+              {
+                "id": 23,
+                "payload_hex": ""
+              },
+              {
+                "id": 65281,
+                "payload_hex": "00"
+              },
+              {
+                "id": 10,
+                "payload_hex": "000a11ec001d001700180019"
+              },
+              {
+                "id": 11,
+                "payload_hex": "0100"
+              },
+              {
+                "id": 35,
+                "payload_hex": ""
+              },
+              {
+                "id": 16,
+                "payload_hex": "000c02683208687474702f312e31"
+              },
+              {
+                "id": 5,
+                "payload_hex": "0100000000"
+              },
+              {
+                "id": 34,
+                "payload_hex": "00080403050306030203"
+              },
+              {
+                "id": 18,
+                "payload_hex": ""
+              },
+              {
+                "id": 51,
+                "payload_hex": "",
+                "key_share_groups": [
+                  4588,
+                  29,
+                  23
+                ]
+              },
+              {
+                "id": 43,
+                "payload_hex": "0403040303"
+              },
+              {
+                "id": 13,
+                "payload_hex": "001604030503060308040805080604010501060102030201"
+              },
+              {
+                "id": 45,
+                "payload_hex": "0101"
+              },
+              {
+                "id": 28,
+                "payload_hex": "4001"
+              },
+              {
+                "id": 27,
+                "payload_hex": "06000100020003"
+              },
+              {
+                "id": 65037,
+                "payload_hex": "0000010003af002054acd1847a812717042f5e7846b490413046223d8d570b636afa0eb35e0c4d0800f0f593c5b8208294aefbd58e66854c07ec1b7327bc16af469d4aefcba9f662a179d9718bd79f0db5cf132d6822eb929987dbb805a86c0503337b591681a022906db32abb1ffcbbd39ba0f0b28672428c560217a050a189275f162f8ec5e65f660e07a60fcae9265e968f6e39a4ef7d6e4c79242bcad382fc671f4bb904f908191cb933fdb9eff86bedd4b5d50087585bbe884ef83f271d98e873bd80859cd7e05bf08d63438bf9a0f220d23a7a796c06d2ee65e3658576bfbefc6eb3f32403976af7399b5e5f162a088af35d40c15221dd5f7a5023eaf45dbe0aeaa22d00b415ddf8af46f94437a2a469235fe8086d63e1"
+              }
+            ]
+          },
+          "raw_events": [
+            {
+              "run_id": "capture13",
+              "sequence": 16,
+              "connection_id": "conn-6",
+              "type": "tls.client_hello",
+              "time": "2026-11-25T11:20:33.1877176Z",
+              "data": {
+                "record_version": 769,
+                "legacy_version": 771,
+                "cipher_suites": [
+                  4865,
+                  4867,
+                  4866,
+                  49195,
+                  49199,
+                  52393,
+                  52392,
+                  49196,
+                  49200,
+                  49171,
+                  49172,
+                  156,
+                  157,
+                  47,
+                  53
+                ],
+                "extensions": [
+                  {
+                    "id": 0,
+                    "payload_hex": "000c0000096c6f63616c686f7374"
+                  },
+                  {
+                    "id": 23,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 65281,
+                    "payload_hex": "00"
+                  },
+                  {
+                    "id": 10,
+                    "payload_hex": "000a11ec001d001700180019"
+                  },
+                  {
+                    "id": 11,
+                    "payload_hex": "0100"
+                  },
+                  {
+                    "id": 35,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 16,
+                    "payload_hex": "000c02683208687474702f312e31"
+                  },
+                  {
+                    "id": 5,
+                    "payload_hex": "0100000000"
+                  },
+                  {
+                    "id": 34,
+                    "payload_hex": "00080403050306030203"
+                  },
+                  {
+                    "id": 18,
+                    "payload_hex": ""
+                  },
+                  {
+                    "id": 51,
+                    "payload_hex": "",
+                    "key_share_groups": [
+                      4588,
+                      29,
+                      23
+                    ]
+                  },
+                  {
+                    "id": 43,
+                    "payload_hex": "0403040303"
+                  },
+                  {
+                    "id": 13,
+                    "payload_hex": "001604030503060308040805080604010501060102030201"
+                  },
+                  {
+                    "id": 45,
+                    "payload_hex": "0101"
+                  },
+                  {
+                    "id": 28,
+                    "payload_hex": "4001"
+                  },
+                  {
+                    "id": 27,
+                    "payload_hex": "06000100020003"
+                  },
+                  {
+                    "id": 65037,
+                    "payload_hex": "0000010003af002054acd1847a812717042f5e7846b490413046223d8d570b636afa0eb35e0c4d0800f0f593c5b8208294aefbd58e66854c07ec1b7327bc16af469d4aefcba9f662a179d9718bd79f0db5cf132d6822eb929987dbb805a86c0503337b591681a022906db32abb1ffcbbd39ba0f0b28672428c560217a050a189275f162f8ec5e65f660e07a60fcae9265e968f6e39a4ef7d6e4c79242bcad382fc671f4bb904f908191cb933fdb9eff86bedd4b5d50087585bbe884ef83f271d98e873bd80859cd7e05bf08d63438bf9a0f220d23a7a796c06d2ee65e3658576bfbefc6eb3f32403976af7399b5e5f162a088af35d40c15221dd5f7a5023eaf45dbe0aeaa22d00b415ddf8af46f94437a2a469235fe8086d63e1"
+                  }
+                ]
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 17,
+              "connection_id": "conn-6",
+              "type": "tls.negotiated",
+              "time": "2026-11-25T11:20:33.2218859Z",
+              "data": {
+                "alpn": "h2",
+                "cipher_suite": 4865,
+                "resumed": false,
+                "version": 772
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 18,
+              "connection_id": "conn-6",
+              "type": "http2.settings",
+              "time": "2026-11-25T11:20:33.2225552Z",
+              "data": [
+                {
+                  "id": 1,
+                  "value": 65536
+                },
+                {
+                  "id": 2,
+                  "value": 0
+                },
+                {
+                  "id": 4,
+                  "value": 131072
+                },
+                {
+                  "id": 5,
+                  "value": 16384
+                }
+              ]
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 19,
+              "connection_id": "conn-6",
+              "type": "http2.window_update",
+              "time": "2026-11-25T11:20:33.2225552Z",
+              "data": {
+                "increment": 12517377,
+                "stream_id": 0
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 20,
+              "connection_id": "conn-6",
+              "type": "http2.header_priority",
+              "time": "2026-11-25T11:20:33.2225552Z",
+              "data": {
+                "dependency": 0,
+                "exclusive": false,
+                "stream_id": 3,
+                "weight": 42
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 21,
+              "connection_id": "conn-6",
+              "type": "http2.headers",
+              "time": "2026-11-25T11:20:33.2225552Z",
+              "data": {
+                "headers": [
+                  {
+                    "name": ":method",
+                    "value": "GET"
+                  },
+                  {
+                    "name": ":path",
+                    "value": "/inspect?sample=firefox-161.0-tls13-h2-0"
+                  },
+                  {
+                    "name": ":authority",
+                    "value": "localhost:57567"
+                  },
+                  {
+                    "name": ":scheme",
+                    "value": "https"
+                  },
+                  {
+                    "name": "user-agent",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0"
+                  },
+                  {
+                    "name": "accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                  },
+                  {
+                    "name": "accept-language",
+                    "value": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5"
+                  },
+                  {
+                    "name": "accept-encoding",
+                    "value": "gzip, deflate, br, zstd"
+                  },
+                  {
+                    "name": "upgrade-insecure-requests",
+                    "value": "1"
+                  },
+                  {
+                    "name": "sec-fetch-dest",
+                    "value": "document"
+                  },
+                  {
+                    "name": "sec-fetch-mode",
+                    "value": "navigate"
+                  },
+                  {
+                    "name": "sec-fetch-site",
+                    "value": "none"
+                  },
+                  {
+                    "name": "sec-fetch-user",
+                    "value": "?1"
+                  },
+                  {
+                    "name": "priority",
+                    "value": "u=0, i"
+                  },
+                  {
+                    "name": "te",
+                    "value": "trailers"
+                  }
+                ],
+                "scope": "first-request-per-connection",
+                "stream_id": 3
+              }
+            },
+            {
+              "run_id": "capture13",
+              "sequence": 22,
+              "connection_id": "conn-6",
+              "type": "http2.window_update",
+              "time": "2026-11-25T11:20:33.2579642Z",
+              "data": {
+                "increment": 12451840,
+                "stream_id": 3
+              }
+            }
+          ],
+          "ja3": {
+            "text": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25,0",
+            "md5": "9d42e90b0225e779f03141ddcd699df2"
+          },
+          "samples": [
+            {
+              "captured_at": "2026-11-25T11:20:31.138Z",
+              "sha256": "704be6c1d73234cd6308450bcd4983b40aa40a544d1af30d4903a097a53e5da8"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:33.850Z",
+              "sha256": "c79faf59a7099a37063fda34ac0c3c922b8dab982818e35bbbeececbaf9c72df"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:36.192Z",
+              "sha256": "819f61ee23a859e088aea68a62c24b8f4e40c0f43be03e090d31c1669b2d3e6b"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:38.945Z",
+              "sha256": "f06da1e52008fcd0e3691e1752108c0159db7d08baf1982e249fa871bcdfe257"
+            },
+            {
+              "captured_at": "2026-11-25T11:20:41.662Z",
+              "sha256": "b1753f90a9efda8a7f79645a6b82e06ad17a7f6663279209f8ee11b50e50d595"
+            }
+          ]
+        }
+      },
+      "runtime_replay": {
+        "tls_and_headers_match": true,
+        "whole_profile_match": true,
+        "online_offline_pairs": 3
+      }
     }
   ]
 }
