@@ -28,17 +28,17 @@
       "run_url": "https://github.com/FastTLS/imitate/actions/runs/45603127093"
     },
     "edge": {
-      "version": "158.0.4370.33",
+      "version": "158.0.4370.45",
       "profile_id": "edge/158/windows",
-      "spec_sha256": "06d670384796c7f5722f8eeba49774414bb54d3ff4587c033f164aaba9cbd1dc",
-      "source_commit": "3bcc7c280f8e8849232fecd867227f8ee9546ea8",
+      "spec_sha256": "52df64cc01d393ebeb30786c3987f26f12d02e6eccb573f87074b1c1978bf6fb",
+      "source_commit": "5a56bddb4b9e0f7fe1ba264932d69ae6801cd2d8",
       "verified_fields": [
         "http.headers.navigation.en-US",
         "http2.initial_frames.cold",
         "tls.static_client_hello.cold.chromium"
       ],
       "scope": "Windows x64 en-US headed-offscreen-software; cold H1/H2 navigation",
-      "run_url": "https://github.com/FastTLS/imitate/actions/runs/44915335096"
+      "run_url": "https://github.com/FastTLS/imitate/actions/runs/45805472005"
     }
   }
 }

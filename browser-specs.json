@@ -30995,6 +30995,55 @@
             "id": "0x0a0a"
           },
           {
+            "id": "0x0033",
+            "key_shares": [
+              "0x0a0a",
+              "0x11ec",
+              "0x001d"
+            ]
+          },
+          {
+            "id": "0xfe0d",
+            "strategy": "grease-ech"
+          },
+          {
+            "id": "0x001b",
+            "compression_algorithms": [
+              "0x0002"
+            ]
+          },
+          {
+            "id": "0x0017"
+          },
+          {
+            "id": "0x002d",
+            "psk_modes": "AQ=="
+          },
+          {
+            "id": "0x000b",
+            "point_formats": "AA=="
+          },
+          {
+            "id": "0xff01"
+          },
+          {
+            "id": "0x0005"
+          },
+          {
+            "id": "0x44cd",
+            "alpn": [
+              "h2"
+            ]
+          },
+          {
+            "id": "0x002b",
+            "versions": [
+              "0x0a0a",
+              "0x0304",
+              "0x0303"
+            ]
+          },
+          {
             "id": "0x000d",
             "signature_algorithms": [
               "0x0a0a",
@@ -31012,29 +31061,13 @@
             ]
           },
           {
-            "id": "0x0005"
+            "id": "0x0000"
           },
           {
-            "id": "0xfe0d",
-            "strategy": "grease-ech"
+            "id": "0x0023"
           },
           {
-            "id": "0x002d",
-            "psk_modes": "AQ=="
-          },
-          {
-            "id": "0xff01"
-          },
-          {
-            "id": "0x000b",
-            "point_formats": "AA=="
-          },
-          {
-            "id": "0x0010",
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ]
+            "id": "0x0012"
           },
           {
             "id": "0x000a",
@@ -31047,43 +31080,10 @@
             ]
           },
           {
-            "id": "0x0023"
-          },
-          {
-            "id": "0x44cd",
+            "id": "0x0010",
             "alpn": [
-              "h2"
-            ]
-          },
-          {
-            "id": "0x0012"
-          },
-          {
-            "id": "0x0000"
-          },
-          {
-            "id": "0x0033",
-            "key_shares": [
-              "0x0a0a",
-              "0x11ec",
-              "0x001d"
-            ]
-          },
-          {
-            "id": "0x001b",
-            "compression_algorithms": [
-              "0x0002"
-            ]
-          },
-          {
-            "id": "0x0017"
-          },
-          {
-            "id": "0x002b",
-            "versions": [
-              "0x0a0a",
-              "0x0304",
-              "0x0303"
+              "h2",
+              "http/1.1"
             ]
           },
           {
@@ -31277,9 +31277,9 @@
       },
       "evidence": [
         {
-          "source": "testdata/edge/windows.json#158.0.4370.33-tls12-h1",
-          "captured_at": "2026-11-21T14:46:36.597Z",
-          "product_version": "158.0.4370.33",
+          "source": "testdata/edge/windows.json#158.0.4370.45-tls12-h1",
+          "captured_at": "2026-11-26T10:57:19.487Z",
+          "product_version": "158.0.4370.45",
           "platform": "windows",
           "verified_fields": [
             "tls.static_client_hello.cold.chromium",
@@ -31287,12 +31287,12 @@
             "http2.initial_frames.cold"
           ],
           "transport": "tls12-h1",
-          "sample_sha256": "87a147d8fab2c0b9e175ebc0dcf02d1d8984329a0e5c953293a0ffef13bec62d"
+          "sample_sha256": "d98f277d9fa1e77025dd9e2c2c42980fc0aeb2ed5d622838817a2c6c68b0cf25"
         },
         {
-          "source": "testdata/edge/windows.json#158.0.4370.33-tls13-h1",
-          "captured_at": "2026-11-21T14:46:44.189Z",
-          "product_version": "158.0.4370.33",
+          "source": "testdata/edge/windows.json#158.0.4370.45-tls13-h1",
+          "captured_at": "2026-11-26T10:57:27.612Z",
+          "product_version": "158.0.4370.45",
           "platform": "windows",
           "verified_fields": [
             "tls.static_client_hello.cold.chromium",
@@ -31300,12 +31300,12 @@
             "http2.initial_frames.cold"
           ],
           "transport": "tls13-h1",
-          "sample_sha256": "2d97f86fd7243df4681c2839df9fd7196d7b39cfc1f85eb94f8bd3848fcda4a3"
+          "sample_sha256": "c598f90017d27f058e20bac89a675cb336336cc674ac758cb6328a0896112215"
         },
         {
-          "source": "testdata/edge/windows.json#158.0.4370.33-tls13-h2",
-          "captured_at": "2026-11-21T14:46:51.459Z",
-          "product_version": "158.0.4370.33",
+          "source": "testdata/edge/windows.json#158.0.4370.45-tls13-h2",
+          "captured_at": "2026-11-26T10:57:34.805Z",
+          "product_version": "158.0.4370.45",
           "platform": "windows",
           "verified_fields": [
             "tls.static_client_hello.cold.chromium",
@@ -31313,7 +31313,7 @@
             "http2.initial_frames.cold"
           ],
           "transport": "tls13-h2",
-          "sample_sha256": "4f8d88564621b05ed24f6793ccc2259524bfa751e6210d7182b93adae59a6ab6"
+          "sample_sha256": "bb49e2034e307156fcb81b5db1431838d90a6023d916c10911ce4139cbb7134d"
         }
       ]
     },
@@ -31332,7 +31332,7 @@
       "platform": "windows",
       "device": "desktop",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
-      "baseline_id": "edge-158.0.4370.33",
+      "baseline_id": "edge-158.0.4370.45",
       "method": "compatible",
       "verified_fields": [
         "tls.static_client_hello.cold.chromium",
